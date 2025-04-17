@@ -1,0 +1,67 @@
+2025-02-21T18:23:13.001Z [ERROR]: ❌ MongoDB connection error:
+2025-02-22 00:09:33 [ERROR]: ❌ MongoDB connection error: {"message":"connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","errorLabelSet":{},"reason":{"type":"Unknown","servers":{"localhost:27017":{"address":"localhost:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":233571337,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":null,"maxElectionId":null,"maxSetVersion":null,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null}}
+2025-02-22 01:07:30 [ERROR]: Not Found
+2025-02-22 01:07:31 [ERROR]: Not Found
+2025-02-22 01:13:42 [ERROR]: Not Found
+2025-02-22 01:13:42 [ERROR]: Not Found
+2025-02-22 01:36:56 [ERROR]: Not Found
+2025-02-22 01:36:56 [ERROR]: Not Found
+2025-02-22 12:42:16 [ERROR]: Not Found
+2025-02-22 12:42:16 [ERROR]: Not Found
+2025-02-22 12:42:46 [ERROR]: Not Found
+2025-02-22 12:42:46 [ERROR]: Not Found
+2025-02-22 12:58:48 [ERROR]: Not Found
+2025-02-22 12:58:48 [ERROR]: Not Found
+2025-02-22 13:02:42 [ERROR]: Not Found
+2025-02-22 13:05:32 [ERROR]: Not Found
+2025-02-22 13:09:04 [ERROR]: Not Found
+2025-02-22 13:09:04 [ERROR]: Not Found
+2025-02-22 13:21:25 [ERROR]: Not Found
+2025-02-22 13:21:25 [ERROR]: Not Found
+2025-02-22 13:21:25 [ERROR]: Not Found
+2025-02-22 13:29:31 [ERROR]: Not Found
+2025-02-22 13:29:31 [ERROR]: Not Found
+2025-02-22 13:33:33 [ERROR]: Not Found
+2025-02-22 13:33:33 [ERROR]: Not Found
+2025-02-22 13:33:33 [ERROR]: Not Found
+2025-02-22 13:35:29 [ERROR]: Not Found
+2025-02-22 13:35:29 [ERROR]: Not Found
+2025-02-22 13:39:19 [ERROR]: Not Found
+2025-02-22 13:39:19 [ERROR]: Not Found
+2025-02-22 13:47:56 [ERROR]: Not Found
+2025-02-22 13:47:56 [ERROR]: Not Found
+2025-02-22 13:53:25 [ERROR]: Not Found
+2025-02-22 13:53:25 [ERROR]: Not Found
+2025-02-22 14:04:02 [ERROR]: Not Found
+2025-02-22 14:04:02 [ERROR]: Not Found
+2025-02-22 14:17:09 [ERROR]: Not Found
+2025-02-22 14:17:09 [ERROR]: Not Found
+2025-02-22 14:27:34 [ERROR]: Not Found: /latest-block
+2025-02-22 14:27:34 [ERROR]: Not Found: /latest-block
+2025-02-27 16:48:23 [ERROR]: ❌ MongoDB connection error: {"message":"connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","errorLabelSet":{},"reason":{"type":"Unknown","servers":{"localhost:27017":{"address":"localhost:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":147765198,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":null,"maxElectionId":null,"maxSetVersion":null,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null}}
+2025-04-13 04:13:28 [ERROR]: Not Found: /api/donors/view-donations
+2025-04-13 04:26:43 [ERROR]: Not Found: /api/donors/donations
+2025-04-13 04:26:43 [ERROR]: Not Found: /api/donors/donations
+2025-04-13 04:26:49 [ERROR]: Not Found: /api/donors/donations
+2025-04-13 04:26:49 [ERROR]: Not Found: /api/donors/donations
+2025-04-14 02:03:06 [ERROR]: Not Found: /api/login
+2025-04-14 03:41:50 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:50 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:52 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:52 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:53 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:53 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:58 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:58 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:43:41 [ERROR]: Not Found: /api/fieldworker/assigned-tasks
+2025-04-14 03:43:44 [ERROR]: Not Found: /api/fieldworker/assigned-tasks
+2025-04-14 03:43:44 [ERROR]: Not Found: /api/fieldworker/assigned-tasks
+2025-04-14 03:45:01 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:06 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:06 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:07 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:07 [ERROR]: Not Found: /api/field-worker/assigned-tasks

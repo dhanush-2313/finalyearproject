@@ -1,0 +1,224 @@
+2025-01-29T17:21:51.765Z [info]: Server running on port 5000
+2025-01-29T17:22:46.721Z [info]: Server running on port 5000
+2025-01-30T04:18:35.712Z [info]: Server running on port 5000
+2025-01-31T14:30:47.306Z [info]: Server running on port 5000
+2025-02-01T16:00:27.800Z [info]: Server running on port 5000
+2025-02-08T14:43:21.638Z [info]: Server running on port 5000
+2025-02-09T13:15:41.449Z [info]: Server running on port 5000
+2025-02-09T15:49:06.431Z [info]: Server running on port 5000
+2025-02-21T18:22:43.001Z [INFO]: 🚀 Server running on port 5000
+2025-02-21T18:23:13.001Z [ERROR]: ❌ MongoDB connection error:
+2025-02-22 00:09:03 [INFO]: 🚀 Server running on port 5000
+2025-02-22 00:09:33 [ERROR]: ❌ MongoDB connection error: {"message":"connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","errorLabelSet":{},"reason":{"type":"Unknown","servers":{"localhost:27017":{"address":"localhost:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":233571337,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":null,"maxElectionId":null,"maxSetVersion":null,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null}}
+2025-02-22 01:05:14 [INFO]: 🚀 Server running on port 5000
+2025-02-22 01:05:14 [INFO]: ✅ MongoDB connected
+2025-02-22 01:07:30 [ERROR]: Not Found
+2025-02-22 01:07:31 [ERROR]: Not Found
+2025-02-22 01:12:15 [INFO]: 🚀 Server running on port 5000
+2025-02-22 01:12:15 [INFO]: ✅ MongoDB connected
+2025-02-22 01:13:42 [ERROR]: Not Found
+2025-02-22 01:13:42 [ERROR]: Not Found
+2025-02-22 01:35:06 [INFO]: 🚀 Server running on port 5000
+2025-02-22 01:35:06 [INFO]: ✅ MongoDB connected
+2025-02-22 01:36:56 [ERROR]: Not Found
+2025-02-22 01:36:56 [ERROR]: Not Found
+2025-02-22 12:38:28 [INFO]: 🚀 Server running on port 5000
+2025-02-22 12:38:28 [INFO]: ✅ MongoDB connected
+2025-02-22 12:41:26 [INFO]: 🚀 Server running on port 5000
+2025-02-22 12:41:26 [INFO]: ✅ MongoDB connected
+2025-02-22 12:42:16 [ERROR]: Not Found
+2025-02-22 12:42:16 [ERROR]: Not Found
+2025-02-22 12:42:46 [ERROR]: Not Found
+2025-02-22 12:42:46 [ERROR]: Not Found
+2025-02-22 12:56:46 [INFO]: 🚀 Server running on port 5000
+2025-02-22 12:56:46 [INFO]: ✅ MongoDB connected
+2025-02-22 12:58:48 [ERROR]: Not Found
+2025-02-22 12:58:48 [ERROR]: Not Found
+2025-02-22 13:02:42 [ERROR]: Not Found
+2025-02-22 13:05:32 [ERROR]: Not Found
+2025-02-22 13:07:08 [INFO]: 🚀 Server running on port 5000
+2025-02-22 13:07:08 [INFO]: ✅ MongoDB connected
+2025-02-22 13:09:04 [ERROR]: Not Found
+2025-02-22 13:09:04 [ERROR]: Not Found
+2025-02-22 13:21:25 [ERROR]: Not Found
+2025-02-22 13:21:25 [ERROR]: Not Found
+2025-02-22 13:21:25 [ERROR]: Not Found
+2025-02-22 13:28:36 [INFO]: 🚀 Server running on port 5000
+2025-02-22 13:28:36 [INFO]: ✅ MongoDB connected
+2025-02-22 13:29:31 [ERROR]: Not Found
+2025-02-22 13:29:31 [ERROR]: Not Found
+2025-02-22 13:32:11 [INFO]: 🚀 Server running on port 5000
+2025-02-22 13:32:11 [INFO]: ✅ MongoDB connected
+2025-02-22 13:33:33 [ERROR]: Not Found
+2025-02-22 13:33:33 [ERROR]: Not Found
+2025-02-22 13:33:33 [ERROR]: Not Found
+2025-02-22 13:34:53 [INFO]: 🚀 Server running on port 5000
+2025-02-22 13:34:53 [INFO]: ✅ MongoDB connected
+2025-02-22 13:35:29 [ERROR]: Not Found
+2025-02-22 13:35:29 [ERROR]: Not Found
+2025-02-22 13:38:38 [INFO]: 🚀 Server running on port 5000
+2025-02-22 13:38:38 [INFO]: ✅ MongoDB connected
+2025-02-22 13:39:19 [ERROR]: Not Found
+2025-02-22 13:39:19 [ERROR]: Not Found
+2025-02-22 13:46:56 [INFO]: 🚀 Server running on port 5000
+2025-02-22 13:46:56 [INFO]: ✅ MongoDB connected
+2025-02-22 13:47:56 [ERROR]: Not Found
+2025-02-22 13:47:56 [ERROR]: Not Found
+2025-02-22 13:52:43 [INFO]: 🚀 Server running on port 5000
+2025-02-22 13:52:44 [INFO]: ✅ MongoDB connected
+2025-02-22 13:53:25 [ERROR]: Not Found
+2025-02-22 13:53:25 [ERROR]: Not Found
+2025-02-22 14:01:28 [INFO]: 🚀 Server running on port 5000
+2025-02-22 14:01:28 [INFO]: ✅ MongoDB connected
+2025-02-22 14:04:02 [ERROR]: Not Found
+2025-02-22 14:04:02 [ERROR]: Not Found
+2025-02-22 14:16:33 [INFO]: 🚀 Server running on port 5000
+2025-02-22 14:16:33 [INFO]: ✅ MongoDB connected
+2025-02-22 14:17:09 [ERROR]: Not Found
+2025-02-22 14:17:09 [ERROR]: Not Found
+2025-02-22 14:25:45 [INFO]: 🚀 Server running on port 5000
+2025-02-22 14:25:45 [INFO]: ✅ MongoDB connected
+2025-02-22 14:27:34 [ERROR]: Not Found: /latest-block
+2025-02-22 14:27:34 [ERROR]: Not Found: /latest-block
+2025-02-22 14:54:10 [INFO]: 🚀 Server running on port 5000
+2025-02-22 14:54:10 [INFO]: ✅ MongoDB connected
+2025-02-27 13:36:11 [INFO]: 🚀 Server running on port 5000
+2025-02-27 13:36:11 [INFO]: ✅ MongoDB connected
+2025-02-27 13:36:57 [INFO]: 🚀 Server running on port 5000
+2025-02-27 13:36:57 [INFO]: ✅ MongoDB connected
+2025-02-27 13:38:57 [INFO]: 🚀 Server running on port 5000
+2025-02-27 13:38:57 [INFO]: ✅ MongoDB connected
+2025-02-27 13:40:26 [INFO]: 🚀 Server running on port 5000
+2025-02-27 13:40:26 [INFO]: ✅ MongoDB connected
+2025-02-27 14:04:19 [INFO]: 🚀 Server running on port 5000
+2025-02-27 14:04:19 [INFO]: ✅ MongoDB connected
+2025-02-27 16:47:53 [INFO]: 🚀 Server running on port 5000
+2025-02-27 16:48:23 [ERROR]: ❌ MongoDB connection error: {"message":"connect ECONNREFUSED ::1:27017, connect ECONNREFUSED 127.0.0.1:27017","errorLabelSet":{},"reason":{"type":"Unknown","servers":{"localhost:27017":{"address":"localhost:27017","type":"Unknown","hosts":[],"passives":[],"arbiters":[],"tags":{},"minWireVersion":0,"maxWireVersion":0,"roundTripTime":-1,"minRoundTripTime":0,"lastUpdateTime":147765198,"lastWriteDate":0,"error":{"errorLabelSet":{},"beforeHandshake":false},"topologyVersion":null,"setName":null,"setVersion":null,"electionId":null,"logicalSessionTimeoutMinutes":null,"maxMessageSizeBytes":null,"maxWriteBatchSize":null,"maxBsonObjectSize":null,"primary":null,"me":null,"$clusterTime":null,"iscryptd":false}},"stale":false,"compatible":true,"heartbeatFrequencyMS":10000,"localThresholdMS":15,"setName":null,"maxElectionId":null,"maxSetVersion":null,"commonWireVersion":0,"logicalSessionTimeoutMinutes":null}}
+2025-02-27 16:58:58 [INFO]: 🚀 Server running on port 5000
+2025-02-27 16:58:58 [INFO]: ✅ MongoDB connected
+2025-03-05 13:28:35 [INFO]: 🚀 Server running on port 5000
+2025-03-05 13:28:35 [INFO]: ✅ MongoDB connected
+2025-04-08 03:09:48 [INFO]: 🚀 Server running on port 4000
+2025-04-08 03:09:48 [INFO]: ✅ MongoDB connected
+2025-04-13 02:08:38 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:09:30 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:09:30 [INFO]: ✅ MongoDB connected
+2025-04-13 02:21:56 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:21:56 [INFO]: ✅ MongoDB connected
+2025-04-13 02:22:36 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:22:36 [INFO]: ✅ MongoDB connected
+2025-04-13 02:22:45 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:22:45 [INFO]: ✅ MongoDB connected
+2025-04-13 02:24:45 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:24:45 [INFO]: ✅ MongoDB connected
+2025-04-13 02:27:51 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:27:51 [INFO]: ✅ MongoDB connected
+2025-04-13 02:29:54 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:29:54 [INFO]: ✅ MongoDB connected
+2025-04-13 02:29:56 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:29:56 [INFO]: ✅ MongoDB connected
+2025-04-13 02:30:08 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:30:08 [INFO]: ✅ MongoDB connected
+2025-04-13 02:30:20 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:30:20 [INFO]: ✅ MongoDB connected
+2025-04-13 02:30:34 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:30:34 [INFO]: ✅ MongoDB connected
+2025-04-13 02:35:00 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:35:00 [INFO]: ✅ MongoDB connected
+2025-04-13 02:41:35 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:41:35 [INFO]: ✅ MongoDB connected
+2025-04-13 02:41:48 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:41:48 [INFO]: ✅ MongoDB connected
+2025-04-13 02:43:41 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:43:41 [INFO]: ✅ MongoDB connected
+2025-04-13 02:44:02 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:44:02 [INFO]: ✅ MongoDB connected
+2025-04-13 02:44:06 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:44:06 [INFO]: ✅ MongoDB connected
+2025-04-13 02:45:09 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:45:09 [INFO]: ✅ MongoDB connected
+2025-04-13 02:45:11 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:45:11 [INFO]: ✅ MongoDB connected
+2025-04-13 02:47:59 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:47:59 [INFO]: ✅ MongoDB connected
+2025-04-13 02:55:55 [INFO]: 🚀 Server running on port 4000
+2025-04-13 02:55:55 [INFO]: ✅ MongoDB connected
+2025-04-13 04:13:28 [ERROR]: Not Found: /api/donors/view-donations
+2025-04-13 04:26:43 [ERROR]: Not Found: /api/donors/donations
+2025-04-13 04:26:43 [ERROR]: Not Found: /api/donors/donations
+2025-04-13 04:26:49 [ERROR]: Not Found: /api/donors/donations
+2025-04-13 04:26:49 [ERROR]: Not Found: /api/donors/donations
+2025-04-14 01:44:22 [INFO]: 🚀 Server running on port 4000
+2025-04-14 01:44:22 [INFO]: ✅ MongoDB connected
+2025-04-14 01:55:24 [INFO]: 🚀 Server running on port 4000
+2025-04-14 01:55:24 [INFO]: ✅ MongoDB connected
+2025-04-14 01:55:25 [INFO]: 🚀 Server running on port 4000
+2025-04-14 01:55:25 [INFO]: ✅ MongoDB connected
+2025-04-14 01:57:11 [INFO]: 🚀 Server running on port 4000
+2025-04-14 01:57:11 [INFO]: ✅ MongoDB connected
+2025-04-14 02:00:37 [INFO]: 🚀 Server running on port 4000
+2025-04-14 02:00:37 [INFO]: ✅ MongoDB connected
+2025-04-14 02:00:57 [INFO]: 🚀 Server running on port 4000
+2025-04-14 02:00:57 [INFO]: ✅ MongoDB connected
+2025-04-14 02:03:06 [ERROR]: Not Found: /api/login
+2025-04-14 02:19:57 [INFO]: 🚀 Server running on port 4000
+2025-04-14 02:19:57 [INFO]: ✅ MongoDB connected
+2025-04-14 03:35:17 [INFO]: 🚀 Server running on port 4000
+2025-04-14 03:35:17 [INFO]: ✅ MongoDB connected
+2025-04-14 03:41:50 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:50 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:52 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:52 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:53 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:53 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:58 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:41:58 [ERROR]: Not Found: /api/fieldworker/tasks
+2025-04-14 03:43:41 [ERROR]: Not Found: /api/fieldworker/assigned-tasks
+2025-04-14 03:43:44 [ERROR]: Not Found: /api/fieldworker/assigned-tasks
+2025-04-14 03:43:44 [ERROR]: Not Found: /api/fieldworker/assigned-tasks
+2025-04-14 03:45:01 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:05 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:06 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:06 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:07 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:45:07 [ERROR]: Not Found: /api/field-worker/assigned-tasks
+2025-04-14 03:47:22 [INFO]: 🚀 Server running on port 4000
+2025-04-14 03:47:22 [INFO]: ✅ MongoDB connected
+2025-04-14 03:56:28 [INFO]: 🚀 Server running on port 4000
+2025-04-14 03:56:28 [INFO]: ✅ MongoDB connected
+2025-04-15 15:22:18 [INFO]: 🚀 Server running on port 4000
+2025-04-15 15:22:18 [INFO]: ✅ MongoDB connected
+2025-04-17 02:52:14 [INFO]: 🚀 Server running on port 4000
+2025-04-17 02:58:09 [INFO]: 🚀 Server running on port 4000
+2025-04-17 02:58:10 [INFO]: ✅ MongoDB connected
+2025-04-17 02:58:34 [INFO]: 🚀 Server running on port 4000
+2025-04-17 02:58:35 [INFO]: ✅ MongoDB connected
+2025-04-17 02:58:40 [INFO]: 🚀 Server running on port 4000
+2025-04-17 02:58:41 [INFO]: ✅ MongoDB connected
+2025-04-17 02:59:09 [INFO]: 🚀 Server running on port 4000
+2025-04-17 02:59:09 [INFO]: ✅ MongoDB connected
+2025-04-17 03:22:26 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:22:26 [INFO]: ✅ MongoDB connected
+2025-04-17 03:26:34 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:26:34 [INFO]: ✅ MongoDB connected
+2025-04-17 03:27:02 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:27:02 [INFO]: ✅ MongoDB connected
+2025-04-17 03:28:24 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:28:24 [INFO]: ✅ MongoDB connected
+2025-04-17 03:28:27 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:28:28 [INFO]: ✅ MongoDB connected
+2025-04-17 03:29:30 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:29:31 [INFO]: ✅ MongoDB connected
+2025-04-17 03:31:16 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:31:16 [INFO]: ✅ MongoDB connected
+2025-04-17 03:36:37 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:36:37 [INFO]: ✅ MongoDB connected
+2025-04-17 03:39:19 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:39:19 [INFO]: ✅ MongoDB connected
+2025-04-17 03:39:26 [INFO]: 🚀 Server running on port 4000
+2025-04-17 03:39:26 [INFO]: ✅ MongoDB connected
+2025-04-17 15:31:11 [INFO]: 🚀 Server running on port 4000
+2025-04-17 15:31:12 [INFO]: ✅ MongoDB connected

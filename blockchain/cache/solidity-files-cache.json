@@ -1,0 +1,295 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/contracts/AidContract.sol": {
+      "lastModificationDate": 1744055528610,
+      "contentHash": "4c8f81c8618f8d91573ba2709adfab79",
+      "sourceName": "contracts/AidContract.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.19"
+      ],
+      "artifacts": [
+        "AidContract"
+      ]
+    },
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/contracts/AidDistribution.sol": {
+      "lastModificationDate": 1744055528610,
+      "contentHash": "2cf2373127af27b935e814867ddeef7c",
+      "sourceName": "contracts/AidDistribution.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "AidDistribution"
+      ]
+    },
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/contracts/DonorTracking.sol": {
+      "lastModificationDate": 1744055528610,
+      "contentHash": "6fbdee9fe2632e4ee14e5196ce4da678",
+      "sourceName": "contracts/DonorTracking.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "DonorTracking"
+      ]
+    },
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/contracts/FieldWorker.sol": {
+      "lastModificationDate": 1744055528611,
+      "contentHash": "bed3dbc3d2676cc66447201135ecc244",
+      "sourceName": "contracts/FieldWorker.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "FieldWorker"
+      ]
+    },
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/contracts/Lock.sol": {
+      "lastModificationDate": 1744055528611,
+      "contentHash": "87a6418adb8b2ba9f534571541f01334",
+      "sourceName": "contracts/Lock.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "hardhat/console.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.28"
+      ],
+      "artifacts": [
+        "Lock"
+      ]
+    },
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1744842345210,
+      "contentHash": "681c532e816169606d13a5fe8b475074",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/contracts/Migrations.sol": {
+      "lastModificationDate": 1744055528611,
+      "contentHash": "55cc683bcef02596a37e86b6996a0e8a",
+      "sourceName": "contracts/Migrations.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "Migrations"
+      ]
+    },
+    "/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockchain/contracts/RefugeeAccess.sol": {
+      "lastModificationDate": 1744055528611,
+      "contentHash": "5dede070a12d14b5049c73c907dddb28",
+      "sourceName": "contracts/RefugeeAccess.sol",
+      "solcConfig": {
+        "version": "0.8.28",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "RefugeeAccess"
+      ]
+    }
+  }
+}

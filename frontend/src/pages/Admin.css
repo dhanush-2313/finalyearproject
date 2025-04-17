@@ -1,0 +1,127 @@
+.admin-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .admin-page h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+  
+  .admin-description {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .admin-tabs {
+    display: flex;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .admin-tab {
+    padding: 0.75rem 1.5rem;
+    cursor: pointer;
+    margin-right: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .admin-tab.active {
+    border-bottom: 3px solid #3498db;
+    color: #3498db;
+  }
+  
+  .admin-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .users-table,
+  .logs-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .users-table th,
+  .users-table td,
+  .logs-table th,
+  .logs-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .users-table th,
+  .logs-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+  
+  .btn-edit,
+  .btn-delete {
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-edit {
+    background-color: #3498db;
+    color: white;
+  }
+  
+  .btn-delete {
+    background-color: #e74c3c;
+    color: white;
+  }
+  
+  .settings-form {
+    max-width: 600px;
+  }
+  
+  .settings-form .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .settings-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .settings-form input[type="text"],
+  .settings-form input[type="email"],
+  .settings-form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .btn-save {
+    background-color: #2ecc71;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .loading,
+  .error {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .error {
+    color: #e74c3c;
+  }
+  

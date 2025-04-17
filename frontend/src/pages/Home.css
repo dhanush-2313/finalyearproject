@@ -1,0 +1,124 @@
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.home-header {
+  text-align: center;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #28a745, #20c997);
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.home-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.home-header p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.home-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  background-color: #fff;
+  color: #28a745;
+}
+
+.btn.primary:hover {
+  background-color: #f8f9fa;
+  transform: translateY(-2px);
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn.secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+.home-features {
+  margin: 40px 0;
+  text-align: center;
+}
+
+.home-features h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-item {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-10px);
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #28a745;
+}
+
+.feature-item p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.blockchain-section,
+.aid-records-section {
+  margin: 40px 0;
+}
+
+@media (max-width: 768px) {
+  .home-header h1 {
+    font-size: 2rem;
+  }
+
+  .home-header p {
+    font-size: 1rem;
+  }
+
+  .home-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+

@@ -1,0 +1,163 @@
+.aid-records {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
+
+.aid-records h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.aid-records h3 {
+  color: #34495e;
+  font-size: 1.4rem;
+  margin: 20px 0;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.aid-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #555;
+}
+
+.aid-records input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aid-records input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+  outline: none;
+}
+
+.aid-records button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.aid-records button:hover {
+  background-color: #2980b9;
+}
+
+.aid-records button:disabled {
+  background-color: #95a5a6;
+  cursor: not-allowed;
+}
+
+.records-list {
+  margin-top: 30px;
+}
+
+.records-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.records-list th,
+.records-list td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.records-list th {
+  background-color: #34495e;
+  color: white;
+  font-weight: 600;
+}
+
+.records-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.records-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+.status-delivered {
+  background-color: rgba(46, 204, 113, 0.1) !important;
+}
+
+.status-in-transit {
+  background-color: rgba(241, 196, 15, 0.1) !important;
+}
+
+.status-pending {
+  background-color: rgba(231, 76, 60, 0.1) !important;
+}
+
+.error-message {
+  color: #e74c3c;
+  background-color: rgba(231, 76, 60, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.no-records {
+  text-align: center;
+  padding: 20px;
+  color: #7f8c8d;
+  font-style: italic;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  .records-list {
+    overflow-x: auto;
+  }
+
+  .aid-records {
+    padding: 15px;
+  }
+}

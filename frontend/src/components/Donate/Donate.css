@@ -1,0 +1,70 @@
+.donate-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+}
+
+.donate-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+}
+
+.donate-container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donate-container input:focus {
+  border-color: #4caf50;
+  box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+  outline: none;
+}
+
+.donate-container button {
+  width: 100%;
+  padding: 12px;
+  font-size: 1.2rem;
+  background: linear-gradient(135deg, #4caf50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.donate-container button:hover {
+  background: linear-gradient(135deg, #45a049, #3d8b40);
+  transform: translateY(-2px);
+}
+
+.donate-container button:active {
+  transform: translateY(0);
+}
+
+.donate-container p {
+  text-align: center;
+  font-size: 1rem;
+  color: #333;
+  margin-top: 15px;
+}
+
+.donate-container .message-success {
+  color: #28a745;
+}
+
+.donate-container .message-error {
+  color: #dc3545;
+}
+

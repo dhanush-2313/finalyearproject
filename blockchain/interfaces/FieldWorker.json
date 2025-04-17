@@ -1,0 +1,71 @@
+
+{
+    "abi": [
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "worker",
+            "type": "address"
+          },
+          {
+            "internalType": "string",
+            "name": "taskDetails",
+            "type": "string"
+          }
+        ],
+        "name": "assignTask",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          }
+        ],
+        "name": "completeTask",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "worker",
+            "type": "address"
+          }
+        ],
+        "name": "getAssignedTasks",
+        "outputs": [
+          {
+            "internalType": "string[]",
+            "name": "",
+            "type": "string[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "address": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+    "network": "development"
+  }
+  

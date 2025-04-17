@@ -1,0 +1,28 @@
+@import url("./src/styles/themes/variable.css"); /* Ensure variables are loaded first */
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  background-color: var(--light-color);
+  color: var(--dark-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color var(--transition-speed, 0.3s ease-in-out);
+}
+
+button:hover {
+  background-color: var(--secondary-color);
+}
+

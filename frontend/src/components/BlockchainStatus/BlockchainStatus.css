@@ -1,0 +1,76 @@
+.blockchain-status {
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blockchain-status h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.block-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.label {
+  font-weight: 600;
+  color: #34495e;
+}
+
+.value {
+  font-family: monospace;
+  background-color: rgba(44, 62, 80, 0.1);
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.hash {
+  color: #2980b9;
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+.error {
+  color: #e74c3c;
+  padding: 15px;
+  background-color: rgba(231, 76, 60, 0.1);
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.no-data {
+  color: #7f8c8d;
+  font-style: italic;
+  padding: 20px;
+}

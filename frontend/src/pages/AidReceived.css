@@ -1,0 +1,76 @@
+.aid-received-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+  
+  .aid-received-page h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+  }
+  
+  .aid-received-description {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+  }
+  
+  .aid-records-list {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .aid-records-list h2 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .aid-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .aid-table th,
+  .aid-table td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .aid-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+  }
+  
+  .status-delivered {
+    background-color: rgba(46, 204, 113, 0.1);
+  }
+  
+  .status-in-transit {
+    background-color: rgba(241, 196, 15, 0.1);
+  }
+  
+  .status-pending {
+    background-color: rgba(231, 76, 60, 0.1);
+  }
+  
+  .loading,
+  .error,
+  .no-records {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+  .error {
+    color: #e74c3c;
+  }
+  
+  .no-records {
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  

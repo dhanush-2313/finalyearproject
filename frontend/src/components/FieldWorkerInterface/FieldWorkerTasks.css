@@ -1,0 +1,127 @@
+.field-worker-tasks {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.field-worker-tasks h2 {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eaeaea;
+  padding-bottom: 10px;
+}
+
+.field-worker-tasks ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.field-worker-tasks .error {
+  color: #e74c3c;
+  background-color: #fadbd8;
+  padding: 12px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  font-weight: 500;
+  border-left: 4px solid #e74c3c;
+}
+
+.task-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out;
+  border-left: 5px solid #3498db;
+}
+
+.task-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.task-header strong {
+  font-size: 1.1rem;
+  color: #34495e;
+  flex: 1;
+}
+
+.task-header .status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+}
+
+.task-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+.task-meta span {
+  display: flex;
+  align-items: center;
+}
+
+.task-meta .date:before {
+  content: "📅";
+  margin-right: 5px;
+}
+
+.task-meta .refugee:before {
+  content: "👤";
+  margin-right: 5px;
+}
+
+/* Task status styles */
+.task-item.task-pending {
+  border-left-color: #e74c3c;
+}
+
+.task-item.task-pending .status {
+  background-color: #fadbd8;
+  color: #c0392b;
+}
+
+.task-item.task-completed {
+  border-left-color: #2ecc71;
+}
+
+.task-item.task-completed .status {
+  background-color: #d5f5e3;
+  color: #27ae60;
+}
+
+.task-item.task-in-progress {
+  border-left-color: #f39c12;
+}
+
+.task-item.task-in-progress .status {
+  background-color: #fdebd0;
+  color: #e67e22;
+}
+
+/* Loading state */
+.field-worker-tasks p:not(.error) {
+  color: #7f8c8d;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
+}
+

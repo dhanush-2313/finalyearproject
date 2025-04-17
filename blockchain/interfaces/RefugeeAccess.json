@@ -1,0 +1,59 @@
+
+
+{
+    "abi": [
+      {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "refugee",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "access",
+            "type": "bool"
+          }
+        ],
+        "name": "grantAccess",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "refugee",
+            "type": "address"
+          }
+        ],
+        "name": "getAccessStatus",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ],
+    "address": "0xabcdefabcdefabcdefabcdefabcdefabcdefabcdef",
+    "network": "mainnet"
+  }
+  
