@@ -1,0 +1,137 @@
+.file-upload-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.file-upload-dropzone {
+  border: 2px dashed #3498db;
+  border-radius: 8px;
+  padding: 30px 20px;
+  text-align: center;
+  background-color: #f8fafc;
+  transition: all 0.3s ease;
+}
+
+.file-upload-dropzone:hover {
+  border-color: #2980b9;
+  background-color: #eef2f7;
+}
+
+.file-upload-label {
+  display: block;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2c3e50;
+  background-color: #e3f2fd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: all 0.2s ease;
+}
+
+.file-upload-label:hover {
+  background-color: #bbdefb;
+}
+
+.file-upload-label.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+input[type="file"] {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.file-info {
+  margin: 15px 0;
+  padding: 15px;
+  background-color: #ecf0f1;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.file-info p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #34495e;
+}
+
+.file-description {
+  margin: 15px 0;
+  text-align: left;
+}
+
+.file-description label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.file-description textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #bdc3c7;
+  border-radius: 4px;
+  min-height: 80px;
+  font-family: inherit;
+  resize: vertical;
+}
+
+.file-upload-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 15px;
+}
+
+.file-upload-button:hover:not(:disabled) {
+  background-color: #2980b9;
+}
+
+.file-upload-button:disabled {
+  background-color: #bdc3c7;
+  cursor: not-allowed;
+}
+
+.file-upload-error {
+  color: #e74c3c;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #fdeded;
+  border-left: 4px solid #e74c3c;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.file-upload-progress {
+  margin: 15px 0;
+  background-color: #ecf0f1;
+  border-radius: 20px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #2ecc71;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  transition: width 0.3s ease;
+} 

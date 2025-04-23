@@ -19,6 +19,7 @@ const Donations = lazy(() => import("./pages/Donations"))
 const Admin = lazy(() => import("./pages/Admin"))
 const FieldWorker = lazy(() => import("./pages/FieldWorker"))
 const AidReceived = lazy(() => import("./pages/AidReceived"))
+const IPFSFiles = lazy(() => import("./pages/IPFSFiles"))
 
 // Protected Route component
 const ProtectedRoute = ({ children }) => {
@@ -139,6 +140,14 @@ const App = () => {
                 element={
                   <ProtectedRoute>
                     <AidReceived />
+                  </ProtectedRoute>
+                }
+              />
+              <Route
+                path="/files"
+                element={
+                  <ProtectedRoute>
+                    <IPFSFiles />
                   </ProtectedRoute>
                 }
               />

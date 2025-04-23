@@ -1,0 +1,8 @@
+{
+  "register_refugee": "0x19097b3437c0035ae4cf78ef9d13e2ed59978432e1d60ee3c4a265b051abf79f",
+  "make_donation": "0xef22817da9e6919fa9d4d5488e93862a84d8834fb546296de8609d0a4cf71e20",
+  "create_aid": "0x856362fd60b1914a6a3779825be90a910e0fa49cfc2e480f51062fa407199da9",
+  "assign_task": "0xf6adbb740cbdbe800e3e2b970f8eebbc45379ecf3e28608fa9bf0d0a8ac507df",
+  "complete_task": "0xe8463ae1c555fde2206c61d818f215fdf7fba50fb63a9ebe2d6e171d20f69079",
+  "distribute_aid": "0x40f415f110bd5fcfdc0279769f6fe7cae20f4c2b4302f7bd48c8401e452207a4"
+}

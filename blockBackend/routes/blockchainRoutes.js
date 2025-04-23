@@ -1,26 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const blockchainGateway = require('../blockchain/gateway');
+const blockchainController = require('../controllers/blockchainController');
+const authMiddleware = require("../middleware/authMiddleware")
 
-// Add aid record
-router.post('/aid', async (req, res) => {
-    try {
-        const { recipient, aidType, amount } = req.body;
-        const result = await blockchainGateway.addAidRecord(recipient, aidType, amount);
-        res.json({ success: true, transactionHash: result.transactionHash });
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
 
-// Track donations
-router.get('/donations/:address', async (req, res) => {
-    try {
-        const donorDetails = await blockchainGateway.trackDonation(req.params.address);
-        res.json(donorDetails);
-    } catch (error) {
-        res.status(500).json({ error: error.message });
-    }
-});
+// Public routes
+router.get('/aid/:id', blockchainController.getAidRecord);
+router.get('/aid', blockchainController.getAllAidRecords);
+router.get('/verify/:txHash', blockchainController.verifyTransaction);
+
+// Protected routes
+router.post('/aid', authMiddleware, blockchainController.addAid);
+router.put('/aid/:id', authMiddleware, blockchainController.updateAidStatus);
+router.get('/events', authMiddleware, blockchainController.getRecentEvents);
+router.get('/events/type/:type', authMiddleware, blockchainController.getEventsByType);
+router.get('/latest-block', blockchainController.getLatestBlock);
 
 module.exports = router;

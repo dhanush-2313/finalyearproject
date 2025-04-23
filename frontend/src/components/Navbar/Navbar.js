@@ -31,6 +31,7 @@ const Navbar = ({ account, connectWallet }) => {
             {user?.role === "fieldWorker" && <Link to="/field-worker">Field Work</Link>}
             {user?.role === "donor" && <Link to="/donations">My Donations</Link>}
             {user?.role === "refugee" && <Link to="/aid-received">Aid Received</Link>}
+            <Link to="/files">Documents</Link>
           </>
         ) : (
           <>

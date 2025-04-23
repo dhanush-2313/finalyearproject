@@ -1,85 +1,89 @@
 const mongoose = require('mongoose');
 
-const mongoose = require('mongoose');
-
-const blockchainEventSchema = new mongoose.Schema({
-  eventType: { type: String, required: true, enum: ['AidAdded', 'AidUpdated'] }, // Example event types
-  transactionId: { type: String, required: true },
-  payload: { type: Object, required: true },
-  timestamp: { type: Date, required: true },
-}, { timestamps: true });
-
-module.exports = mongoose.model('BlockchainEvent', blockchainEventSchema);
-
-
-models/User.js
-javascript
-const mongoose = require('mongoose');
-const bcrypt = require('bcrypt');
-
-const userSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, unique: true, required: true },
-  password: { type: String, required: true },
-  role: { type: String, enum: ['admin', 'fieldWorker', 'donor', 'refugee'], required: true },
-}, { timestamps: true });
-
-
-userSchema.pre('save', async function (next) {
-  if (!this.isModified('password')) return next();
-  this.password = await bcrypt.hash(this.password, 10);
-  next();
+const BlockchainEventSchema = new mongoose.Schema({
+    txHash: {
+        type: String,
+        trim: true,
+        // Can be null for failed transactions that never reached the chain
+        required: false
+    },
+    type: {
+        type: String,
+        required: true,
+        enum: [
+            // AidContract events
+            'AidAdded', 
+            'AidStatusUpdated', 
+            'AidDistributed', 
+            'DonationReceived',
+            
+            // AidDistribution events 
+            'AidDonated',
+            
+            // DonorTracking events
+            'DonorUpdated',
+            
+            // RefugeeAccess events
+            'RefugeeStatusUpdated',
+            
+            // FieldWorker events
+            'TaskAssigned',
+            'TaskCompleted',
+            
+            // Other events
+            'UserRegistered', 
+            'Other'
+        ]
+    },
+    status: {
+        type: String,
+        required: true,
+        enum: ['PENDING', 'CONFIRMED', 'FAILED'],
+        default: 'PENDING'
+    },
+    data: {
+        type: mongoose.Schema.Types.Mixed,
+        required: true
+    },
+    initiatedBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+    },
+    blockNumber: {
+        type: Number,
+        required: false
+    },
+    gasUsed: {
+        type: Number,
+        required: false
+    },
+    error: {
+        type: String,
+        required: false
+    },
+    createdAt: {
+        type: Date,
+        default: Date.now
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now
+    }
 });
 
-module.exports = mongoose.model('User', userSchema);
-models/AidRecord.js
-javascript
-const mongoose = require('mongoose');
+// Create indexes for better query performance
+BlockchainEventSchema.index({ txHash: 1 });
+BlockchainEventSchema.index({ type: 1 });
+BlockchainEventSchema.index({ status: 1 });
+BlockchainEventSchema.index({ initiatedBy: 1 });
+BlockchainEventSchema.index({ createdAt: -1 });
 
-const aidRecordSchema = new mongoose.Schema({
-  refugeeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Refugee', required: true },
-  fieldWorkerId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  description: { type: String, required: true },
-  dateProvided: { type: Date, required: true },
-  status: { type: String, enum: ['pending', 'completed'], default: 'pending' },
-}, { timestamps: true });
+// Pre-save hook to update the updatedAt field
+BlockchainEventSchema.pre('save', function(next) {
+    this.updatedAt = Date.now();
+    next();
+});
 
-module.exports = mongoose.model('AidRecord', aidRecordSchema);
-models/Donation.js
-javascript
-const mongoose = require('mongoose');
+module.exports = mongoose.model('BlockchainEvent', BlockchainEventSchema);
 
-const donationSchema = new mongoose.Schema({
-  donorId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  amount: { type: Number, required: true },
-  cause: { type: String, required: true },
-  status: { type: String, enum: ['pending', 'confirmed'], default: 'pending' },
-}, { timestamps: true });
-
-module.exports = mongoose.model('Donation', donationSchema);
-models/Refugee.js
-javascript
-const mongoose = require('mongoose');
-
-const refugeeSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  age: { type: Number, required: true },
-  gender: { type: String, enum: ['male', 'female', 'other'], required: true },
-  location: { type: String, required: true },
-  needs: { type: [String], required: true }, 
-  status: { type: String, enum: ['active', 'inactive'], default: 'active' },
-}, { timestamps: true });
-
-module.exports = mongoose.model('Refugee', refugeeSchema);
-models/ActivityLog.js
-javascript
-const mongoose = require('mongoose');
-
-const activityLogSchema = new mongoose.Schema({
-  userId: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
-  action: { type: String, required: true },
-  details: { type: String },
-  timestamp: { type: Date, default: Date.now },
-}, { timestamps: true });
-
-module.exports = mongoose.model('ActivityLog', activityLogSchema);

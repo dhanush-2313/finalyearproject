@@ -2,6 +2,7 @@ const jwt = require("jsonwebtoken")
 const bcrypt = require("bcryptjs")
 const User = require("../models/User")
 const { validationResult } = require("express-validator")
+const monitoring = require("../utils/monitoring")
 
 // Generate JWT Token
 const generateToken = (user) => {
@@ -49,6 +50,9 @@ exports.register = async (req, res) => {
       isVerified: true, // User is verified by default
     })
 
+    // Track registration in metrics
+    monitoring.metrics.userRegistrationsTotal.inc({ role: user.role })
+
     // Generate token
     const token = generateToken(user)
 
@@ -91,6 +95,9 @@ exports.login = async (req, res) => {
     //   return res.status(401).json({ error: "Invalid credentials" })
     // }
 
+    // Update active users count
+    monitoring.metrics.activeUsers.inc()
+
     // Generate token
     const token = generateToken(user)
 
@@ -113,6 +120,8 @@ exports.login = async (req, res) => {
 
 // Logout User (Client-side only - just for API completeness)
 exports.logout = (req, res) => {
+  // Decrement active users count
+  monitoring.metrics.activeUsers.dec()
   res.json({ message: "Logged out successfully" })
 }
 

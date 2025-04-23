@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useContext } from "react"
 import { AuthContext } from "../../auth/authContext"
+import { blockchainAPI } from "../../api/api"
 import "./AidRecords.css"
 
 const AidRecords = () => {
@@ -12,9 +13,9 @@ const AidRecords = () => {
   const [formData, setFormData] = useState({
     recipient: "",
     aidType: "",
-    amount: "",
+    amount: "0.1", // Default to 0.1 ETH
   })
-  const { isAuthenticated, role } = useContext(AuthContext)
+  const { isAuthenticated, user } = useContext(AuthContext)
 
   useEffect(() => {
     fetchAidRecords()
@@ -23,28 +24,34 @@ const AidRecords = () => {
   const fetchAidRecords = async () => {
     try {
       setLoading(true)
-      // In a real app, we would fetch from the backend
-      // For now, we'll use mock data
-      const mockData = [
-        {
-          id: 1,
-          recipient: "Refugee Camp Alpha",
-          aidType: "Food Supplies",
-          amount: 1000,
-          status: "Delivered",
-          timestamp: new Date().toLocaleString(),
-        },
-        {
-          id: 2,
-          recipient: "Medical Center Beta",
-          aidType: "Medical Supplies",
-          amount: 500,
-          status: "In Transit",
-          timestamp: new Date(Date.now() - 86400000).toLocaleString(),
-        },
-      ]
-
-      setRecords(mockData)
+      // Fetch real data from the blockchain API
+      const response = await blockchainAPI.getAidRecords()
+      
+      if (response && response.data && response.data.success) {
+        setRecords(response.data.records || [])
+      } else {
+        // Fallback to mock data if API call fails
+        const mockData = [
+          {
+            id: 1,
+            recipient: "Refugee Camp Alpha",
+            aidType: "Food Supplies",
+            amount: 1000,
+            status: "Delivered",
+            timestamp: new Date().toLocaleString(),
+          },
+          {
+            id: 2,
+            recipient: "Medical Center Beta",
+            aidType: "Medical Supplies",
+            amount: 500,
+            status: "In Transit",
+            timestamp: new Date(Date.now() - 86400000).toLocaleString(),
+          },
+        ]
+        setRecords(mockData)
+      }
+      
       setError(null)
     } catch (err) {
       console.error("Error fetching aid records:", err)
@@ -70,7 +77,7 @@ const AidRecords = () => {
       return
     }
 
-    if (role !== "admin" && role !== "fieldWorker") {
+    if (user?.role !== "admin" && user?.role !== "fieldWorker") {
       setError("You don't have permission to add records")
       return
     }
@@ -79,34 +86,31 @@ const AidRecords = () => {
       setSubmitting(true)
       setError(null)
 
-      // In a real app, we would call the API
-      // await blockchainAPI.addAidRecord(
-      //   formData.recipient,
-      //   formData.aidType,
-      //   formData.amount
-      // );
-
-      // For now, we'll just add to the local state
-      const newRecord = {
-        id: records.length + 1,
-        ...formData,
-        status: "Pending",
-        timestamp: new Date().toLocaleString(),
-      }
-
-      setRecords([...records, newRecord])
-
-      // Reset form
-      setFormData({
-        recipient: "",
-        aidType: "",
-        amount: "",
+      // Real API call to the blockchain backend
+      const response = await blockchainAPI.addAidRecord({
+        recipient: formData.recipient,
+        aidType: formData.aidType,
+        amount: formData.amount,
       })
 
-      alert("Aid record added successfully!")
+      if (response && response.data && response.data.success) {
+        // Refresh the records list
+        fetchAidRecords()
+        
+        // Reset form
+        setFormData({
+          recipient: "",
+          aidType: "",
+          amount: "0.1",
+        })
+
+        alert("Aid record added successfully!")
+      } else {
+        throw new Error(response?.data?.error || "Failed to add aid record")
+      }
     } catch (err) {
       console.error("Error adding aid record:", err)
-      setError("Error adding aid record. Please try again.")
+      setError(`Error adding aid record: ${err.message || "Please try again."}`)
     } finally {
       setSubmitting(false)
     }
@@ -116,31 +120,34 @@ const AidRecords = () => {
     <div className="aid-records">
       <h2>Aid Records</h2>
 
-      {isAuthenticated && (role === "admin" || role === "fieldWorker") && (
+      {isAuthenticated && (user?.role === "admin" || user?.role === "fieldWorker") && (
         <form onSubmit={handleSubmit} className="aid-form">
           <h3>Add New Aid Record</h3>
 
           {error && <div className="error-message">{error}</div>}
 
           <div className="form-group">
-            <label htmlFor="recipient">Recipient</label>
+            <label htmlFor="recipient">Recipient Address</label>
             <input
               type="text"
               id="recipient"
               name="recipient"
+              placeholder="0x..."
               value={formData.recipient}
               onChange={handleChange}
               required
               disabled={submitting}
             />
+            <small>Enter the Ethereum address of the recipient</small>
           </div>
 
           <div className="form-group">
-            <label htmlFor="aidType">Aid Type</label>
+            <label htmlFor="aidType">Aid Description</label>
             <input
               type="text"
               id="aidType"
               name="aidType"
+              placeholder="Food supplies, Medicine, etc."
               value={formData.aidType}
               onChange={handleChange}
               required
@@ -149,19 +156,21 @@ const AidRecords = () => {
           </div>
 
           <div className="form-group">
-            <label htmlFor="amount">Amount</label>
+            <label htmlFor="amount">Amount (ETH)</label>
             <input
-              type="number"
+              type="text"
               id="amount"
               name="amount"
+              placeholder="0.1"
               value={formData.amount}
               onChange={handleChange}
               required
               disabled={submitting}
             />
+            <small>Amount of ETH to allocate for this aid package</small>
           </div>
 
-          <button type="submit" disabled={submitting}>
+          <button type="submit" disabled={submitting} className="submit-button">
             {submitting ? "Adding..." : "Add Record"}
           </button>
         </form>
@@ -169,16 +178,19 @@ const AidRecords = () => {
 
       <div className="records-list">
         <h3>Recent Records</h3>
+        <button onClick={fetchAidRecords} className="refresh-button" disabled={loading}>
+          {loading ? "Refreshing..." : "Refresh"}
+        </button>
 
         {loading ? (
           <div className="loading">Loading records...</div>
         ) : records.length > 0 ? (
-          <table>
+          <table className="records-table">
             <thead>
               <tr>
                 <th>ID</th>
                 <th>Recipient</th>
-                <th>Aid Type</th>
+                <th>Description</th>
                 <th>Amount</th>
                 <th>Status</th>
                 <th>Timestamp</th>
@@ -186,12 +198,14 @@ const AidRecords = () => {
             </thead>
             <tbody>
               {records.map((record) => (
-                <tr key={record.id} className={`status-${record.status.toLowerCase().replace(" ", "-")}`}>
+                <tr key={record.id} className={`status-${record.status?.toLowerCase()?.replace(" ", "-") || "pending"}`}>
                   <td>{record.id}</td>
-                  <td>{record.recipient}</td>
+                  <td className="address-cell" title={record.recipient}>
+                    {record.recipient?.substr(0, 6)}...{record.recipient?.substr(-4)}
+                  </td>
                   <td>{record.aidType}</td>
-                  <td>{record.amount}</td>
-                  <td>{record.status}</td>
+                  <td>{typeof record.amount === 'number' ? record.amount : Number(record.amount) / 1e18} ETH</td>
+                  <td>{record.status || "Pending"}</td>
                   <td>{record.timestamp}</td>
                 </tr>
               ))}

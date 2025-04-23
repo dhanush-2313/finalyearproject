@@ -222,3 +222,596 @@
 2025-04-17 03:39:26 [INFO]: ✅ MongoDB connected
 2025-04-17 15:31:11 [INFO]: 🚀 Server running on port 4000
 2025-04-17 15:31:12 [INFO]: ✅ MongoDB connected
+2025-04-21 18:16:36 [INFO]: ✅ Monitoring metrics initialized
+2025-04-21 18:16:36 [INFO]: ✅ IPFS client created with authentication
+2025-04-21 18:16:36 [INFO]: 🚀 Server running on port 4000
+2025-04-21 18:16:36 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-21 18:16:36 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-21 18:16:36 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-21 18:16:36 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-21 18:16:36 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-21 18:16:36 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-21 18:16:36 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-21 18:16:36 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-21 18:16:36 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-21 18:16:36 [INFO]: ✅ Connected to AidContract contract at 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+2025-04-21 18:16:36 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-21 18:16:37 [INFO]: ✅ MongoDB connected
+2025-04-21 18:16:37 [INFO]: ✅ Created default admin user for system events
+2025-04-21 18:16:37 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-21 18:16:37 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-21 18:17:18 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:17:31 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:17:31 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:18:01 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:18:31 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:19:01 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:19:28 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:19:28 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:19:47 [ERROR]: ❌ Error uploading to IPFS: basic auth failure: invalid project id or project secret
+
+2025-04-21 18:19:47 [ERROR]: IPFS Upload error: Failed to upload to IPFS: basic auth failure: invalid project id or project secret
+
+2025-04-21 18:20:06 [ERROR]: ❌ Error uploading to IPFS: basic auth failure: invalid project id or project secret
+
+2025-04-21 18:20:06 [ERROR]: IPFS Upload error: Failed to upload to IPFS: basic auth failure: invalid project id or project secret
+
+2025-04-21 18:20:24 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:20:24 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:21:11 [INFO]: ✅ Monitoring metrics initialized
+2025-04-21 18:21:12 [INFO]: ✅ IPFS client created with authentication
+2025-04-21 18:21:12 [INFO]: 🚀 Server running on port 4000
+2025-04-21 18:21:12 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-21 18:21:12 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-21 18:21:12 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-21 18:21:12 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-21 18:21:12 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-21 18:21:12 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-21 18:21:12 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-21 18:21:12 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-21 18:21:12 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-21 18:21:12 [INFO]: ✅ Connected to AidContract contract at 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+2025-04-21 18:21:12 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-21 18:21:12 [INFO]: ✅ MongoDB connected
+2025-04-21 18:21:12 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-21 18:21:12 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-21 18:21:14 [INFO]: ✅ Monitoring metrics initialized
+2025-04-21 18:21:14 [INFO]: ✅ IPFS client created with authentication
+2025-04-21 18:21:14 [INFO]: 🚀 Server running on port 4000
+2025-04-21 18:21:14 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-21 18:21:14 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-21 18:21:14 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-21 18:21:14 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-21 18:21:14 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-21 18:21:14 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-21 18:21:14 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-21 18:21:14 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-21 18:21:14 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-21 18:21:14 [INFO]: ✅ Connected to AidContract contract at 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+2025-04-21 18:21:14 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-21 18:21:15 [INFO]: ✅ MongoDB connected
+2025-04-21 18:21:15 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-21 18:21:15 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-21 18:21:36 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:21:36 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-21 18:37:01 [INFO]: Shutting down server...
+2025-04-22 02:16:24 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 02:16:25 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 02:16:25 [INFO]: 🚀 Server running on port 4000
+2025-04-22 02:16:25 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 02:16:25 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 02:16:25 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 02:16:25 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 02:16:25 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 02:16:25 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-22 02:16:25 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-22 02:16:25 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-22 02:16:25 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-22 02:16:25 [INFO]: ✅ Connected to AidContract contract at 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+2025-04-22 02:16:25 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 02:16:25 [INFO]: ✅ MongoDB connected
+2025-04-22 02:16:26 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 02:16:26 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 02:16:35 [INFO]: Shutting down server...
+2025-04-22 02:17:10 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 02:17:10 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 02:17:11 [INFO]: 🚀 Server running on port 4000
+2025-04-22 02:17:11 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 02:17:11 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 02:17:11 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 02:17:11 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 02:17:11 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 02:17:11 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-22 02:17:11 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-22 02:17:11 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-22 02:17:11 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-22 02:17:11 [INFO]: ✅ Connected to AidContract contract at 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+2025-04-22 02:17:11 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 02:17:11 [INFO]: ✅ MongoDB connected
+2025-04-22 02:17:11 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 02:17:11 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 02:17:24 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:17:54 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:18:24 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:18:45 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:18:45 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:19:15 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:20:03 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:20:03 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:20:42 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:20:42 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:21:12 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:21:42 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:22:12 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:22:42 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:23:12 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:23:14 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:23:14 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:23:19 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:23:19 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 02:55:38 [INFO]: Shutting down server...
+2025-04-22 02:55:41 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 02:55:41 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 02:55:42 [INFO]: 🚀 Server running on port 4000
+2025-04-22 02:55:42 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 02:55:42 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 02:55:42 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 02:55:42 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 02:55:42 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 02:55:42 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-22 02:55:42 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-22 02:55:42 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-22 02:55:42 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-22 02:55:42 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 02:55:42 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 02:55:42 [INFO]: ✅ MongoDB connected
+2025-04-22 02:55:43 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 02:55:43 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 02:59:13 [ERROR]: Not Found: /blockchain/aid%20
+2025-04-22 03:00:00 [ERROR]: Not Found: /api/blockchain/aid%20
+2025-04-22 03:00:30 [ERROR]: Not Found: /api/blockchain/aid%20
+2025-04-22 03:02:21 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:02:21 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 1/3: overflow (argument="value", value=500000000000000000, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:02:22 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 2/3: overflow (argument="value", value=500000000000000000, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:02:23 [ERROR]: ❌ Transaction failed after 3 attempts: overflow (argument="value", value=500000000000000000, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:02:23 [ERROR]: Error adding aid record to blockchain: overflow (argument="value", value=500000000000000000, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:02:23 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:03:14 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:03:14 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 1/3: underflow (argument="value", value=0.5, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:03:15 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 2/3: underflow (argument="value", value=0.5, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:03:16 [ERROR]: ❌ Transaction failed after 3 attempts: underflow (argument="value", value=0.5, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:03:16 [ERROR]: Error adding aid record to blockchain: underflow (argument="value", value=0.5, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:03:16 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:04:31 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:04:31 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 1/3: underflow (argument="value", value=0.1, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:04:32 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 2/3: underflow (argument="value", value=0.1, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:04:33 [ERROR]: ❌ Transaction failed after 3 attempts: underflow (argument="value", value=0.1, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:04:33 [ERROR]: Error adding aid record to blockchain: underflow (argument="value", value=0.1, code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-22 03:04:33 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:05:48 [INFO]: Shutting down server...
+2025-04-22 03:05:51 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:05:51 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:05:51 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:05:51 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:05:51 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:05:51 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:05:51 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:05:51 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:05:51 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-22 03:05:51 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-22 03:05:51 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-22 03:05:51 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-22 03:05:51 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:05:51 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:05:52 [INFO]: ✅ MongoDB connected
+2025-04-22 03:05:52 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:05:52 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:05:56 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:05:56 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 1/3: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:05:58 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 2/3: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:05:59 [ERROR]: ❌ Transaction failed after 3 attempts: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:05:59 [ERROR]: Error adding aid record to blockchain: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:05:59 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:06:50 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:06:50 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:06:50 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:06:50 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:06:50 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:06:50 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:06:50 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:06:50 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:06:50 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-22 03:06:50 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-22 03:06:50 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-22 03:06:50 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-22 03:06:50 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:06:50 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:06:50 [INFO]: ✅ MongoDB connected
+2025-04-22 03:06:51 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:06:51 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:06:54 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:06:54 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:06:54 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:06:54 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:06:54 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:06:54 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:06:54 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:06:54 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:06:54 [INFO]: ✅ Connected to AidDistribution contract at 0xDc64a140Aa3E981100a9becA4E685f962f0cF6C9
+2025-04-22 03:06:54 [INFO]: ✅ Connected to DonorTracking contract at 0x5FC8d32690cc91D4c39d9d3abcBD16989F875707
+2025-04-22 03:06:54 [INFO]: ✅ Connected to RefugeeAccess contract at 0x0165878A594ca255338adfa4d48449f69242Eb8F
+2025-04-22 03:06:54 [INFO]: ✅ Connected to FieldWorker contract at 0xa513E6E4b8f2a923D98304ec87F64353C4D5C853
+2025-04-22 03:06:54 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:06:54 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:06:55 [INFO]: ✅ MongoDB connected
+2025-04-22 03:06:55 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:06:55 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:07:07 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:07:07 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:07:08 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:07:08 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:07:08 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:07:08 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:07:08 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:07:08 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:07:08 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:08 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:07:08 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:07:08 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:07:08 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:08 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:07:08 [INFO]: ✅ MongoDB connected
+2025-04-22 03:07:08 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:07:08 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:07:08 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:07:09 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:07:09 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:07:09 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:07:09 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:07:09 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:07:09 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:07:09 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:07:09 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:09 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:07:09 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:07:09 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:07:09 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:09 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:07:09 [INFO]: ✅ MongoDB connected
+2025-04-22 03:07:10 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:07:10 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:07:15 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:07:15 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:07:16 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:07:16 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:07:16 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:07:16 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:07:16 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:07:16 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:07:16 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:16 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:07:16 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:07:16 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:07:16 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:16 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:07:16 [INFO]: ✅ MongoDB connected
+2025-04-22 03:07:16 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:07:16 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:07:24 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:07:24 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 1/3: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:07:25 [ERROR]: ❌ Transaction error in AidContract.addAidRecord, attempt 2/3: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:07:26 [ERROR]: ❌ Transaction failed after 3 attempts: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:07:26 [ERROR]: Error adding aid record to blockchain: missing revert data (action="estimateGas", data=null, reason=null, transaction={ "data": "0x9bb781c6000000000000000000000000000000000000000000000000000000000000006000000000000000000000000000000000000000000000000000000000000000c0000000000000000000000000000000000000000000000000016345785d8a0000000000000000000000000000000000000000000000000000000000000000002a30783930463739626636454232633466383730333635453738353938324531663130314539336239303600000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000", "from": "0xfa26b9Fb1130F607DF470c5298e63A81C36c22FA", "to": "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316" }, invocation=null, revert=null, code=CALL_EXCEPTION, version=6.13.5)
+2025-04-22 03:07:26 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:07:57 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:07:57 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:07:57 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:07:57 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:07:57 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:07:57 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:07:57 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:07:57 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:07:57 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:57 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:07:57 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:07:57 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:07:57 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:07:57 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:07:58 [INFO]: ✅ MongoDB connected
+2025-04-22 03:07:58 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:07:58 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:08:00 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:08:00 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:08:00 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:08:00 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:08:00 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:08:00 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:08:00 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:08:00 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:08:00 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:00 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:08:00 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:08:00 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:08:00 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:00 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:08:00 [INFO]: ✅ MongoDB connected
+2025-04-22 03:08:01 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:08:01 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:08:08 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:08:08 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:08:09 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:08:09 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:08:09 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:08:09 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:08:09 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:08:09 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:08:09 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:09 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:08:09 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:08:09 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:08:09 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:09 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:08:09 [INFO]: ✅ MongoDB connected
+2025-04-22 03:08:09 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:08:09 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:08:14 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:08:14 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:08:14 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:08:14 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:08:14 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:08:14 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:08:14 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:08:14 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:08:14 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:14 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:08:14 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:08:14 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:08:14 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:14 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:08:14 [INFO]: ✅ MongoDB connected
+2025-04-22 03:08:15 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:08:15 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:08:16 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:08:16 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:08:16 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:08:16 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:08:16 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:08:16 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:08:16 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:08:16 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:08:16 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:16 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:08:16 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:08:16 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:08:16 [INFO]: ✅ Connected to AidContract contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:16 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:08:17 [INFO]: ✅ MongoDB connected
+2025-04-22 03:08:17 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:08:17 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:08:36 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 03:08:36 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 03:08:37 [INFO]: 🚀 Server running on port 4000
+2025-04-22 03:08:37 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 03:08:37 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 03:08:37 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 03:08:37 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 03:08:37 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 03:08:37 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:37 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 03:08:37 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 03:08:37 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 03:08:37 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 03:08:37 [INFO]: ✅ MongoDB connected
+2025-04-22 03:08:37 [INFO]: ℹ️ AidContract not deployed, using individual contracts
+2025-04-22 03:08:37 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 03:08:37 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 03:08:42 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 03:08:42 [INFO]: Using contract: AidDistribution for addAidRecord
+2025-04-22 03:08:42 [INFO]: Contract addresses: AidContract=undefined, AidDistribution=0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 03:08:42 [INFO]: Calling AidDistribution.createAidRecord with params: description=Food supplies, amount=100000000000000000, recipient=0x90F79bf6EB2c4f870365E785982E1f101E93b906
+2025-04-22 03:08:42 [ERROR]: ❌ Transaction error in AidDistribution.createAidRecord, attempt 1/3: insufficient funds for intrinsic transaction cost (transaction="0x02f9011282053980843b9aca00846e994a748301c478941b4bf77ee4ab26f3f508510b5b3568db7c9f831680b8a44098d7040000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000016345785d8a000000000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000c080a07255871c2f534d3c43a3b4091bc444cc5e6ceec6ce253fbbf7ac97a791c76702a0685767d1dc771f1d9847ef639dbe0123c16d9b1ee7ba0bf79c6778b42d86a8a8", info={ "error": { "code": -32003, "message": "insufficient funds for gas * price + value", "stack": "Error: insufficient funds for gas * price + value\n    at TransactionPool.prepareTransaction (/Applications/Ganache.app/Contents/Resources/static/node/node_modules/ganache/dist/node/1.js:2:121341)" } }, code=INSUFFICIENT_FUNDS, version=6.13.5)
+2025-04-22 03:08:43 [ERROR]: ❌ Transaction error in AidDistribution.createAidRecord, attempt 2/3: insufficient funds for intrinsic transaction cost (transaction="0x02f9011282053980843b9aca00846e994a748301c478941b4bf77ee4ab26f3f508510b5b3568db7c9f831680b8a44098d7040000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000016345785d8a000000000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000c080a07255871c2f534d3c43a3b4091bc444cc5e6ceec6ce253fbbf7ac97a791c76702a0685767d1dc771f1d9847ef639dbe0123c16d9b1ee7ba0bf79c6778b42d86a8a8", info={ "error": { "code": -32003, "message": "insufficient funds for gas * price + value", "stack": "Error: insufficient funds for gas * price + value\n    at TransactionPool.prepareTransaction (/Applications/Ganache.app/Contents/Resources/static/node/node_modules/ganache/dist/node/1.js:2:121341)" } }, code=INSUFFICIENT_FUNDS, version=6.13.5)
+2025-04-22 03:08:44 [ERROR]: ❌ Transaction failed after 3 attempts: insufficient funds for intrinsic transaction cost (transaction="0x02f9011282053980843b9aca00846e994a748301c478941b4bf77ee4ab26f3f508510b5b3568db7c9f831680b8a44098d7040000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000016345785d8a000000000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000c080a07255871c2f534d3c43a3b4091bc444cc5e6ceec6ce253fbbf7ac97a791c76702a0685767d1dc771f1d9847ef639dbe0123c16d9b1ee7ba0bf79c6778b42d86a8a8", info={ "error": { "code": -32003, "message": "insufficient funds for gas * price + value", "stack": "Error: insufficient funds for gas * price + value\n    at TransactionPool.prepareTransaction (/Applications/Ganache.app/Contents/Resources/static/node/node_modules/ganache/dist/node/1.js:2:121341)" } }, code=INSUFFICIENT_FUNDS, version=6.13.5)
+2025-04-22 03:08:44 [ERROR]: Error adding aid record to blockchain: insufficient funds for intrinsic transaction cost (transaction="0x02f9011282053980843b9aca00846e994a748301c478941b4bf77ee4ab26f3f508510b5b3568db7c9f831680b8a44098d7040000000000000000000000000000000000000000000000000000000000000060000000000000000000000000000000000000000000000000016345785d8a000000000000000000000000000090f79bf6eb2c4f870365e785982e1f101e93b906000000000000000000000000000000000000000000000000000000000000000d466f6f6420737570706c69657300000000000000000000000000000000000000c080a07255871c2f534d3c43a3b4091bc444cc5e6ceec6ce253fbbf7ac97a791c76702a0685767d1dc771f1d9847ef639dbe0123c16d9b1ee7ba0bf79c6778b42d86a8a8", info={ "error": { "code": -32003, "message": "insufficient funds for gas * price + value", "stack": "Error: insufficient funds for gas * price + value\n    at TransactionPool.prepareTransaction (/Applications/Ganache.app/Contents/Resources/static/node/node_modules/ganache/dist/node/1.js:2:121341)" } }, code=INSUFFICIENT_FUNDS, version=6.13.5)
+2025-04-22 03:08:44 [INFO]: Blockchain event stored: AidAdded, Hash: N/A
+2025-04-22 10:06:39 [INFO]: Shutting down server...
+2025-04-22 10:14:33 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 10:14:33 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 10:14:33 [INFO]: 🚀 Server running on port 4000
+2025-04-22 10:14:33 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 10:14:33 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 10:14:33 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 10:14:33 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 10:14:33 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 10:14:33 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 10:14:33 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 10:14:33 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 10:14:33 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 10:14:33 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 10:14:34 [INFO]: ✅ MongoDB connected
+2025-04-22 10:14:34 [INFO]: ℹ️ AidContract not deployed, using individual contracts
+2025-04-22 10:14:34 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 10:14:34 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 10:15:02 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:15:39 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:15:39 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:15:54 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:15:54 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:01 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:01 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:11 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:11 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:31 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:16:31 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:17:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:17:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:17:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:18:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:18:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:19:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:19:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:20:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:20:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:21:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:21:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:22:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:22:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:23:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:23:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:24:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:24:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:25:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:25:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:26:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:26:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:27:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:27:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:28:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:28:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:29:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:29:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:30:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:30:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:31:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:31:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:32:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:32:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:33:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:33:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:34:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:34:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:35:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:35:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:36:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:36:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:37:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:37:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:38:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:38:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:39:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:39:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:40:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:40:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:41:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:41:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:42:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:42:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:43:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:43:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:44:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:44:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:45:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:45:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:46:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:46:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:47:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:47:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:48:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:48:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:49:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:49:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:50:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:50:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:51:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:51:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:52:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:52:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:53:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:53:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:54:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:54:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:55:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:55:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:56:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:56:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:57:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:57:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:58:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:58:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:59:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 10:59:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:00:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:00:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:01:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:01:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:02:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:02:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:03:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:03:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:04:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:04:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:05:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:05:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:06:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:06:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:07:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:07:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:08:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:08:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:09:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:09:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:10:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:10:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:11:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:11:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:12:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:12:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:13:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:13:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:14:04 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:14:34 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:15:29 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:16:29 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:17:29 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:18:29 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 11:18:45 [INFO]: Shutting down server...
+2025-04-22 12:39:04 [INFO]: ✅ Monitoring metrics initialized
+2025-04-22 12:39:04 [INFO]: ✅ IPFS client created with authentication
+2025-04-22 12:39:05 [INFO]: 🚀 Server running on port 4000
+2025-04-22 12:39:05 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-22 12:39:05 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-22 12:39:05 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-22 12:39:05 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-22 12:39:05 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-22 12:39:05 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-22 12:39:05 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-22 12:39:05 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-22 12:39:05 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-22 12:39:05 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-22 12:39:05 [INFO]: ✅ MongoDB connected
+2025-04-22 12:39:05 [INFO]: ℹ️ AidContract not deployed, using individual contracts
+2025-04-22 12:39:05 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-22 12:39:05 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-22 12:39:12 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:40:13 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:41:14 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:42:15 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:43:16 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:44:17 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:45:18 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:46:19 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:47:20 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:48:21 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:49:22 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:50:23 [ERROR]: Error fetching latest block: Cannot read properties of undefined (reading 'getBlockNumber')
+2025-04-22 12:50:50 [INFO]: Shutting down server...
+2025-04-23 11:13:47 [INFO]: ✅ Monitoring metrics initialized
+2025-04-23 11:13:47 [INFO]: ✅ IPFS client created with authentication
+2025-04-23 11:13:47 [INFO]: 🚀 Server running on port 4000
+2025-04-23 11:13:47 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-23 11:13:47 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-23 11:13:47 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-23 11:13:47 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-23 11:13:47 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-23 11:13:47 [INFO]: ✅ Connected to AidDistribution contract at 0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316
+2025-04-23 11:13:47 [INFO]: ✅ Connected to DonorTracking contract at 0x1d6224C17402Aac3e19d4cCb4A730E063a05F011
+2025-04-23 11:13:47 [INFO]: ✅ Connected to RefugeeAccess contract at 0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7
+2025-04-23 11:13:47 [INFO]: ✅ Connected to FieldWorker contract at 0x1E2be53982AE3eED2b372519be2711750ee87c48
+2025-04-23 11:13:47 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-23 11:13:48 [INFO]: ✅ MongoDB connected
+2025-04-23 11:13:48 [INFO]: ℹ️ AidContract not deployed, using individual contracts
+2025-04-23 11:13:48 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-23 11:13:48 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-23 11:19:20 [INFO]: Shutting down server...
