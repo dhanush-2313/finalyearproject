@@ -1,5 +1,4 @@
-"use client"
-
+import React from "react"
 import { useState, useEffect } from "react"
 import { fieldWorkerAPI } from "../../api/api"
 import "./FieldWorkerTasks.css"

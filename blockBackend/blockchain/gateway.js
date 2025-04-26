@@ -3,31 +3,37 @@ const path = require('path');
 const fs = require('fs');
 const monitoring = require('../utils/monitoring');
 const logger = require('../utils/logger');
+const { rpcUrl } = require('../config/blockchainConfig');
 require('dotenv').config();
 
 // Load environment variables
-const { PROVIDER_URL, ADMIN_PRIVATE_KEY, BLOCKCHAIN_RPC_URL } = process.env;
+const { ADMIN_PRIVATE_KEY } = process.env;
+
+if (!ADMIN_PRIVATE_KEY) {
+    throw new Error('ADMIN_PRIVATE_KEY environment variable is required');
+}
 
 // Contracts configuration
 const CONTRACTS = {
     AidDistribution: {
-        address: "0x1b4bF77EE4Ab26f3f508510b5B3568db7C9f8316",
+        address: "0xE94a8c2f516DFCf1AC911fF950f6FBd1FE4f63d2",
         path: "../../blockchain/artifacts/contracts/AidDistribution.sol/AidDistribution.json"
     },
     DonorTracking: {
-        address: "0x1d6224C17402Aac3e19d4cCb4A730E063a05F011",
+        address: "0xf6F39f608B06a16468e997D939846b3DeeB24d1b",
         path: "../../blockchain/artifacts/contracts/DonorTracking.sol/DonorTracking.json"
     },
     RefugeeAccess: {
-        address: "0x5cA2850142FF9c4b11Aa8A3F46cF0182A2B6E7A7",
+        address: "0xb7496E0aC913a246A5a2d272B4CC493d1b962971",
         path: "../../blockchain/artifacts/contracts/RefugeeAccess.sol/RefugeeAccess.json"
     },
     FieldWorker: {
-        address: "0x1E2be53982AE3eED2b372519be2711750ee87c48",
+        address: "0x5c3F66d2d21993fdA4673757D94AfB82982D07E7",
         path: "../../blockchain/artifacts/contracts/FieldWorker.sol/FieldWorker.json"
     },
     AidContract: {
-        address: process.env.CONTRACT_ADDRESS, // Use this only if it's deployed
+        // Use the same address as AidDistribution since it's the main contract
+        address: "0xE94a8c2f516DFCf1AC911fF950f6FBd1FE4f63d2",
         path: "../../blockchain/artifacts/contracts/AidContract.sol/AidContract.json"
     }
 };
@@ -38,61 +44,77 @@ let wallet;
 let contracts = {};
 
 // Load contract ABIs
-const loadContractABIs = () => {
-    let loadedContracts = {};
-    
-    Object.keys(CONTRACTS).forEach(contractName => {
-        try {
-            const contractPath = path.resolve(__dirname, CONTRACTS[contractName].path);
-            if (fs.existsSync(contractPath)) {
-                const contractJson = JSON.parse(fs.readFileSync(contractPath, 'utf8'));
-                loadedContracts[contractName] = {
-                    address: CONTRACTS[contractName].address,
-                    abi: contractJson.abi
-                };
-                logger.logInfo(`✅ Loaded ABI for ${contractName}`);
-            } else {
-                logger.logWarning(`⚠️ Contract artifact not found for ${contractName}: ${contractPath}`);
+const loadContractABIs = async () => {
+    try {
+        console.log('Starting to load contract ABIs...');
+        for (const [name, config] of Object.entries(CONTRACTS)) {
+            try {
+                console.log(`Loading ABI for ${name} contract...`);
+                console.log('ABI path:', config.path);
+                
+                const abiPath = path.join(__dirname, config.path);
+                console.log('Full ABI path:', abiPath);
+                
+                const artifactContent = fs.readFileSync(abiPath, 'utf8');
+                const artifact = JSON.parse(artifactContent);
+                config.abi = artifact.abi;
+                console.log(`ABI content loaded for ${name}`);
+            } catch (error) {
+                console.error(`Error loading ABI for ${name}:`, error);
+                throw error;
             }
-        } catch (error) {
-            logger.logError(`❌ Failed to load ABI for ${contractName}: ${error.message}`);
         }
-    });
-    
-    return loadedContracts;
+        console.log('All contract ABIs loaded successfully');
+    } catch (error) {
+        console.error('Error in loadContractABIs:', error);
+        throw error;
+    }
 };
 
 // Initialize connection with retry mechanism
-const initializeConnection = async (retries = 5) => {
+const initializeConnection = async () => {
     try {
-        provider = new ethers.JsonRpcProvider(BLOCKCHAIN_RPC_URL);
-        await provider.getNetwork(); // Test the connection
+        console.log('Starting blockchain connection initialization...');
+        console.log('RPC URL:', rpcUrl);
         
+        // Initialize provider
+        provider = new ethers.JsonRpcProvider(rpcUrl);
+        console.log('Provider initialized');
+        
+        // Initialize wallet with admin private key
         wallet = new ethers.Wallet(ADMIN_PRIVATE_KEY, provider);
+        console.log('Wallet initialized with address:', wallet.address);
         
         // Load contract ABIs
-        const contractConfigs = loadContractABIs();
+        console.log('Loading contract ABIs...');
+        await loadContractABIs();
+        console.log('Contract ABIs loaded');
         
         // Initialize contract instances
-        Object.keys(contractConfigs).forEach(contractName => {
-            const config = contractConfigs[contractName];
-            if (config.address && config.abi) {
-                contracts[contractName] = new ethers.Contract(config.address, config.abi, wallet);
-                logger.logInfo(`✅ Connected to ${contractName} contract at ${config.address}`);
+        console.log('Initializing contract instances...');
+        for (const [name, config] of Object.entries(CONTRACTS)) {
+            try {
+                console.log(`Initializing ${name} contract...`);
+                console.log('Contract address:', config.address);
+                console.log('Contract ABI:', config.abi);
+                
+                contracts[name] = new ethers.Contract(
+                    config.address,
+                    config.abi,
+                    wallet
+                );
+                console.log(`${name} contract initialized successfully`);
+            } catch (error) {
+                console.error(`Error initializing ${name} contract:`, error);
+                throw error;
             }
-        });
+        }
         
-        logger.logInfo('✅ Connected to Ethereum Blockchain');
+        console.log('All contracts initialized successfully');
         return true;
     } catch (error) {
-        if (retries > 0) {
-            logger.logError(`❌ Failed to connect to Ethereum network, retrying... (${retries} attempts left)`);
-            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry
-            return initializeConnection(retries - 1);
-        } else {
-            logger.logError(`❌ Failed to connect to Ethereum network after multiple attempts: ${error.message}`);
-            throw error;
-        }
+        console.error('Error in initializeConnection:', error);
+        throw error;
     }
 };
 
@@ -101,63 +123,41 @@ initializeConnection().catch(err => {
     logger.logError(`Initial blockchain connection failed: ${err.message}`);
 });
 
-// Transaction wrapper with retry mechanism
+// Execute transaction with confirmation
 const executeTransaction = async (contractName, methodName, ...args) => {
-    // Record the transaction attempt in metrics
-    monitoring.metrics.contractCallsTotal.inc({ method: methodName, contract: contractName });
-    
-    // Check if contract exists
-    if (!contracts[contractName]) {
-        throw new Error(`Contract ${contractName} not found or not initialized`);
-    }
-    
-    let attempts = 0;
-    const maxAttempts = 3;
-    
-    while (attempts < maxAttempts) {
-        try {
-            // Ensure connection is active
-            if (!provider || !contracts[contractName]) {
-                await initializeConnection();
-            }
-            
-            // Execute the transaction
-            const tx = await contracts[contractName][methodName](...args);
-            
-            // Wait for transaction to be mined with a timeout
-            const receipt = await tx.wait(2); // Wait with 2 confirmations
-            
-            logger.logInfo(`✅ Transaction successful: Contract=${contractName}, Method=${methodName}, Hash=${tx.hash}`);
-            return { success: true, hash: tx.hash, receipt };
-        } catch (error) {
-            attempts++;
-            
-            // Check if it's a network issue
-            if (error.code === 'NETWORK_ERROR' || error.code === 'TIMEOUT' || 
-                error.message.includes('network') || error.message.includes('timeout')) {
-                logger.logError(`❌ Network error in ${contractName}.${methodName}, attempt ${attempts}/${maxAttempts}: ${error.message}`);
-                await new Promise(resolve => setTimeout(resolve, 2000 * attempts)); // Increasing backoff
-                await initializeConnection(1); // Try to reconnect
-            } 
-            // Check if it's a nonce error
-            else if (error.message.includes('nonce') || error.message.includes('replacement')) {
-                logger.logError(`❌ Nonce error in ${contractName}.${methodName}, attempt ${attempts}/${maxAttempts}: ${error.message}`);
-                
-                // Reset the connection to get a fresh nonce
-                await initializeConnection(1);
-            } 
-            // If we've tried maximum attempts or it's a different error, throw it
-            else if (attempts >= maxAttempts) {
-                logger.logError(`❌ Transaction failed after ${maxAttempts} attempts: ${error.message}`);
-                throw error;
-            } else {
-                logger.logError(`❌ Transaction error in ${contractName}.${methodName}, attempt ${attempts}/${maxAttempts}: ${error.message}`);
-                await new Promise(resolve => setTimeout(resolve, 1000)); // Wait before retry
-            }
+    try {
+        if (!contracts[contractName]) {
+            throw new Error(`Contract ${contractName} not found or not initialized`);
         }
+
+        // Check if the last argument is a transaction options object
+        const hasOptions = args.length > 0 && 
+                          typeof args[args.length - 1] === 'object' && 
+                          (args[args.length - 1].value !== undefined || 
+                           args[args.length - 1].gasLimit !== undefined);
+
+        // Separate options from regular arguments if present
+        const options = hasOptions ? args.pop() : {};
+        
+        logger.logInfo(`Executing ${contractName}.${methodName} with args:`, args, 'options:', options);
+
+        // Execute the transaction with proper options
+        const tx = await contracts[contractName][methodName](...args, options);
+        logger.logInfo(`✅ Transaction submitted: Contract=${contractName}, Method=${methodName}, Hash=${tx.hash}`);
+        
+        // Return transaction info immediately
+        return {
+            success: true,
+            hash: tx.hash,
+            wait: async (confirmations = 1) => {
+                const receipt = await tx.wait(confirmations);
+                return receipt;
+            }
+        };
+    } catch (error) {
+        logger.logError(`❌ Transaction failed: Contract=${contractName}, Method=${methodName}, Error=${error.message}`);
+        throw error;
     }
-    
-    throw new Error(`Failed to execute ${contractName}.${methodName} after ${maxAttempts} attempts`);
 };
 
 // Call view function (no transaction)
@@ -184,71 +184,67 @@ const callViewFunction = async (contractName, methodName, ...args) => {
 };
 
 // Function to add an aid record
-const addAidRecord = async (recipient, aidType, amount) => {
-    // Try using AidContract first, fallback to AidDistribution
-    const contractName = contracts.AidContract ? 'AidContract' : 'AidDistribution';
-    
-    logger.logInfo(`Using contract: ${contractName} for addAidRecord`);
-    logger.logInfo(`Contract addresses: AidContract=${contracts.AidContract?.target}, AidDistribution=${contracts.AidDistribution?.target}`);
-    
-    if (contractName === 'AidContract') {
-        logger.logInfo(`Calling AidContract.addAidRecord with params: recipient=${recipient}, aidType=${aidType}, amount=${amount}`);
-        return executeTransaction('AidContract', 'addAidRecord', recipient, aidType, amount);
-    } else {
-        // AidDistribution contract uses createAidRecord with different parameter order (description, amount, recipient)
-        logger.logInfo(`Calling AidDistribution.createAidRecord with params: description=${aidType}, amount=${amount}, recipient=${recipient}`);
-        return executeTransaction('AidDistribution', 'createAidRecord', aidType, amount, recipient);
+const addAidRecord = async (recipient, aidType, amount, paymentMethod = "ETH", paymentDetails = "", options = {}) => {
+    try {
+        logger.logInfo(`Creating aid record with AidDistribution: description=${aidType}, amount=${amount}, recipient=${recipient}`);
+        return executeTransaction(
+            'AidDistribution', 
+            'createAidRecord',
+            aidType, // description
+            amount,  // amount 
+            recipient, // recipient address
+            { 
+                ...options, 
+                gasLimit: options.gasLimit || 1000000,  // Increased gas limit
+                gasPrice: options.gasPrice || undefined
+            }
+        );
+    } catch (error) {
+        logger.logError(`Error in addAidRecord: ${error.message}`);
+        throw error;
     }
 };
 
 // Function to update aid status
 const updateAidStatus = async (id, status) => {
-    // Try using AidContract first, fallback to AidDistribution
-    const contractName = contracts.AidContract ? 'AidContract' : 'AidDistribution';
-    
-    if (contractName === 'AidContract') {
-        return executeTransaction('AidContract', 'updateAidStatus', id, status);
-    } else {
-        // Check if this is a distribution status update
-        if (status.toLowerCase() === 'distributed') {
+    try {
+        logger.logInfo(`Updating aid status: ID=${id}, New Status=${status}`);
+        
+        // For AidDistribution, only support marking as distributed
+        if (status.toLowerCase() === 'distributed' || status.toLowerCase() === 'delivered' || status.toLowerCase() === 'verified') {
+            logger.logInfo('Marking aid as distributed in AidDistribution contract');
             return executeTransaction('AidDistribution', 'distributeAid', id);
         } else {
-            throw new Error('AidDistribution contract only supports marking records as distributed');
+            // Track intermediate states off-chain
+            logger.logInfo(`Tracking status "${status}" off-chain`);
+            await storeBlockchainEvent({
+                txHash: null,
+                type: 'AidStatusUpdated',
+                status: 'CONFIRMED',
+                data: { id, status, isOffChain: true }
+            });
+            return { hash: null, status: 'pending' };
         }
+    } catch (error) {
+        logger.logError(`Error updating aid status: ${error.message}`);
+        throw error;
     }
 };
 
 // Function to query a specific aid record by ID
 const queryAidRecord = async (id) => {
     try {
-        // Try using AidContract first, fallback to AidDistribution
-        const contractName = contracts.AidContract ? 'AidContract' : 'AidDistribution';
+        const record = await callViewFunction('AidDistribution', 'getAidRecord', id);
         
-        if (contractName === 'AidContract') {
-            const record = await callViewFunction('AidContract', 'getAidRecord', id);
-            
-            return {
-                id: Number(record[0]),
-                recipient: record[1],
-                aidType: record[2],
-                amount: Number(record[3]),
-                status: record[4],
-                addedBy: record[5],
-                timestamp: Number(record[6]) * 1000
-            };
-        } else {
-            const record = await callViewFunction('AidDistribution', 'getAidRecord', id);
-            
-            return {
-                id: Number(record.id),
-                recipient: record.recipient,
-                aidType: "Aid Distribution", // Default value
-                amount: Number(record.amount),
-                status: record.distributed ? "Distributed" : "Pending",
-                addedBy: "0x0", // Not available in AidDistribution
-                timestamp: Date.now() // Not available in AidDistribution
-            };
-        }
+        return {
+            id: Number(record.id),
+            recipient: record.recipient,
+            aidType: "Aid Distribution", // Default value
+            amount: Number(record.amount),
+            status: record.distributed ? "Distributed" : "Pending",
+            addedBy: "0x0", // Not available in AidDistribution
+            timestamp: Date.now() // Not available in AidDistribution
+        };
     } catch (error) {
         logger.logError(`❌ Error fetching aid record [ID: ${id}]: ${error.message}`);
         
@@ -264,49 +260,44 @@ const queryAidRecord = async (id) => {
 // Function to get all aid records
 const getAllAidRecords = async () => {
     try {
-        // Try using AidContract first, fallback to AidDistribution
-        const contractName = contracts.AidContract ? 'AidContract' : 'AidDistribution';
-        
-        if (contractName === 'AidContract') {
-            const records = await callViewFunction('AidContract', 'getAllAidRecords');
-            
-            return records.map(record => ({
-                id: Number(record.id),
-                recipient: record.recipient,
-                aidType: record.aidType,
-                amount: Number(record.amount),
-                status: record.status,
-                addedBy: record.addedBy,
-                timestamp: Number(record.timestamp) * 1000
-            }));
-        } else {
-            // AidDistribution doesn't have a getAllAidRecords method
-            // We need to manually query records by ID
-            const nextId = await callViewFunction('AidDistribution', 'nextId');
-            const records = [];
-            
-            for (let i = 0; i < nextId; i++) {
-                try {
-                    const record = await callViewFunction('AidDistribution', 'getAidRecord', i);
-                    records.push({
-                        id: Number(record.id),
-                        recipient: record.recipient,
-                        aidType: "Aid Distribution", // Default value
-                        amount: Number(record.amount),
-                        status: record.distributed ? "Distributed" : "Pending",
-                        addedBy: "0x0", // Not available in AidDistribution
-                        timestamp: Date.now() // Not available in AidDistribution
-                    });
-                } catch (error) {
-                    // Skip non-existent records
-                    continue;
-                }
-            }
-            
-            return records;
+        console.log('Starting getAllAidRecords...');
+        const contract = contracts.AidDistribution;
+        if (!contract) {
+            console.error('AidDistribution contract not found in contracts object');
+            throw new Error('Contract AidDistribution not found or not initialized.');
         }
+        console.log('Contract found, getting nextId...');
+        
+        const nextId = await contract.nextId();
+        console.log('Next ID:', nextId.toString());
+        
+        const records = [];
+        for (let i = 0; i < nextId; i++) {
+            try {
+                console.log(`Fetching record ${i}...`);
+                const record = await contract.aidRecords(i);
+                console.log('Raw record:', record);
+                
+                records.push({
+                    id: i,
+                    recipient: record.recipient,
+                    aidType: record.description,
+                    amount: record.amount.toString(),
+                    addedBy: "0x0", // Not available in AidDistribution
+                    timestamp: record.timestamp ? record.timestamp.toString() : Math.floor(Date.now() / 1000).toString(),
+                    status: record.distributed ? "Distributed" : "Pending"
+                });
+                console.log('Processed record:', records[records.length - 1]);
+            } catch (error) {
+                console.error(`Error fetching record ${i}:`, error);
+                continue;
+            }
+        }
+        
+        console.log('Total records found:', records.length);
+        return records;
     } catch (error) {
-        logger.logError(`❌ Error fetching all aid records: ${error.message}`);
+        console.error('Error in getAllAidRecords:', error);
         throw error;
     }
 };
@@ -473,28 +464,43 @@ const removeBlockchainEventListeners = () => {
     logger.logInfo("✅ Stopped listening for blockchain events");
 };
 
-// Function to verify a transaction hash
+// Function to verify transaction confirmation
 const verifyTransaction = async (txHash) => {
     try {
-        if (!provider) {
-            await initializeConnection();
-        }
+        await initializeConnection();
         
-        const tx = await provider.getTransaction(txHash);
-        if (!tx) {
-            return { verified: false, reason: 'Transaction not found' };
+        // Try to get transaction receipt
+        const receipt = await contracts.provider.getTransactionReceipt(txHash);
+        if (!receipt) {
+            return {
+                verified: false,
+                status: 'PENDING',
+                message: 'Transaction is still pending'
+            };
         }
+
+        // If we have a receipt, check its status
+        const confirmed = receipt.status === 1;
+        const blockNumber = receipt.blockNumber;
         
-        const receipt = await provider.getTransactionReceipt(txHash);
-        return { 
-            verified: receipt && receipt.status === 1,
-            receipt,
-            blockNumber: receipt ? receipt.blockNumber : null,
-            blockTimestamp: receipt ? (await provider.getBlock(receipt.blockNumber)).timestamp * 1000 : null
+        // Get current block number to calculate confirmations
+        const currentBlock = await contracts.provider.getBlockNumber();
+        const confirmations = currentBlock - blockNumber + 1;
+        
+        return {
+            verified: confirmed,
+            status: confirmed ? 'CONFIRMED' : 'FAILED',
+            confirmations,
+            blockNumber,
+            gasUsed: receipt.gasUsed.toString(),
+            message: confirmed 
+                ? `Transaction confirmed with ${confirmations} confirmation(s)` 
+                : 'Transaction failed',
+            receipt
         };
     } catch (error) {
-        logger.logError(`❌ Error verifying transaction ${txHash}: ${error.message}`);
-        return { verified: false, reason: error.message };
+        logger.logError(`Error verifying transaction ${txHash}: ${error.message}`);
+        throw error;
     }
 };
 
@@ -529,7 +535,7 @@ const checkBlockchainHealth = async () => {
             blockNumber,
             chainId: chainId.toString(),
             contracts: contractStatuses,
-            providerUrl: BLOCKCHAIN_RPC_URL
+            providerUrl: rpcUrl
         };
     } catch (error) {
         logger.logError(`❌ Blockchain health check failed: ${error.message}`);
@@ -540,7 +546,43 @@ const checkBlockchainHealth = async () => {
     }
 };
 
-// Helper function to get contract instance
+// Function to handle donation transactions
+const processDonation = async (amount, donorName = "") => {
+    try {
+        // Amount validation and conversion
+        let amountInWei;
+        try {
+            // Always treat input as ETH amount and convert to Wei
+            amountInWei = ethers.parseEther(amount.toString());
+        } catch (error) {
+            throw new Error(`Invalid amount format: ${error.message}`);
+        }
+
+        // Contract requires minimum 0.01 ETH (10000000000000000 Wei)
+        const minAmount = ethers.parseEther("0.01");
+        if (amountInWei < minAmount) {
+            throw new Error(`Minimum donation amount is 0.01 ETH`);
+        }
+
+        // Execute donation transaction
+        logger.logInfo(`Executing donation transaction: amount=${amountInWei.toString()} wei, name=${donorName}`);
+
+        // Use AidDistribution contract instead
+        return executeTransaction(
+            'AidDistribution',
+            'donate',
+            {
+                value: amountInWei,
+                gasLimit: 300000
+            }
+        );
+    } catch (error) {
+        logger.logError(`Error processing donation: ${error.message}`);
+        throw error;
+    }
+};
+
+// Function to get a contract instance
 const getContract = (contractName) => {
     if (!contracts[contractName]) {
         throw new Error(`Contract ${contractName} not found or not initialized`);
@@ -548,7 +590,6 @@ const getContract = (contractName) => {
     return contracts[contractName];
 };
 
-// Export functions
 module.exports = { 
     getContract,
     addAidRecord, 
@@ -558,5 +599,7 @@ module.exports = {
     getBlockchainEvents, 
     removeBlockchainEventListeners,
     verifyTransaction,
-    checkBlockchainHealth
+    checkBlockchainHealth,
+    processDonation,
+    initializeConnection
 };

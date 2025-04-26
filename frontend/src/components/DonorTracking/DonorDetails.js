@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { donorAPI } from "../../api/api" // Import the donor API
+import { donorAPI } from "../../api/api"
+import { formatEther } from "ethers"
 
 const DonorDetails = ({ onDonationClick }) => {
   const [donations, setDonations] = useState([])
@@ -12,8 +13,14 @@ const DonorDetails = ({ onDonationClick }) => {
     const fetchDonations = async () => {
       try {
         setLoading(true)
-        const response = await donorAPI.getDonations() // Use the API to fetch donations
-        setDonations(response.data)
+        const response = await donorAPI.getDonations()
+        if (response.data) {
+          const formattedDonations = response.data.map(donation => ({
+            ...donation,
+            amount: Number(formatEther(donation.amount)).toFixed(4)
+          }))
+          setDonations(formattedDonations)
+        }
         setError(null)
       } catch (err) {
         console.error("Error fetching donations:", err)
@@ -45,7 +52,7 @@ const DonorDetails = ({ onDonationClick }) => {
                 <strong>{donation.cause || "Donation"}</strong>
               </div>
               <div>
-                Amount: <span className="amount">${donation.amount}</span>
+                Amount: <span className="amount">{donation.amount} ETH</span>
               </div>
               <div>
                 Status: <span className="status">{donation.status || "Pending"}</span>

@@ -8,6 +8,7 @@ contract AidDistribution {
         uint amount;
         address recipient;
         bool distributed;
+        uint256 timestamp;
     }
 
     mapping(uint => AidRecord) public aidRecords;
@@ -20,7 +21,7 @@ contract AidDistribution {
 
     // ✅ Function to create an aid record
     function createAidRecord(string memory description, uint amount, address recipient) public {
-        aidRecords[nextId] = AidRecord(nextId, description, amount, recipient, false);
+        aidRecords[nextId] = AidRecord(nextId, description, amount, recipient, false, block.timestamp);
         nextId++;
     }
 

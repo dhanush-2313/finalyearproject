@@ -11,4 +11,7 @@ router.get('/view-donations', donorController.viewDonations);
 router.post('/make-donation', donorController.makeDonation);
 router.get('/track-donation/:id', donorController.trackDonation);
 
+// Generate and store donation receipt
+router.post('/receipt', authMiddleware, donorController.generateDonationReceipt);
+
 module.exports = router;

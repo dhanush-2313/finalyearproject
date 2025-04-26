@@ -1,6 +1,30 @@
 require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();  // ✅ Load environment variables
 
+// Add custom task for viewing transactions
+task("view-tx", "View details of a transaction on the blockchain")
+  .addParam("tx", "The transaction hash to view")
+  .setAction(async (taskArgs, hre) => {
+    const { spawn } = require('child_process');
+    const process = spawn('npx', [
+      'hardhat',
+      'run',
+      'scripts/transaction-viewer-fixed.js',
+      '--network',
+      hre.network.name
+    ], {
+      env: {
+        ...process.env,
+        TX_HASH: taskArgs.tx
+      },
+      stdio: 'inherit'
+    });
+    
+    await new Promise((resolve) => {
+      process.on('close', resolve);
+    });
+  });
+
 module.exports = {
   solidity: "0.8.28",
   networks: {

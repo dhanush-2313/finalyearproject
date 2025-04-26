@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useContext } from "react"
+import React, { useState, useContext } from "react"
 import { useNavigate, Link } from "react-router-dom"
 import { AuthContext } from "../auth/authContext"
 import "./Signup.css"

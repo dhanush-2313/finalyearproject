@@ -32,4 +32,24 @@ const evaluateTransaction = async (transactionName, ...args) => {
   }
 };
 
-module.exports = { submitTransaction, evaluateTransaction };
+const generateDonationReceipt = async (donationData) => {
+  const receipt = {
+    receiptNumber: `DON-${Date.now()}`,
+    timestamp: new Date().toISOString(),
+    donor: {
+      name: donationData.donorName,
+      walletAddress: donationData.donorAddress
+    },
+    donation: {
+      amount: donationData.amount,
+      currency: 'ETH',
+      cause: donationData.cause || 'General Aid'
+    },
+    transactionHash: donationData.transactionHash,
+    status: 'Confirmed'
+  };
+
+  return receipt;
+};
+
+module.exports = { submitTransaction, evaluateTransaction, generateDonationReceipt };

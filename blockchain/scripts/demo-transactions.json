@@ -1,8 +1,8 @@
 {
-  "register_refugee": "0x19097b3437c0035ae4cf78ef9d13e2ed59978432e1d60ee3c4a265b051abf79f",
-  "make_donation": "0xef22817da9e6919fa9d4d5488e93862a84d8834fb546296de8609d0a4cf71e20",
-  "create_aid": "0x856362fd60b1914a6a3779825be90a910e0fa49cfc2e480f51062fa407199da9",
-  "assign_task": "0xf6adbb740cbdbe800e3e2b970f8eebbc45379ecf3e28608fa9bf0d0a8ac507df",
-  "complete_task": "0xe8463ae1c555fde2206c61d818f215fdf7fba50fb63a9ebe2d6e171d20f69079",
-  "distribute_aid": "0x40f415f110bd5fcfdc0279769f6fe7cae20f4c2b4302f7bd48c8401e452207a4"
+  "register_refugee": "0xda8995abe8d6325b114f0b40fbdd842216fff04ef3da2424a435cca6fba35288",
+  "make_donation": "0x1e453daf56e27af06445eeb5fd2ff89d25440c5ba02184087002df21ed61dc6b",
+  "create_aid": "0x70c35b5675f9380429731db9da8afbfec5657de4477ee04c9b69e7a1b759001b",
+  "assign_task": "0xa39128333ac1fb0d88a2aad46c15c1f1ec29d17f4fd44a685ad779ff6d6e256c",
+  "complete_task": "0x1f20ab898815b3face094f286e8d5da4474b60603b79b41a5cb3a78b952ef61b",
+  "distribute_aid": "0x608c17ac397d40801f31e95ec0337bac28a032583564bd34e5e2a583622e5629"
 }

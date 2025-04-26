@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { getContract } from "../../utils/contract"
+import { formatEther } from "ethers"
 import "./Home.css" // Import the corresponding CSS file
 
 const Home = () => {
@@ -14,7 +15,9 @@ const Home = () => {
         if (!contract) return
 
         const balance = await contract.getTotalDonations()
-        setTotalDonations(balance.toString())
+        // Format to 4 decimal places
+        const formatted = Number(formatEther(balance)).toFixed(4)
+        setTotalDonations(formatted)
       } catch (error) {
         console.error("Error fetching donations:", error)
       }

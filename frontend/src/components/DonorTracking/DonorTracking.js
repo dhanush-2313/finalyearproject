@@ -10,7 +10,7 @@ function DonorTracking() {
   const [error, setError] = useState("")
   const [loading, setLoading] = useState(false)
 
-  const CONTRACT_ADDRESS = process.env.REACT_APP_AID_DISTRIBUTION_CONTRACT // ✅ Fixed environment variable
+  const CONTRACT_ADDRESS = process.env.REACT_APP_AID_DISTRIBUTION_CONTRACT
 
   const getDonorInfo = async () => {
     if (!window.ethereum) {
@@ -32,7 +32,9 @@ function DonorTracking() {
         throw new Error("❌ Donor not found or has not donated.")
       }
 
-      setDonatedAmount(formatEther(amount)) // Convert wei to ETH
+      // Format ETH amount to 4 decimal places
+      const formattedAmount = Number(formatEther(amount)).toFixed(4)
+      setDonatedAmount(formattedAmount)
     } catch (err) {
       console.error("Error fetching donor details:", err)
       setError(err.message || "❌ Failed to fetch donor details.")

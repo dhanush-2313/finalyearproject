@@ -6,6 +6,7 @@ export const getLatestBlock = async () => {
   try {
     // First try to get block from the backend API
     try {
+      // Use the api client that's already correctly configured with base URL
       const response = await api.get('/blockchain/latest-block');
       if (response.data) {
         return {
@@ -172,10 +173,49 @@ export const verifyTransaction = async (txHash) => {
   }
 }
 
+// 📌 Update aid status through API or smart contract
+export const updateAidStatus = async (id, status) => {
+  try {
+    // Try API first
+    try {
+      const response = await api.put(`/blockchain/aid/${id}`, { status });
+      if (response.data && response.data.success) {
+        return response;
+      }
+    } catch (apiError) {
+      console.warn("Failed to update status via API, falling back to direct contract:", apiError);
+      if (apiError.response?.data?.error) {
+        throw new Error(apiError.response.data.error);
+      }
+    }
+
+    // Fallback to direct contract interaction
+    const contract = getContract();
+    if (!contract) {
+      throw new Error("Smart contract instance not found.");
+    }
+
+    const tx = await contract.updateAidStatus(id, status, { gasLimit: 100000 });
+    await tx.wait();
+
+    return {
+      data: {
+        success: true,
+        txHash: tx.hash,
+        message: `Aid status updated to ${status} successfully via direct contract interaction`
+      }
+    };
+  } catch (error) {
+    console.error("❌ Error updating aid status:", error.message || error);
+    throw error;
+  }
+}
+
 export default {
   getLatestBlock,
   getLatestAidRecords,
   addAidRecord,
-  verifyTransaction
+  verifyTransaction,
+  updateAidStatus
 }
 

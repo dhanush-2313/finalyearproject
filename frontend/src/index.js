@@ -1,20 +1,30 @@
-import React from "react"
-import ReactDOM from "react-dom/client" // React 18 requires this import
-import App from "./App.js" // Ensure correct path
-import ErrorBoundary from "./components/ErrorBoundary"
+import './polyfills';
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ChakraProvider } from '@chakra-ui/react';
+import { BrowserRouter } from 'react-router-dom';
+import { AuthProvider } from './auth/authContext';
+import App from './App';
+import ErrorBoundary from './components/ErrorBoundary';
 
-const rootElement = document.getElementById("root")
-
-if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement)
-  root.render(
-    <React.StrictMode>
-      <ErrorBoundary>
-        <App />
-      </ErrorBoundary>
-    </React.StrictMode>,
-  )
-} else {
-  console.error("❌ Root element not found. Check if 'index.html' contains <div id='root'></div>.")
+const container = document.getElementById('root');
+if (!container) {
+  throw new Error('Root element not found');
 }
+
+const root = ReactDOM.createRoot(container);
+
+root.render(
+  <React.StrictMode>
+    <ErrorBoundary>
+      <ChakraProvider>
+        <AuthProvider>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </AuthProvider>
+      </ChakraProvider>
+    </ErrorBoundary>
+  </React.StrictMode>
+);
 

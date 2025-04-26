@@ -1,0 +1,37 @@
+.donation-confirmation {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.donation-confirmation h2 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.confirmation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.blockchain-details, .receipt-section {
+  background-color: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.blockchain-details h3, .receipt-section h3 {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.receipt-section p {
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}

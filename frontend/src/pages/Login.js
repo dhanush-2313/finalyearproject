@@ -1,80 +1,202 @@
 "use client"
 
-import { useState, useContext } from "react"
-import { useNavigate, Link } from "react-router-dom"
-import { AuthContext } from "../auth/authContext"
-import "./Login.css"
+import React, { useState, useContext } from 'react';
+import {
+  Box,
+  Button,
+  Container,
+  FormControl,
+  FormLabel,
+  Heading,
+  Input,
+  Stack,
+  Text,
+  useColorModeValue,
+  Alert,
+  AlertIcon,
+  InputGroup,
+  InputRightElement,
+  IconButton,
+  Link,
+} from '@chakra-ui/react';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { Link as RouterLink, useNavigate } from 'react-router-dom';
+import { AuthContext } from '../auth/authContext';
+import MFAVerification from '../components/MFAVerification/MFAVerification';
+import { verifyMFA } from '../api/mfa';
 
 const Login = () => {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const [formError, setFormError] = useState("")
-  const { login, loading, error } = useContext(AuthContext)
-  const navigate = useNavigate()
+  const [formData, setFormData] = useState({
+    email: '',
+    password: '',
+  });
+  const [showPassword, setShowPassword] = useState(false);
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+  const [requireMFA, setRequireMFA] = useState(false);
+  const [userId, setUserId] = useState(null);
+  
+  const { login, error: authError } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const handleLogin = async (e) => {
-    e.preventDefault()
-    setFormError("")
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
 
-    // Form validation
-    if (!email || !password) {
-      setFormError("Email and password are required")
-      return
-    }
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    setIsLoading(true);
 
     try {
-      await login(email, password)
-      navigate("/dashboard")
+      const result = await login(formData);
+      
+      if (result.requireMFA) {
+        // Handle MFA requirement
+        setRequireMFA(true);
+        setUserId(result.userId);
+        setIsLoading(false);
+        return;
+      }
+      
+      if (result.success) {
+        navigate('/dashboard');
+      } else {
+        setError(result.error || 'Login failed. Please try again.');
+      }
     } catch (err) {
-      setFormError(err.response?.data?.error || "Login failed. Please check your credentials.")
+      setError(err.message || 'Login failed. Please try again.');
+    } finally {
+      setIsLoading(false);
     }
+  };
+
+  const handleMFASuccess = async () => {
+    navigate('/dashboard');
+  };
+
+  const handleMFACancel = () => {
+    setRequireMFA(false);
+    setUserId(null);
+  };
+
+  // Show MFA verification if required
+  if (requireMFA) {
+    return (
+      <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
+        <MFAVerification 
+          userId={userId} 
+          onSuccess={handleMFASuccess} 
+          onCancel={handleMFACancel} 
+        />
+      </Container>
+    );
   }
 
   return (
-    <div className="login-container">
-      <div className="login-card">
-        <h2>Login to AidForge</h2>
+    <Container maxW="lg" py={{ base: '12', md: '24' }} px={{ base: '0', sm: '8' }}>
+      <Stack spacing="8">
+        <Stack spacing="6" textAlign="center">
+          <Heading size={{ base: 'xl', md: '2xl' }}>Welcome back</Heading>
+          <Text color={useColorModeValue('gray.600', 'gray.400')}>
+            Enter your email and password to access your account
+          </Text>
+        </Stack>
+        <Box
+          py={{ base: '0', sm: '8' }}
+          px={{ base: '4', sm: '10' }}
+          bg={useColorModeValue('white', 'gray.800')}
+          boxShadow={{ base: 'none', sm: 'md' }}
+          borderRadius={{ base: 'none', sm: 'xl' }}
+        >
+          <form onSubmit={handleSubmit}>
+            <Stack spacing="6">
+              {(error || authError) && (
+                <Alert status="error" borderRadius="md">
+                  <AlertIcon />
+                  {error || authError}
+                </Alert>
+              )}
+              
+              <Stack spacing="5">
+                <FormControl isRequired>
+                  <FormLabel htmlFor="email">Email</FormLabel>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    autoComplete="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    disabled={isLoading}
+                  />
+                </FormControl>
 
-        {(formError || error) && <div className="error-message">{formError || error}</div>}
+                <FormControl isRequired>
+                  <FormLabel htmlFor="password">Password</FormLabel>
+                  <InputGroup>
+                    <Input
+                      id="password"
+                      name="password"
+                      type={showPassword ? 'text' : 'password'}
+                      autoComplete="current-password"
+                      value={formData.password}
+                      onChange={handleChange}
+                      required
+                      disabled={isLoading}
+                    />
+                    <InputRightElement h="full">
+                      <IconButton
+                        variant="ghost"
+                        onClick={() => setShowPassword(show => !show)}
+                        icon={showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                        aria-label={showPassword ? 'Hide password' : 'Show password'}
+                        disabled={isLoading}
+                      />
+                    </InputRightElement>
+                  </InputGroup>
+                </FormControl>
+              </Stack>
 
-        <form onSubmit={handleLogin}>
-          <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              id="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              disabled={loading}
-            />
-          </div>
+              <Stack spacing="6">
+                <Button
+                  type="submit"
+                  colorScheme="blue"
+                  size="lg"
+                  fontSize="md"
+                  isLoading={isLoading}
+                  loadingText="Signing in..."
+                  disabled={isLoading}
+                >
+                  Sign in
+                </Button>
 
-          <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-              disabled={loading}
-            />
-          </div>
+                <Stack spacing="4" direction="row" align="center" justify="center">
+                  <Text color={useColorModeValue('gray.600', 'gray.400')}>
+                    Don't have an account?
+                  </Text>
+                  <Link
+                    as={RouterLink}
+                    to="/signup"
+                    color={useColorModeValue('blue.500', 'blue.200')}
+                    fontWeight="semibold"
+                    _hover={{ color: useColorModeValue('blue.600', 'blue.300') }}
+                  >
+                    Sign up
+                  </Link>
+                </Stack>
+              </Stack>
+            </Stack>
+          </form>
+        </Box>
+      </Stack>
+    </Container>
+  );
+};
 
-          <button type="submit" disabled={loading}>
-            {loading ? "Logging in..." : "Login"}
-          </button>
-        </form>
-
-        <div className="login-footer">
-          <p>
-            Don't have an account? <Link to="/signup">Sign up</Link>
-          </p>
-        </div>
-      </div>
-    </div>
-  )
-}
-
-export default Login
+export default Login;

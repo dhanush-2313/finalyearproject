@@ -2,9 +2,10 @@
 
 const { ethers } = require("hardhat");
 const fs = require('fs');
+const path = require('path');
 
 // Load contract address
-const contractAddresses = JSON.parse(fs.readFileSync('deployments/contractAddresses.json'));
+const contractAddresses = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'deployments', 'contractAddresses.json')));
 
 async function main() {
     const [deployer] = await ethers.getSigners();

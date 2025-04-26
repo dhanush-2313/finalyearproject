@@ -95,6 +95,26 @@
   background-color: #c82333;
 }
 
+.account-settings-btn {
+  color: white;
+  background-color: #4a5568;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.account-settings-btn:hover {
+  background-color: #2d3748;
+}
+
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

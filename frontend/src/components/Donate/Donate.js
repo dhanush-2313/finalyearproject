@@ -1,11 +1,12 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { getContract } from "../../utils/contract" // Updated import from "web3" to "contract"
+import { getContract } from "../../utils/contract"
+import { formatEther, parseEther } from "ethers"
 import "./Donate.css"
 
 const Donate = () => {
-  const [amount, setAmount] = useState("")
+  const [amount, setAmount] = useState("0.01") // Default to minimum required amount of 0.01 ETH
   const [message, setMessage] = useState("")
   const [balance, setBalance] = useState("0")
 
@@ -20,7 +21,9 @@ const Donate = () => {
         }
 
         const balance = await contract.getTotalDonations()
-        setBalance(balance.toString())
+        // Format balance to 4 decimal places
+        const formatted = Number(formatEther(balance)).toFixed(4)
+        setBalance(formatted)
       } catch (error) {
         console.error("Error fetching balance:", error)
         setMessage("⚠️ Failed to load balance.")
@@ -44,14 +47,16 @@ const Donate = () => {
         return
       }
 
-      const tx = await contract.donate({ value: ethers.parseEther(amount) })
+      const tx = await contract.donate({ value: parseEther(amount) })
       await tx.wait()
 
       setMessage("✅ Donation successful! 🎉")
 
       // Update balance after donation
       const newBalance = await contract.getTotalDonations()
-      setBalance(newBalance.toString())
+      // Format new balance to 4 decimal places
+      const formatted = Number(formatEther(newBalance)).toFixed(4)
+      setBalance(formatted)
     } catch (error) {
       console.error("Error donating:", error)
       setMessage(`❌ Transaction failed: ${error.message || "Unknown error"}`)
@@ -61,7 +66,14 @@ const Donate = () => {
   return (
     <div className="donate-container">
       <h2>Donate to AidForge</h2>
-      <input type="number" placeholder="Amount in ETH" value={amount} onChange={(e) => setAmount(e.target.value)} />
+      <input 
+        type="number" 
+        placeholder="Amount in ETH" 
+        value={amount} 
+        onChange={(e) => setAmount(e.target.value)}
+        step="0.01"
+        min="0.01"
+      />
       <button onClick={handleDonate}>Donate</button>
       <p className={message.includes("✅") ? "message-success" : "message-error"}>{message}</p>
       <p>Total Donations: {balance} ETH</p>

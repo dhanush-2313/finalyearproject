@@ -1,5 +1,5 @@
 const jwt = require("jsonwebtoken")
-const bcrypt = require("bcryptjs")
+const bcrypt = require("bcrypt") // Changed from bcryptjs to bcrypt to match User model
 const User = require("../models/User")
 const { validationResult } = require("express-validator")
 const monitoring = require("../utils/monitoring")
@@ -38,10 +38,7 @@ exports.register = async (req, res) => {
       return res.status(400).json({ error: "Email already in use" })
     }
 
-    // Hash password
-    // const hashedPassword = await bcrypt.hash(password, 10)
-
-    // Create user (isVerified is true by default)
+    // Create user (password will be hashed by the User model's pre-save middleware)
     const user = await User.create({
       name,
       email: normalizedEmail,
@@ -78,31 +75,52 @@ exports.login = async (req, res) => {
   try {
     const { email, password } = req.body
 
+    console.log(`Login attempt for email: ${email}, ${password}`); // Add logging for debugging
+
     if (!email || !password) {
-      return res.status(400).json({ error: "Email and password are required" })
+      return res.status(400).json({ message: "Email and password are required" })
     }
 
     const normalizedEmail = email.toLowerCase()
-    const user = await User.findOne({ email: normalizedEmail,password })
+    const user = await User.findOne({ email: normalizedEmail })
 
     if (!user) {
-      return res.status(401).json({ error: "Invalid credentials" })
+      console.log(`User not found for email: ${normalizedEmail}`);
+      return res.status(401).json({ message: "Invalid credentials" })
     }
 
-    // const isMatch = await bcrypt.compare(password, user.password)
+    console.log(`Found user: ${user.name}, role: ${user.role}`);
 
-    // if (!isMatch) {
-    //   return res.status(401).json({ error: "Invalid credentials" })
-    // }
+    // Use the User model's comparePassword method
+    // const isMatch = await user.comparePassword(password)
+    if(user.password === password) {
+      var isMatch = true
+    }
+
+    console.log(`Password match result: ${isMatch}`);
+
+    if (!isMatch) {
+      return res.status(401).json({ message: "Invalid credentials" })
+    }
+
+    // Check if MFA is enabled for this user
+    if (user.mfaEnabled) {
+      return res.status(200).json({
+        requireMFA: true,
+        userId: user.id,
+        message: "MFA verification required",
+      })
+    }
 
     // Update active users count
     monitoring.metrics.activeUsers.inc()
 
     // Generate token
     const token = generateToken(user)
-
-    // Return user data and token
-    res.json({
+    
+    // Store token in invalidated tokens list (if we implement token tracking)
+    
+    res.status(200).json({
       message: "Login successful",
       token,
       user: {
@@ -113,16 +131,34 @@ exports.login = async (req, res) => {
       },
     })
   } catch (error) {
-    console.error(error)
-    res.status(500).json({ error: "Error logging in" })
+    console.error("Login error:", error)
+    res.status(500).json({ error: "Error during login" })
   }
 }
 
-// Logout User (Client-side only - just for API completeness)
-exports.logout = (req, res) => {
-  // Decrement active users count
-  monitoring.metrics.activeUsers.dec()
-  res.json({ message: "Logged out successfully" })
+// Logout User
+exports.logout = async (req, res) => {
+  try {
+    // Get token from request headers
+    const token = req.headers.authorization?.split(' ')[1]
+    
+    if (!token) {
+      return res.status(400).json({ message: "No token provided" })
+    }
+    
+    // In a production environment, you would add the token to a blacklist
+    // For example, in Redis or a database table of invalidated tokens
+    // For now, we'll just acknowledge the logout
+    
+    // Decrement active users count in monitoring
+    monitoring.metrics.activeUsers.dec()
+    
+    // Send successful response
+    res.status(200).json({ message: "Logged out successfully" })
+  } catch (error) {
+    console.error("Logout error:", error)
+    res.status(500).json({ error: "Error during logout" })
+  }
 }
 
 // Get current user

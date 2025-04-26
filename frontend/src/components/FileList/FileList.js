@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { getFileFromIPFS } from '../../api/ipfs';
 import { IPFS_GATEWAY_URL } from '../../utils/constants';
 import './FileList.css';

@@ -6,7 +6,7 @@ const API_URL = process.env.REACT_APP_API_URL || "http://localhost:4000/api"
 // Create axios instance
 const api = axios.create({
   baseURL: API_URL,
-  timeout: 10000,
+  timeout: 120000, // Increased timeout to 2 minutes for blockchain transactions
   headers: {
     "Content-Type": "application/json",
   }
@@ -19,6 +19,12 @@ api.interceptors.request.use(
     if (token) {
       config.headers["Authorization"] = `Bearer ${token}`
     }
+    
+    // Add retry configuration for blockchain endpoints
+    if (config.url.includes('/blockchain/')) {
+      config.retry = 3;
+      config.retryDelay = 1000;
+    }
     return config
   },
   (error) => {
@@ -26,11 +32,20 @@ api.interceptors.request.use(
   },
 )
 
-// Add response interceptor to handle token expiration
+// Add response interceptor to handle token expiration and retries
 api.interceptors.response.use(
   (response) => response,
-  (error) => {
-    if (error.response && error.response.status === 401) {
+  async (error) => {
+    const { config, response } = error;
+    
+    // If the error is due to timeout and we haven't retried yet
+    if (error.code === 'ECONNABORTED' && config.retry) {
+      config.retry -= 1;
+      await new Promise(resolve => setTimeout(resolve, config.retryDelay));
+      return api(config);
+    }
+    
+    if (response && response.status === 401) {
       // Token expired or invalid
       localStorage.removeItem("token")
       window.location.href = "/login"
@@ -43,16 +58,28 @@ api.interceptors.response.use(
 export const authAPI = {
   register: (userData) => api.post("/auth/register", userData),
   login: (credentials) => api.post("/auth/login", credentials),
-  logout: () => api.post("/auth/logout"),
+  logout: () => {
+    localStorage.removeItem("token");
+    return api.post("/auth/logout").finally(() => {
+      window.location.href = "/login";
+    });
+  },
   getCurrentUser: () => api.get("/auth/me"),
 }
 
 // Blockchain API
 export const blockchainAPI = {
   getLatestBlock: () => api.get("/blockchain/latest-block"),
-  getAidRecords: () => api.get("/blockchain/aid-records"),
+  getAidRecords: () => api.get("/blockchain/aid"),
   addAidRecord: (data) => api.post("/blockchain/aid", data),
   updateAidStatus: (id, status) => api.put(`/blockchain/aid/${id}`, { status }),
+  // New address resolution methods
+  resolveAddress: (address) => api.get(`/blockchain/resolve/address/${address}`),
+  resolveMultipleAddresses: (addresses) => api.post("/blockchain/resolve/addresses", { addresses }),
+  getEnhancedAidRecords: () => api.get("/blockchain/enhanced-aid-records"),
+  // Added functions for Admin dashboard
+  getRecentEvents: () => api.get("/blockchain/events/recent"),
+  getAidStats: () => api.get("/blockchain/stats/aid"),
 }
 
 // Donor API
@@ -82,6 +109,15 @@ export const adminAPI = {
   createFieldWorker: (data) => api.post("/admin/create-fieldworker", data),
   deleteFieldWorker: (id) => api.delete(`/admin/delete-fieldworker/${id}`),
   getActivityLogs: () => api.get("/admin/logs"),
+  // Added functions for Admin dashboard
+  getUserStats: () => api.get("/admin/stats/users"),
+  getUsers: () => api.get("/admin/users"),
+  getDonationStats: () => api.get("/admin/stats/donations"),
+  getAllDonations: () => api.get("/admin/donations"),
+  getLogs: () => api.get("/admin/activity-logs"),
+  createUser: (userData) => api.post("/admin/users", userData),
+  updateUser: (id, userData) => api.put(`/admin/users/${id}`, userData),
+  deleteUser: (id) => api.delete(`/admin/users/${id}`),
 }
 
 export default api

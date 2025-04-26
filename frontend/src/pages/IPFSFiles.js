@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useEffect, useContext, useCallback } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../auth/authContext';
 import { API_URL, USER_ROLES } from '../utils/constants';
@@ -14,8 +14,8 @@ const IPFSFiles = () => {
   const [verifySuccess, setVerifySuccess] = useState(false);
   const [filter, setFilter] = useState('all'); // 'all', 'verified', 'unverified'
 
-  // Get files from API
-  const fetchFiles = async () => {
+  // Wrap fetchFiles in useCallback
+  const fetchFiles = useCallback(async () => {
     setLoading(true);
     try {
       // Different queries based on user role
@@ -39,12 +39,12 @@ const IPFSFiles = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [user?.id, user?.role]);
 
   // Load files on component mount
   useEffect(() => {
     fetchFiles();
-  }, [user]);
+  }, [fetchFiles]);
 
   // Handle successful file upload
   const handleUploadComplete = (result) => {

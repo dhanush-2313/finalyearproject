@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { uploadFileToIPFS } from '../../api/ipfs';
 import { MAX_FILE_SIZE, ACCEPTED_FILE_TYPES } from '../../utils/constants';
 import './FileUpload.css';

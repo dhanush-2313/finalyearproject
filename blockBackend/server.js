@@ -19,6 +19,7 @@ const fieldWorkerRoutes = require('./routes/fieldWorkerRoutes');
 const monitoringRoutes = require('./routes/monitoringRoutes');
 const ipfsRoutes = require('./routes/ipfsRoutes');
 const apiRoutes = require('./routes/api');
+const mfaRoutes = require('./routes/mfaRoutes');
 
 const app = express();
 
@@ -26,8 +27,34 @@ const app = express();
 app.use(cors());
 app.use(morgan(process.env.LOG_LEVEL || 'combined'));
 app.use(express.json());
+
+// Increase timeout for blockchain routes
+app.use('/api/blockchain', (req, res, next) => {
+  // Set timeout to 2 minutes for blockchain routes
+  req.setTimeout(120000);
+  res.setTimeout(120000);
+  next();
+});
+
 // Add monitoring middleware
 app.use(monitoring.middleware.requestDuration);
+
+// Add redirect middleware for legacy URLs without /api prefix
+app.use((req, res, next) => {
+  const legacyPaths = ['/donors', '/refugees', '/admin', '/blockchain', '/field-worker', '/auth'];
+  const path = req.path;
+  
+  // Check if the request matches any of our legacy paths
+  const matchedPath = legacyPaths.find(legacyPath => path.startsWith(legacyPath));
+  
+  if (matchedPath) {
+    const newPath = `/api${path}`;
+    logger.logInfo(`Redirecting legacy path ${path} to ${newPath}`);
+    req.url = newPath;
+  }
+  
+  next();
+});
 
 // 🔹 Connect to MongoDB
 mongoose.connect(process.env.MONGO_URI)
@@ -84,6 +111,7 @@ app.use('/api/blockchain', blockchainRoutes);
 app.use('/api/field-worker', fieldWorkerRoutes);
 app.use('/api/monitoring', monitoringRoutes);
 app.use('/api/ipfs', ipfsRoutes);
+app.use('/api/mfa', mfaRoutes);
 
 // 🔹 Catch-all for unknown routes
 app.use((req, res, next) => {

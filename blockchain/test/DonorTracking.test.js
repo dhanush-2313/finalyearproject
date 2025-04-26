@@ -40,4 +40,19 @@ describe("DonorTracking Contract", function () {
         await expect(donorTracking.connect(donor).donate({ value: 0 }))
             .to.be.revertedWith("Donation amount must be greater than zero");
     });
+
+    it("should prevent donations below minimum amount", async function () {
+        await expect(donorTracking.connect(donor).donate({ value: ethers.parseEther("0.009") }))
+            .to.be.revertedWith("Minimum donation amount is 0.01 ETH");
+    });
+
+    it("should prevent donations with empty name", async function () {
+        await expect(donorTracking.connect(donor).donate("", { value: ethers.parseEther("1.0") }))
+            .to.be.revertedWith("Donor name cannot be empty");
+    });
+
+    it("should prevent donations with mismatched amounts", async function () {
+        await expect(donorTracking.connect(donor).donate("John", ethers.parseEther("2.0"), { value: ethers.parseEther("1.0") }))
+            .to.be.revertedWith("Sent ETH amount must match donation amount");
+    });
 });

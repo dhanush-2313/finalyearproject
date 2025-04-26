@@ -3,76 +3,64 @@ const logger = require('./logger');
 
 /**
  * Store a blockchain event in the database
- * @param {Object} eventData - Event data to store
- * @param {string} eventData.txHash - Transaction hash
- * @param {string} eventData.type - Event type
- * @param {string} eventData.status - Event status
- * @param {Object} eventData.data - Event data
- * @param {string} eventData.initiatedBy - User ID who initiated the event
- * @returns {Promise<Object>} Stored event
  */
-async function storeBlockchainEvent(eventData) {
+exports.storeBlockchainEvent = async (eventData) => {
     try {
-        // Validate required fields
-        if (!eventData.type || !eventData.data) {
-            throw new Error('Event type and data are required');
-        }
-
-        // Create and save event
         const event = new BlockchainEvent(eventData);
         await event.save();
-        
         logger.logInfo(`Blockchain event stored: ${eventData.type}, Hash: ${eventData.txHash || 'N/A'}`);
         return event;
     } catch (error) {
         logger.logError(`Failed to store blockchain event: ${error.message}`);
-        // Don't throw - this is a non-critical operation
-        return null;
+        throw error;
     }
-}
+};
 
 /**
- * Update a blockchain event status
- * @param {string} txHash - Transaction hash to update
- * @param {string} status - New status
- * @param {Object} additionalData - Additional data to update
- * @returns {Promise<Object>} Updated event
+ * Update the status of a blockchain event
  */
-async function updateBlockchainEventStatus(txHash, status, additionalData = {}) {
+exports.updateBlockchainEventStatus = async (txHash, status, updateData = {}) => {
     try {
-        if (!txHash) {
-            throw new Error('Transaction hash is required');
+        let event;
+        if (txHash && !updateData._id) {
+            // Find by transaction hash
+            event = await BlockchainEvent.findOne({ txHash });
+        } else if (updateData._id) {
+            // Find by ID if provided
+            event = await BlockchainEvent.findById(updateData._id);
         }
 
-        const event = await BlockchainEvent.findOne({ txHash });
         if (!event) {
             throw new Error(`Event with transaction hash ${txHash} not found`);
         }
 
+        // Update status and other fields
         event.status = status;
         
-        // Update additional fields if provided
-        if (additionalData.blockNumber) {
-            event.blockNumber = additionalData.blockNumber;
+        if (updateData.txHash) {
+            event.txHash = updateData.txHash;
         }
         
-        if (additionalData.gasUsed) {
-            event.gasUsed = additionalData.gasUsed;
+        if (updateData.blockNumber) {
+            event.blockNumber = updateData.blockNumber;
         }
         
-        if (additionalData.error) {
-            event.error = additionalData.error;
+        if (updateData.gasUsed) {
+            event.gasUsed = updateData.gasUsed;
         }
         
+        if (updateData.error) {
+            event.error = updateData.error;
+        }
+
         await event.save();
-        
-        logger.logInfo(`Blockchain event updated: ${event.type}, Hash: ${txHash}, Status: ${status}`);
+        logger.logInfo(`Blockchain event updated: ${event.type}, Hash: ${event.txHash}, Status: ${status}`);
         return event;
     } catch (error) {
         logger.logError(`Failed to update blockchain event: ${error.message}`);
-        return null;
+        throw error;
     }
-}
+};
 
 /**
  * Setup event listeners to automatically store contract events
@@ -83,7 +71,7 @@ function setupEventListeners(contracts, adminUserId) {
     // AidDistribution events
     if (contracts.AidDistribution) {
         contracts.AidDistribution.on("AidDistributed", async (id, recipient, amount, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'AidDistributed',
                 status: 'CONFIRMED',
@@ -94,7 +82,7 @@ function setupEventListeners(contracts, adminUserId) {
         });
         
         contracts.AidDistribution.on("AidDonated", async (donor, amount, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'AidDonated',
                 status: 'CONFIRMED',
@@ -108,7 +96,7 @@ function setupEventListeners(contracts, adminUserId) {
     // DonorTracking events
     if (contracts.DonorTracking) {
         contracts.DonorTracking.on("DonorUpdated", async (donor, totalDonated, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'DonorUpdated',
                 status: 'CONFIRMED',
@@ -122,7 +110,7 @@ function setupEventListeners(contracts, adminUserId) {
     // RefugeeAccess events
     if (contracts.RefugeeAccess) {
         contracts.RefugeeAccess.on("RefugeeStatusUpdated", async (refugee, isEligibleForAid, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'RefugeeStatusUpdated',
                 status: 'CONFIRMED',
@@ -136,7 +124,7 @@ function setupEventListeners(contracts, adminUserId) {
     // FieldWorker events
     if (contracts.FieldWorker) {
         contracts.FieldWorker.on("TaskAssigned", async (taskId, fieldWorker, description, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'TaskAssigned',
                 status: 'CONFIRMED',
@@ -147,7 +135,7 @@ function setupEventListeners(contracts, adminUserId) {
         });
         
         contracts.FieldWorker.on("TaskCompleted", async (taskId, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'TaskCompleted',
                 status: 'CONFIRMED',
@@ -161,7 +149,7 @@ function setupEventListeners(contracts, adminUserId) {
     // AidContract events
     if (contracts.AidContract) {
         contracts.AidContract.on("AidAdded", async (id, recipient, aidType, amount, status, addedBy, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'AidAdded',
                 status: 'CONFIRMED',
@@ -179,7 +167,7 @@ function setupEventListeners(contracts, adminUserId) {
         });
         
         contracts.AidContract.on("AidUpdated", async (id, status, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'AidStatusUpdated',
                 status: 'CONFIRMED',
@@ -190,7 +178,7 @@ function setupEventListeners(contracts, adminUserId) {
         });
         
         contracts.AidContract.on("AidDistributed", async (recipient, aidType, amount, timestamp, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'AidDistributed',
                 status: 'CONFIRMED',
@@ -206,7 +194,7 @@ function setupEventListeners(contracts, adminUserId) {
         });
         
         contracts.AidContract.on("DonationReceived", async (donor, name, amount, event) => {
-            await storeBlockchainEvent({
+            await exports.storeBlockchainEvent({
                 txHash: event.log.transactionHash,
                 type: 'DonationReceived',
                 status: 'CONFIRMED',
@@ -221,7 +209,7 @@ function setupEventListeners(contracts, adminUserId) {
 }
 
 module.exports = {
-    storeBlockchainEvent,
-    updateBlockchainEventStatus,
+    storeBlockchainEvent: exports.storeBlockchainEvent,
+    updateBlockchainEventStatus: exports.updateBlockchainEventStatus,
     setupEventListeners
-}; 
+};
