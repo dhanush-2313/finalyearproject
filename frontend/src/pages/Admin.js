@@ -160,7 +160,8 @@ const Admin = () => {
     name: "",
     email: "",
     role: "donor",
-    walletAddress: ""
+    walletAddress: "",
+    password: ""
   });
 
   const cancelRef = React.useRef();
@@ -536,7 +537,8 @@ const Admin = () => {
       name: user.name || "",
       email: user.email || "",
       role: user.role || "donor",
-      walletAddress: user.walletAddress || ""
+      walletAddress: user.walletAddress || "",
+      password: ""
     });
     onUserModalOpen();
   };
@@ -547,7 +549,8 @@ const Admin = () => {
       name: "",
       email: "",
       role: "donor",
-      walletAddress: ""
+      walletAddress: "",
+      password: ""
     });
     onUserModalOpen();
   };
@@ -586,11 +589,14 @@ const Admin = () => {
           response = await adminAPI.createFieldWorker({
             name: userForm.name,
             email: userForm.email,
-            password: "defaultPassword123", // You may want to generate this or add a password field to the form
+            password: userForm.password || "defaultPassword123",
             walletAddress: userForm.walletAddress
           });
         } else {
-          response = await adminAPI.createUser(userForm);
+          response = await adminAPI.createUser({
+            ...userForm,
+            password: userForm.password || "defaultPassword123"
+          });
         }
         
         if (response?.data?.success || response?.status === 201) {
@@ -949,7 +955,8 @@ const Admin = () => {
                         name: "",
                         email: "",
                         role: "fieldWorker",
-                        walletAddress: ""
+                        walletAddress: "",
+                        password: ""
                       });
                       onUserModalOpen();
                     }}
@@ -1399,6 +1406,16 @@ const Admin = () => {
                     <option value="refugee">Refugee</option>
                     <option value="admin">Administrator</option>
                   </Select>
+                </FormControl>
+                <FormControl>
+                  <FormLabel>Password</FormLabel>
+                  <Input 
+                    name="password" 
+                    value={userForm.password} 
+                    onChange={handleFormChange} 
+                    type="password"
+                    placeholder="Enter password"
+                  />
                 </FormControl>
                 <FormControl>
                   <FormLabel>Wallet Address (Optional)</FormLabel>

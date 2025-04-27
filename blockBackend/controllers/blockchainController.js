@@ -540,9 +540,25 @@ exports.getEnhancedAidRecords = async (req, res) => {
         const enhancedRecords = records.map(record => {
             const enhanced = { ...record };
             
-            // Always ensure we have a timestamp
-            const timestamp = record.timestamp ? Number(record.timestamp) : Math.floor(Date.now() / 1000);
-            enhanced.timestamp = new Date(timestamp * 1000).toISOString();
+            // Handle timestamp conversion safely
+            try {
+                if (record.timestamp) {
+                    const timestamp = typeof record.timestamp === 'string' 
+                        ? new Date(record.timestamp) 
+                        : new Date(Number(record.timestamp) * 1000);
+                    
+                    if (!isNaN(timestamp.getTime())) {
+                        enhanced.timestamp = timestamp.toISOString();
+                    } else {
+                        enhanced.timestamp = new Date().toISOString();
+                    }
+                } else {
+                    enhanced.timestamp = new Date().toISOString();
+                }
+            } catch (error) {
+                logger.logWarning(`Failed to convert timestamp for record ${record.id}: ${error.message}`);
+                enhanced.timestamp = new Date().toISOString();
+            }
             
             if (record.addedBy && addressMap.has(record.addedBy.toLowerCase())) {
                 enhanced.addedByDetails = addressMap.get(record.addedBy.toLowerCase());

@@ -3,6 +3,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import axios from 'axios';
 import Loader from '../components/Loader';
+import { ethers } from 'ethers';
 
 // Create auth context
 export const AuthContext = createContext(null);
@@ -18,6 +19,7 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [walletAddress, setWalletAddress] = useState(null);
 
   // Add isAuthenticated computed property
   const isAuthenticated = !!user;
@@ -41,6 +43,46 @@ export const AuthProvider = ({ children }) => {
       setLoading(false);
     }
   }, []);
+
+  // Handle wallet connection
+  const connectWallet = async () => {
+    try {
+      if (!window.ethereum) {
+        throw new Error('MetaMask is not installed');
+      }
+
+      const provider = new ethers.BrowserProvider(window.ethereum);
+      const accounts = await window.ethereum.request({ method: 'eth_requestAccounts' });
+      const address = accounts[0];
+      
+      setWalletAddress(address);
+      
+      // Update user's wallet address in the database
+      if (user) {
+        try {
+          const response = await axios.put('/api/users/update-wallet', {
+            walletAddress: address
+          }, {
+            headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
+          });
+          
+          if (response.data.success) {
+            setUser(prevUser => ({
+              ...prevUser,
+              walletAddress: address
+            }));
+          }
+        } catch (err) {
+          console.error('Error updating wallet address:', err);
+        }
+      }
+      
+      return address;
+    } catch (err) {
+      console.error('Failed to connect wallet:', err);
+      throw err;
+    }
+  };
 
   const register = async (userData) => {
     try {
@@ -98,6 +140,7 @@ export const AuthProvider = ({ children }) => {
       // Always clear local state
       localStorage.removeItem('token');
       setUser(null);
+      setWalletAddress(null);
     }
   };
 
@@ -106,6 +149,8 @@ export const AuthProvider = ({ children }) => {
     loading,
     error,
     isAuthenticated,
+    walletAddress,
+    connectWallet,
     register,
     login,
     logout

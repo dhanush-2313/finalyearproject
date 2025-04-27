@@ -37,7 +37,7 @@ import { formatIndianTimestamp, weiToEth } from "../utils/dateUtils"
 import "./AidReceived.css"
 
 const AidReceived = () => {
-  const { isAuthenticated, user } = useContext(AuthContext)
+  const { isAuthenticated, user, walletAddress, connectWallet } = useContext(AuthContext)
   const [aidRecords, setAidRecords] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -60,10 +60,25 @@ const AidReceived = () => {
         const response = await blockchainAPI.getEnhancedAidRecords()
         
         if (isMounted && response?.data?.success) {
-          const myRecords = response.data.records.filter(
-            record => record.recipient?.toLowerCase() === user.walletAddress?.toLowerCase()
-          )
+          console.log("User wallet address:", walletAddress);
+          console.log("All records:", response.data.records);
           
+          // Check if user has a wallet address
+          if (!walletAddress) {
+            console.warn("No wallet address found. Please connect your wallet.");
+            setError("Please connect your wallet to view aid records.");
+            return;
+          }
+          
+          const myRecords = response.data.records.filter(record => {
+            const recordRecipient = record.recipient?.toLowerCase();
+            const userWallet = walletAddress?.toLowerCase();
+            const matches = recordRecipient === userWallet;
+            console.log(`Record ${record.id}: ${recordRecipient} === ${userWallet} = ${matches}`);
+            return matches;
+          });
+          
+          console.log("Filtered records:", myRecords);
           setAidRecords(myRecords)
           
           // Calculate statistics
@@ -109,7 +124,7 @@ const AidReceived = () => {
     return () => {
       isMounted = false
     }
-  }, [isAuthenticated, user])
+  }, [isAuthenticated, user, walletAddress])
 
   if (!isAuthenticated) {
     return <Navigate to="/login" />

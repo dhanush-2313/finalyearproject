@@ -256,10 +256,12 @@ const getAllAidRecords = async () => {
         // First check AidDistribution contract
         if (contracts.AidDistribution) {
             try {
+                // Get nextId and handle potential "0x" response
                 const nextIdValue = await contracts.AidDistribution.nextId();
-                logger.info(`Found ${nextIdValue} records in AidDistribution`);
+                const recordCount = nextIdValue === "0x" ? 0 : Number(nextIdValue);
+                logger.info(`Found ${recordCount} records in AidDistribution`);
                 
-                for (let i = 0; i < Number(nextIdValue); i++) {
+                for (let i = 0; i < recordCount; i++) {
                     try {
                         const record = await callViewFunction('AidDistribution', 'getAidRecord', i);
                         if (record) {
@@ -267,7 +269,7 @@ const getAllAidRecords = async () => {
                                 id: i,
                                 recipient: record.recipient || "",
                                 aidType: "Aid Distribution",
-                                amount: record.amount ? BigInt(record.amount).toString() : "0",
+                                amount: record.amount ? record.amount.toString() : "0",
                                 status: record.distributed ? "Distributed" : "Pending",
                                 addedBy: "0x0000000000000000000000000000000000000000",
                                 timestamp: record.timestamp ? new Date(Number(record.timestamp) * 1000).toISOString() : new Date().toISOString()
@@ -299,8 +301,8 @@ const getAllAidRecords = async () => {
                                 id: i,
                                 recipient: record.recipient || "",
                                 aidType: "Aid Contract",
-                                amount: record.amount ? BigInt(record.amount).toString() : "0",
-                                status: record.distributed ? "Distributed" : "Pending",
+                                amount: record.amount ? record.amount.toString() : "0",
+                                status: record.status || "Pending",
                                 addedBy: record.addedBy || "0x0000000000000000000000000000000000000000",
                                 timestamp: record.timestamp ? new Date(Number(record.timestamp) * 1000).toISOString() : new Date().toISOString()
                             });
