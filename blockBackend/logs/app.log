@@ -30418,3 +30418,75 @@
 2025-04-27 18:37:35 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
 2025-04-27 18:37:35 [INFO]: Successfully fetched 6 total records
 2025-04-27 18:37:35 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:03 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:03 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:03 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:03 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:03 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:03 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:03 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:03 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:03 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:03 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:03 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:04 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:04 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:04 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:04 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:04 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:04 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:04 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:14 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:14 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:14 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:14 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:14 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:14 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:14 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:14 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:14 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:14 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:14 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:14 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:14 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:14 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:14 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:15 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:15 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:15 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:20 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:20 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:21 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:21 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:21 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:21 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:21 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:21 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:21 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:21 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:21 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:21 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:21 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:21 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:21 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:21 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:21 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:22 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:31 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:31 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:31 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:31 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:31 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:32 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:32 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:32 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:32 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:32 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:32 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:32 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:40:32 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-27 18:40:32 [INFO]: Fetching all aid records from contracts
+2025-04-27 18:40:32 [INFO]: Found 6 records in AidDistribution
+2025-04-27 18:40:32 [WARN]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:40:32 [INFO]: Successfully fetched 6 total records
+2025-04-27 18:40:32 [ERROR]: Error fetching enhanced aid records: Invalid time value
