@@ -1,6 +1,6 @@
 import axios from "axios"
 
-const API_URL = process.env.REACT_APP_BACKEND_URL || "http://localhost:4000/api/aidRecords"
+const API_URL = process.env.REACT_APP_API_URL || "http://localhost:4000/api/aidRecords"
 
 export const addAidRecord = async (data) => {
   try {
