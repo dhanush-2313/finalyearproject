@@ -16,7 +16,6 @@ const Donations = lazy(() => import('./pages/Donations'));
 const Admin = lazy(() => import('./pages/Admin'));
 const FieldWorker = lazy(() => import('./pages/FieldWorker'));
 const AidReceived = lazy(() => import('./pages/AidReceived'));
-const IPFSFiles = lazy(() => import('./pages/IPFSFiles'));
 const Landing = lazy(() => import('./pages/Landing'));
 const AidDistribution = lazy(() => import('./pages/AidDistribution'));
 const DonorTracking = lazy(() => import('./pages/DonorTracking'));
@@ -131,14 +130,7 @@ const AppRoutes = () => {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/files"
-            element={
-              <ProtectedRoute>
-                <IPFSFiles />
-              </ProtectedRoute>
-            }
-          />
+
           <Route
             path="/aid-distribution"
             element={

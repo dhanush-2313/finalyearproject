@@ -3,9 +3,7 @@ const { getContract, verifyTransaction, processDonation } = require('../blockcha
 const logger = require('../utils/logger');
 const { ethers } = require('ethers');
 const { createSimpleTransaction } = require('../utils/ganacheSimulator');
-const { uploadToIPFS } = require('../utils/ipfs');
 const { generateDonationReceipt } = require('../utils/blockchainUtils');
-const IPFSFile = require('../models/IPFSFile');
 
 exports.viewDonations = async (req, res) => {
   try {
@@ -180,32 +178,18 @@ exports.generateDonationReceipt = async (req, res) => {
     // Generate receipt JSON
     const receipt = await generateDonationReceipt(donationData);
     
-    // Convert receipt to Buffer for IPFS
-    const receiptBuffer = Buffer.from(JSON.stringify(receipt, null, 2));
-    
-    // Upload to IPFS
-    const cid = await uploadToIPFS(receiptBuffer);
-    
-    // Save metadata to database
-    const ipfsFile = new IPFSFile({
-      cid,
-      name: `donation-receipt-${receipt.receiptNumber}.json`,
-      description: `Donation receipt for ${donationData.amount} ETH`,
-      mimetype: 'application/json',
-      size: receiptBuffer.length,
-      uploadedBy: req.user.id,
-      verified: true, // Auto-verify since it's system-generated
-      verificationDate: new Date()
-    });
-    
-    await ipfsFile.save();
+    // Store receipt directly in the donation record
+    const updatedDonation = await Donation.findOneAndUpdate(
+      { transactionHash: donationData.transactionHash },
+      { receipt: receipt },
+      { new: true }
+    );
     
     return res.status(200).json({
       success: true,
       receipt: {
         ...receipt,
-        cid,
-        fileId: ipfsFile._id
+        donationId: updatedDonation._id
       }
     });
     

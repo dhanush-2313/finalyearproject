@@ -17,7 +17,6 @@ const adminRoutes = require('./routes/adminRoutes');
 const blockchainRoutes = require('./routes/blockchainRoutes');
 const fieldWorkerRoutes = require('./routes/fieldWorkerRoutes');
 const monitoringRoutes = require('./routes/monitoringRoutes');
-const ipfsRoutes = require('./routes/ipfsRoutes');
 const apiRoutes = require('./routes/api');
 const mfaRoutes = require('./routes/mfaRoutes');
 
@@ -110,7 +109,6 @@ app.use('/api/admin', adminRoutes);
 app.use('/api/blockchain', blockchainRoutes);
 app.use('/api/field-worker', fieldWorkerRoutes);
 app.use('/api/monitoring', monitoringRoutes);
-app.use('/api/ipfs', ipfsRoutes);
 app.use('/api/mfa', mfaRoutes);
 
 // 🔹 Catch-all for unknown routes

@@ -34929,3 +34929,239 @@
 2025-04-27 20:17:01 [INFO]: ✅ MongoDB connected
 2025-04-27 20:17:01 [INFO]: ✅ Blockchain event listeners set up for database storage
 2025-04-27 20:17:01 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:10:43 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:10:43 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:10:43 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:10:43 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:10:43 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:10:43 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:10:43 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:10:43 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:10:43 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:10:43 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:10:43 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:10:43 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:10:43 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:10:43 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:10:43 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:10:44 [INFO]: ✅ MongoDB connected
+2025-04-27 21:10:44 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:10:44 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:10:51 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:10:51 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:10:51 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:10:51 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:10:51 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:10:51 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:10:51 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:10:51 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:10:51 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:10:51 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:10:51 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:10:51 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:10:51 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:10:51 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:10:51 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:10:51 [INFO]: ✅ MongoDB connected
+2025-04-27 21:10:52 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:10:52 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:16:54 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:16:55 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:16:55 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:16:55 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:16:55 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:16:55 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:16:55 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:16:55 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:16:55 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:16:55 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:16:55 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:16:55 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:16:55 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:16:55 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:16:55 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:16:55 [INFO]: ✅ MongoDB connected
+2025-04-27 21:16:56 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:16:56 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:17:01 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:17:01 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:17:01 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:17:01 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:17:01 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:17:01 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:17:01 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:17:01 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:17:01 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:17:01 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:17:01 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:17:01 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:17:01 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:17:01 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:17:01 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:17:01 [INFO]: ✅ MongoDB connected
+2025-04-27 21:17:01 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:17:01 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:17:06 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:17:06 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:17:06 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:17:06 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:17:06 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:17:06 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:17:06 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:17:06 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:17:06 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:17:06 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:17:06 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:17:06 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:17:06 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:17:06 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:17:06 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:17:07 [INFO]: ✅ MongoDB connected
+2025-04-27 21:17:07 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:17:07 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:17:09 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:17:09 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:17:09 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:17:09 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:17:09 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:17:09 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:17:09 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:17:09 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:17:09 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:17:09 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:17:09 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:17:09 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:17:09 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:17:09 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:17:09 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:17:09 [INFO]: ✅ MongoDB connected
+2025-04-27 21:17:10 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:17:10 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:17:20 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:17:20 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:17:20 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:17:20 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:17:20 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:17:20 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:17:20 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:17:20 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:17:20 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:17:20 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:17:20 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:17:20 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:17:20 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:17:20 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:17:20 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:17:20 [INFO]: ✅ MongoDB connected
+2025-04-27 21:17:21 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:17:21 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:20:10 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:20:10 [INFO]: ✅ IPFS client created with authentication
+2025-04-27 21:20:10 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:20:10 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:20:10 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:20:10 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:20:10 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:20:10 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:20:10 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:20:10 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:20:10 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:20:10 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:20:10 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:20:10 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:20:10 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:20:11 [INFO]: ✅ MongoDB connected
+2025-04-27 21:20:11 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:20:11 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:20:14 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:20:14 [INFO]: ✅ IPFS client created without authentication
+2025-04-27 21:20:15 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:20:15 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:20:15 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:20:15 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:20:15 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:20:15 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:20:15 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:20:15 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:20:15 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:20:15 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:20:15 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:20:15 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:20:15 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:20:15 [INFO]: ✅ MongoDB connected
+2025-04-27 21:20:15 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:20:15 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:20:26 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:20:27 [INFO]: ✅ IPFS client created without authentication
+2025-04-27 21:20:27 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:20:27 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:20:27 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:20:27 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:20:27 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:20:27 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:20:27 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:20:27 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:20:27 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:20:27 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:20:27 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:20:27 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:20:27 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:20:27 [INFO]: ✅ MongoDB connected
+2025-04-27 21:20:27 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:20:27 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:20:49 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:20:49 [INFO]: ✅ IPFS client created without authentication
+2025-04-27 21:20:49 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:20:49 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:20:49 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:20:49 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:20:49 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:20:49 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:20:49 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:20:49 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:20:49 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:20:49 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:20:49 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:20:49 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:20:49 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:20:50 [INFO]: ✅ MongoDB connected
+2025-04-27 21:20:50 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:20:50 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:23:33 [INFO]: Shutting down server...
+2025-04-27 21:23:36 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 21:23:36 [INFO]: ✅ IPFS client created without authentication
+2025-04-27 21:23:36 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 21:23:36 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 21:23:36 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 21:23:36 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 21:23:36 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 21:23:36 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 21:23:36 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 21:23:36 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 21:23:36 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 21:23:36 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 21:23:36 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 21:23:36 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 21:23:36 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 21:23:36 [INFO]: ✅ MongoDB connected
+2025-04-27 21:23:37 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 21:23:37 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 21:23:37 [INFO]: Shutting down server...
+2025-04-27 22:56:38 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 22:56:39 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 22:56:39 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 22:56:39 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 22:56:39 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 22:56:39 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 22:56:39 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 22:56:39 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 22:56:39 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 22:56:39 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 22:56:39 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 22:56:39 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 22:56:39 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 22:56:39 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 22:56:39 [INFO]: ✅ MongoDB connected
+2025-04-27 22:56:39 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 22:56:39 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 22:56:42 [INFO]: Shutting down server...

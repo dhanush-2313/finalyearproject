@@ -29,10 +29,6 @@ router.get('/health', async (req, res) => {
     const blockchainStatus = await checkBlockchainHealth();
     services.blockchain = blockchainStatus;
     
-    // Optional: Check IPFS connection
-    // const ipfsStatus = await checkIPFSConnection();
-    // services.ipfs = { connected: ipfsStatus };
-    
     // Overall status is OK only if all services are OK
     const overallStatus = Object.values(services).every(
       service => service.status === 'OK' || service.connected === true

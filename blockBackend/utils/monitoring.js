@@ -32,12 +32,6 @@ const contractCallsTotal = new promClient.Counter({
   labelNames: ['method', 'contract']
 });
 
-const ipfsOperationsTotal = new promClient.Counter({
-  name: 'ipfs_operations_total',
-  help: 'Total count of IPFS operations',
-  labelNames: ['operation']
-});
-
 const userRegistrationsTotal = new promClient.Counter({
   name: 'user_registrations_total',
   help: 'Total count of user registrations',
@@ -53,7 +47,6 @@ const activeUsers = new promClient.Gauge({
 register.registerMetric(httpRequestDurationMicroseconds);
 register.registerMetric(apiCallsTotal);
 register.registerMetric(contractCallsTotal);
-register.registerMetric(ipfsOperationsTotal);
 register.registerMetric(userRegistrationsTotal);
 register.registerMetric(activeUsers);
 
@@ -80,7 +73,6 @@ module.exports = {
     httpRequestDurationMicroseconds,
     apiCallsTotal,
     contractCallsTotal,
-    ipfsOperationsTotal,
     userRegistrationsTotal,
     activeUsers
   },

@@ -23,11 +23,11 @@ const DonationConfirmation = ({ donation, blockchainDetails }) => {
         )}
         
         {/* Add receipt generation */}
-        <div className="receipt-section">
+        {/* <div className="receipt-section">
           <h3>Donation Receipt</h3>
           <p>Generate a permanent record of your donation stored on IPFS</p>
           <DonationReceipt donation={donation} />
-        </div>
+        </div> */}
       </div>
     </div>
   );
