@@ -213,7 +213,7 @@ exports.getDonationStats = async (req, res) => {
 // Create new user
 exports.createUser = async (req, res) => {
   try {
-    const { name, email, password, role } = req.body;
+    const { name, email, password, role, walletAddress } = req.body;
     
     // Check if user already exists
     const existingUser = await User.findOne({ email });
@@ -224,17 +224,14 @@ exports.createUser = async (req, res) => {
       });
     }
     
-    // Hash password
-    const hashedPassword = await bcrypt.hash(password, 12);
-    
-    // Create user
+    // Create user (password will be hashed by the User model's pre-save middleware)
     const newUser = await User.create({
       name,
       email,
-      password: hashedPassword,
+      password,
       role: role || 'donor', // Default role
-      active: true,
-      createdAt: Date.now()
+      walletAddress,
+      active: true
     });
     
     // Log activity

@@ -254,68 +254,74 @@ const getAllAidRecords = async () => {
         const records = [];
         
         // First check AidDistribution contract
-        try {
-            const nextIdValue = await contracts.AidDistribution.nextId();
-            logger.info(`Found ${nextIdValue} records in AidDistribution`);
-            
-            for (let i = 0; i < Number(nextIdValue); i++) {
-                try {
-                    const record = await callViewFunction('AidDistribution', 'getAidRecord', i);
-                    if (record) {
-                        records.push({
-                            id: i,
-                            recipient: record.recipient || "",
-                            aidType: "Aid Distribution",
-                            amount: Number(record.amount || 0),
-                            status: record.distributed ? "Distributed" : "Pending",
-                            addedBy: "0x0000000000000000000000000000000000000000",
-                            timestamp: Date.now()
-                        });
+        if (contracts.AidDistribution) {
+            try {
+                const nextIdValue = await contracts.AidDistribution.nextId();
+                logger.info(`Found ${nextIdValue} records in AidDistribution`);
+                
+                for (let i = 0; i < Number(nextIdValue); i++) {
+                    try {
+                        const record = await callViewFunction('AidDistribution', 'getAidRecord', i);
+                        if (record) {
+                            records.push({
+                                id: i,
+                                recipient: record.recipient || "",
+                                aidType: "Aid Distribution",
+                                amount: record.amount ? BigInt(record.amount).toString() : "0",
+                                status: record.distributed ? "Distributed" : "Pending",
+                                addedBy: "0x0000000000000000000000000000000000000000",
+                                timestamp: record.timestamp ? new Date(Number(record.timestamp) * 1000).toISOString() : new Date().toISOString()
+                            });
+                        }
+                    } catch (recordError) {
+                        logger.warn(`Skipping invalid record at index ${i}: ${recordError.message}`);
+                        continue;
                     }
-                } catch (recordError) {
-                    logger.warn(`Skipping invalid record at index ${i}: ${recordError.message}`);
-                    continue;
                 }
+            } catch (error) {
+                logger.warn(`Error fetching records from AidDistribution: ${error.message}`);
             }
-        } catch (error) {
-            logger.warn(`Error fetching records from AidDistribution: ${error.message}`);
+        } else {
+            logger.warn('AidDistribution contract not initialized');
         }
         
         // Then check AidContract
-        try {
-            const recordCount = await contracts.AidContract.recordCount();
-            logger.info(`Found ${recordCount} records in AidContract`);
-            
-            for (let i = 1; i <= Number(recordCount); i++) {
-                try {
-                    const record = await callViewFunction('AidContract', 'getAidRecord', i);
-                    if (record) {
-                        records.push({
-                            id: i,
-                            recipient: record.recipient || "",
-                            aidType: record.aidType || "Aid",
-                            amount: Number(record.amount || 0),
-                            status: record.status || "Pending",
-                            addedBy: record.addedBy || "0x0000000000000000000000000000000000000000",
-                            timestamp: Number(record.timestamp || Date.now()),
-                            paymentMethod: record.paymentMethod || "ETH",
-                            paymentDetails: record.paymentDetails || ""
-                        });
+        if (contracts.AidContract) {
+            try {
+                const recordCount = await contracts.AidContract.recordCount();
+                logger.info(`Found ${recordCount} records in AidContract`);
+                
+                for (let i = 1; i <= Number(recordCount); i++) {
+                    try {
+                        const record = await callViewFunction('AidContract', 'getAidRecord', i);
+                        if (record) {
+                            records.push({
+                                id: i,
+                                recipient: record.recipient || "",
+                                aidType: "Aid Contract",
+                                amount: record.amount ? BigInt(record.amount).toString() : "0",
+                                status: record.distributed ? "Distributed" : "Pending",
+                                addedBy: record.addedBy || "0x0000000000000000000000000000000000000000",
+                                timestamp: record.timestamp ? new Date(Number(record.timestamp) * 1000).toISOString() : new Date().toISOString()
+                            });
+                        }
+                    } catch (recordError) {
+                        logger.warn(`Skipping invalid record at index ${i}: ${recordError.message}`);
+                        continue;
                     }
-                } catch (recordError) {
-                    logger.warn(`Skipping invalid record at index ${i}: ${recordError.message}`);
-                    continue;
                 }
+            } catch (error) {
+                logger.warn(`Error fetching records from AidContract: ${error.message}`);
             }
-        } catch (error) {
-            logger.warn(`Error fetching records from AidContract: ${error.message}`);
+        } else {
+            logger.warn('AidContract not initialized');
         }
         
-        logger.info(`Total records found: ${records.length}`);
+        logger.info(`Successfully fetched ${records.length} total records`);
         return records;
     } catch (error) {
-        logger.error(`❌ Error fetching all aid records: ${error.message}`);
-        return []; // Return empty array on error instead of throwing
+        logger.error(`Error in getAllAidRecords: ${error.message}`);
+        return [];
     }
 };
 

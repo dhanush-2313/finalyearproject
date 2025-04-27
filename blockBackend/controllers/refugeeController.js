@@ -1,5 +1,6 @@
 const Refugee = require('../models/Refugee');
 const AidRecord = require('../models/AidRecords');
+const User = require('../models/User');
 
 exports.getProfile = async (req, res) => {
   try {
@@ -14,11 +15,31 @@ exports.getProfile = async (req, res) => {
 
 exports.viewAidReceived = async (req, res) => {
   try {
-    const aidRecords = await AidRecord.find({ refugeeId: req.user.id });
-    res.json(aidRecords);
+    // Get the user's wallet address
+    const user = await User.findById(req.user.id);
+    if (!user || !user.walletAddress) {
+      return res.status(400).json({ 
+        success: false, 
+        error: 'User wallet address not found' 
+      });
+    }
+
+    // Find aid records for the user's wallet address
+    const aidRecords = await AidRecord.find({ 
+      recipientAddress: user.walletAddress.toLowerCase() 
+    }).populate('fieldWorker', 'name email');
+
+    res.status(200).json({
+      success: true,
+      count: aidRecords.length,
+      records: aidRecords
+    });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Error fetching aid records' });
+    console.error('Error fetching aid records:', error);
+    res.status(500).json({ 
+      success: false, 
+      error: 'Error fetching aid records' 
+    });
   }
 };
 

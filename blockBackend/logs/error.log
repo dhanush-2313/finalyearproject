@@ -1359,3 +1359,204 @@
 2025-04-27 07:05:23 [ERROR]: ❌ Error fetching all aid records: logger.logWarning is not a function
 2025-04-27 07:11:10 [ERROR]: Not Found: /ipfs/files
 2025-04-27 07:11:10 [ERROR]: Not Found: /ipfs/files
+2025-04-27 18:08:10 [ERROR]: Error creating user: data and salt arguments required
+2025-04-27 18:08:19 [ERROR]: Error creating user: data and salt arguments required
+2025-04-27 18:08:34 [ERROR]: Error creating user: data and salt arguments required
+2025-04-27 18:11:09 [ERROR]: Error creating user: ActivityLog validation failed: userId: Path `userId` is required.
+2025-04-27 18:14:32 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
+2025-04-27 18:28:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:28:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:28:28 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:30:09 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:30:09 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:30:10 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:31:06 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:31:06 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:31:07 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:31:07 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:31:07 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:31:08 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 0: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 1: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 2: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 3: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 4: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 5: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:33:58 [ERROR]: Stack trace: Error: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+    at makeError (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/utils/errors.js:129:21)
+    at assert (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/utils/errors.js:149:15)
+    at Interface.decodeFunctionResult (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/abi/interface.js:780:31)
+    at staticCallResult (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:254:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async staticCall (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:219:24)
+    at async Proxy.recordCount (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:259:20)
+    at async getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:297:37)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 0: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 1: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 2: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:58 [ERROR]: Error fetching AidDistribution record 3: Do not know how to serialize a BigInt
+2025-04-27 18:33:58 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 4: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 5: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:33:59 [ERROR]: Stack trace: Error: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+    at makeError (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/utils/errors.js:129:21)
+    at assert (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/utils/errors.js:149:15)
+    at Interface.decodeFunctionResult (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/abi/interface.js:780:31)
+    at staticCallResult (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:254:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async staticCall (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:219:24)
+    at async Proxy.recordCount (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:259:20)
+    at async getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:297:37)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 0: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 1: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 2: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 3: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 4: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching AidDistribution record 5: Do not know how to serialize a BigInt
+2025-04-27 18:33:59 [ERROR]: Stack trace: TypeError: Do not know how to serialize a BigInt
+    at JSON.stringify (<anonymous>)
+    at getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:266:95)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:33:59 [ERROR]: Error fetching records from AidContract: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+2025-04-27 18:33:59 [ERROR]: Stack trace: Error: could not decode result data (value="0x", info={ "method": "recordCount", "signature": "recordCount()" }, code=BAD_DATA, version=6.13.5)
+    at makeError (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/utils/errors.js:129:21)
+    at assert (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/utils/errors.js:149:15)
+    at Interface.decodeFunctionResult (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/abi/interface.js:780:31)
+    at staticCallResult (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:254:35)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async staticCall (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:219:24)
+    at async Proxy.recordCount (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/node_modules/ethers/lib.commonjs/contract/contract.js:259:20)
+    at async getAllAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/blockchain/gateway.js:297:37)
+    at async exports.getEnhancedAidRecords (/Users/dhanush/Desktop/bruh/blockchain/for v0dev/blockBackend/controllers/blockchainController.js:503:25)
+2025-04-27 18:34:15 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:16 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:16 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:37 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:37 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:38 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:38 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:39 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:39 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:55 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:56 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:56 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:58 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:58 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:34:59 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:17 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:17 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:18 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:24 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:24 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:25 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:28 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:28 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:29 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:35:29 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:23 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:23 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:24 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:24 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:24 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:25 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:28 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:28 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:28 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:35 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 18:37:35 [ERROR]: Error fetching enhanced aid records: Invalid time value
