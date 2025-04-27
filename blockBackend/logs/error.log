@@ -1678,3 +1678,7 @@
 2025-04-27 18:58:27 [ERROR]: Error fetching enhanced aid records: Invalid time value
 2025-04-27 18:58:30 [ERROR]: Error fetching enhanced aid records: Invalid time value
 2025-04-27 18:58:30 [ERROR]: Error fetching enhanced aid records: Invalid time value
+2025-04-27 19:07:32 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
+2025-04-27 19:18:34 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
+2025-04-27 19:18:49 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
+2025-04-27 19:36:39 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')

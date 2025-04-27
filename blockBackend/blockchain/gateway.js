@@ -12,24 +12,28 @@ const { ADMIN_PRIVATE_KEY } = process.env;
 // Contracts configuration
 const CONTRACTS = {
     AidDistribution: {
-        address: "0xE94a8c2f516DFCf1AC911fF950f6FBd1FE4f63d2",
+        address: "0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B",
         abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/AidDistribution.sol/AidDistribution.json')
     },
     DonorTracking: {
-        address: "0xf6F39f608B06a16468e997D939846b3DeeB24d1b",
+        address: "0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4",
         abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/DonorTracking.sol/DonorTracking.json')
     },
     RefugeeAccess: {
-        address: "0xb7496E0aC913a246A5a2d272B4CC493d1b962971",
+        address: "0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b",
         abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/RefugeeAccess.sol/RefugeeAccess.json')
     },
     FieldWorker: {
-        address: "0x5c3F66d2d21993fdA4673757D94AfB82982D07E7",
+        address: "0x191c0bffda56497495367D545C4F46b77BB6aec7",
         abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/FieldWorker.sol/FieldWorker.json')
     },
     AidContract: {
-        address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        address: "0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1",
         abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/AidContract.sol/AidContract.json')
+    },
+    AlternativePayments: {
+        address: "0xFb8B77e7c35769A5AFa18538D2B3354849c661c5",
+        abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/AlternativePayments.sol/AlternativePayments.json')
     }
 };
 
@@ -233,7 +237,7 @@ const queryAidRecord = async (id) => {
             amount: Number(record.amount),
             status: record.distributed ? "Distributed" : "Pending",
             addedBy: "0x0", // Not available in AidDistribution
-            timestamp: Date.now() // Not available in AidDistribution
+            timestamp: Number(record.timestamp) // Use blockchain timestamp
         };
     } catch (error) {
         logger.error(`❌ Error fetching aid record [ID: ${id}]: ${error.message}`);
@@ -265,6 +269,8 @@ const getAllAidRecords = async () => {
                     try {
                         const record = await callViewFunction('AidDistribution', 'getAidRecord', i);
                         if (record) {
+                            // Use blockchain timestamp directly
+                            const timestamp = Number(record.timestamp);
                             records.push({
                                 id: i,
                                 recipient: record.recipient || "",
@@ -272,7 +278,7 @@ const getAllAidRecords = async () => {
                                 amount: record.amount ? record.amount.toString() : "0",
                                 status: record.distributed ? "Distributed" : "Pending",
                                 addedBy: "0x0000000000000000000000000000000000000000",
-                                timestamp: record.timestamp ? new Date(Number(record.timestamp) * 1000).toISOString() : new Date().toISOString()
+                                timestamp: timestamp // Send raw timestamp in seconds
                             });
                         }
                     } catch (recordError) {
@@ -297,6 +303,8 @@ const getAllAidRecords = async () => {
                     try {
                         const record = await callViewFunction('AidContract', 'getAidRecord', i);
                         if (record) {
+                            // Use blockchain timestamp directly
+                            const timestamp = Number(record.timestamp);
                             records.push({
                                 id: i,
                                 recipient: record.recipient || "",
@@ -304,7 +312,7 @@ const getAllAidRecords = async () => {
                                 amount: record.amount ? record.amount.toString() : "0",
                                 status: record.status || "Pending",
                                 addedBy: record.addedBy || "0x0000000000000000000000000000000000000000",
-                                timestamp: record.timestamp ? new Date(Number(record.timestamp) * 1000).toISOString() : new Date().toISOString()
+                                timestamp: timestamp // Send raw timestamp in seconds
                             });
                         }
                     } catch (recordError) {

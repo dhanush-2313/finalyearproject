@@ -112,12 +112,6 @@ const RoleBasedNav = () => {
         {user.role === 'refugee' && (
           <>
             <NavButton 
-              label="My Aid Records" 
-              icon={FaClipboardList} 
-              onClick={() => navigate('/aid-received')} 
-              colorScheme="teal"
-            />
-            <NavButton 
               label="Account Details" 
               icon={FaUser} 
               onClick={() => navigate('/refugee-access')} 

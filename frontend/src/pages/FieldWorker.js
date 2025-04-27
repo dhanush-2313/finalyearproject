@@ -1,9 +1,7 @@
-
 import React, { useContext } from "react"
 import { Navigate } from "react-router-dom"
 import { AuthContext } from "../auth/authContext"
 import FieldWorkerInterface from "../components/FieldWorkerInterface/FieldWorkerInterface"
-import Layout from "../components/Layout"
 import "./FieldWorker.css"
 
 const FieldWorker = () => {
@@ -20,13 +18,11 @@ const FieldWorker = () => {
   }
 
   return (
-    <Layout>
-      <div className="field-worker-page">
-        <h1>Field Worker Dashboard</h1>
-        <p className="field-worker-description">Manage your assigned tasks and update refugee information</p>
-        <FieldWorkerInterface />
-      </div>
-    </Layout>
+    <div className="field-worker-page">
+      <h1>Field Worker Dashboard</h1>
+      <p className="field-worker-description">Manage your assigned tasks and update refugee information</p>
+      <FieldWorkerInterface />
+    </div>
   )
 }
 

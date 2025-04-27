@@ -13,6 +13,12 @@ async function main() {
     }
 
     try {
+        // Deploy AlternativePayments first
+        const AlternativePayments = await ethers.getContractFactory("AlternativePayments");
+        const alternativePayments = await AlternativePayments.deploy();
+        await alternativePayments.waitForDeployment();
+        console.log("AlternativePayments deployed at:", alternativePayments.target);
+
         // Deploy AidDistribution
         const AidDistribution = await ethers.getContractFactory("AidDistribution");
         const aidDistribution = await AidDistribution.deploy();
@@ -37,25 +43,38 @@ async function main() {
         await fieldWorker.waitForDeployment();
         console.log("FieldWorker deployed at:", fieldWorker.target);
 
+        // Deploy AidContract with AlternativePayments address
+        const AidContract = await ethers.getContractFactory("AidContract");
+        const aidContract = await AidContract.deploy(alternativePayments.target);
+        await aidContract.waitForDeployment();
+        console.log("AidContract deployed at:", aidContract.target);
+
         // Store contract addresses
         const contractAddresses = {
+            AlternativePayments: alternativePayments.target,
             AidDistribution: aidDistribution.target,
             DonorTracking: donorTracking.target,
             RefugeeAccess: refugeeAccess.target,
-            FieldWorker: fieldWorker.target
+            FieldWorker: fieldWorker.target,
+            AidContract: aidContract.target
         };
-        fs.writeFileSync(path.join(deploymentsDir, 'contractAddresses.json'), JSON.stringify(contractAddresses, null, 2));
 
-        console.log("Deployment successful! Contract addresses saved.");
+        // Save contract addresses to file
+        fs.writeFileSync(
+            path.join(deploymentsDir, 'contractAddresses.json'),
+            JSON.stringify(contractAddresses, null, 2)
+        );
 
+        console.log("Contract addresses saved to:", path.join(deploymentsDir, 'contractAddresses.json'));
     } catch (error) {
-        console.error("Deployment failed:", error);
-        process.exitCode = 1;
+        console.error("Error deploying contracts:", error);
+        process.exit(1);
     }
 }
 
-// Run the script
-main().catch((error) => {
-    console.error("Script failed:", error);
-    process.exitCode = 1;
-});
+main()
+    .then(() => process.exit(0))
+    .catch((error) => {
+        console.error(error);
+        process.exit(1);
+    });

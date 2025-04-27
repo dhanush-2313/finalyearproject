@@ -21,7 +21,21 @@ export const formatIndianTimestamp = (timestamp) => {
     }
   } else if (typeof timestamp === 'string') {
     // If it's already a string, try to parse it
-    date = new Date(timestamp);
+    try {
+      // First try parsing as ISO string
+      date = new Date(timestamp);
+      
+      // If that fails, try parsing as Unix timestamp
+      if (isNaN(date.getTime())) {
+        const timestampNum = Number(timestamp);
+        if (!isNaN(timestampNum)) {
+          date = new Date(timestampNum * 1000);
+        }
+      }
+    } catch (e) {
+      console.error("Error parsing timestamp:", e);
+      return "Invalid Date";
+    }
   } else if (timestamp instanceof Date) {
     // If it's already a Date object
     date = timestamp;
@@ -57,5 +71,48 @@ export const weiToEth = (wei) => {
     } catch (error) {
         console.error('Error converting Wei to ETH:', error);
         return "0";
+    }
+};
+
+export const formatDate = (timestamp) => {
+    try {
+        // If timestamp is a string, try to parse it
+        if (typeof timestamp === 'string') {
+            // Check if it's a Unix timestamp in seconds
+            if (/^\d+$/.test(timestamp)) {
+                timestamp = parseInt(timestamp) * 1000; // Convert to milliseconds
+            } else {
+                // Try parsing as ISO string
+                timestamp = new Date(timestamp).getTime();
+            }
+        }
+        
+        // If timestamp is a number, assume it's in seconds (blockchain format)
+        if (typeof timestamp === 'number') {
+            // If timestamp is less than 1e12, it's likely in seconds
+            if (timestamp < 1e12) {
+                timestamp = timestamp * 1000; // Convert to milliseconds
+            }
+        }
+        
+        const date = new Date(timestamp);
+        
+        // Check if date is valid
+        if (isNaN(date.getTime())) {
+            console.warn('Invalid date:', timestamp);
+            return 'Invalid date';
+        }
+        
+        return date.toLocaleString('en-US', {
+            year: 'numeric',
+            month: 'short',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        });
+    } catch (error) {
+        console.error('Error formatting date:', error);
+        return 'Invalid date';
     }
 };

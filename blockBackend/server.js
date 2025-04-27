@@ -140,7 +140,9 @@ process.on('SIGTERM', shutdown);
 process.on('SIGINT', shutdown);
 
 // 🔹 Start Server
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => logger.logInfo(`🚀 Server running on port ${PORT}`));
+const PORT = process.env.PORT || 3001;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 module.exports = app;

@@ -88,5 +88,6 @@
         "webpack": "^5.90.3",
         "webpack-cli": "^5.1.4",
         "webpack-dev-server": "^4.15.1"
-    }
+    },
+    "homepage": "https://your-app-name.vercel.app"
 }
