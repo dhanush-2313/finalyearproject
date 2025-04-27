@@ -9,6 +9,7 @@ const api = axios.create({
   timeout: 120000, // Increased timeout to 2 minutes for blockchain transactions
   headers: {
     "Content-Type": "application/json",
+    'ngrok-skip-browser-warning': '69420',
   }
 });
 

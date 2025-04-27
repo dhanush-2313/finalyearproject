@@ -22,14 +22,14 @@ const mfaRoutes = require('./routes/mfaRoutes');
 
 const app = express();
 
-// 🔹 Middleware
 const corsOptions = {
-  origin: '*', // or specify your frontend's ngrok URL for more security
-  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization'],
-  credentials: true
+  origin: ['http://localhost:3000', 'https://19e3-…-ngrok-free.app'],
+  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  allowedHeaders: ['Content-Type','Authorization','ngrok-skip-browser-warning']
+  // ← no credentials:true
 };
 app.use(cors(corsOptions));
+app.options('*', cors(corsOptions));
 app.use(morgan(process.env.LOG_LEVEL || 'combined'));
 app.use(express.json());
 
