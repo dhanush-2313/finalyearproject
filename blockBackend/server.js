@@ -23,7 +23,13 @@ const mfaRoutes = require('./routes/mfaRoutes');
 const app = express();
 
 // 🔹 Middleware
-app.use(cors());
+const corsOptions = {
+  origin: '*', // or specify your frontend's ngrok URL for more security
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+};
+app.use(cors(corsOptions));
 app.use(morgan(process.env.LOG_LEVEL || 'combined'));
 app.use(express.json());
 

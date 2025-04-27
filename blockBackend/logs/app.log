@@ -35165,3 +35165,386 @@
 2025-04-27 22:56:39 [INFO]: ✅ Blockchain event listeners set up for database storage
 2025-04-27 22:56:39 [INFO]: ✅ Blockchain event listeners initialized
 2025-04-27 22:56:42 [INFO]: Shutting down server...
+2025-04-27 22:59:13 [INFO]: ✅ Monitoring metrics initialized
+2025-04-27 22:59:14 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-27 22:59:14 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-27 22:59:14 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-27 22:59:14 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-27 22:59:14 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-27 22:59:14 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-27 22:59:14 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-27 22:59:14 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-27 22:59:14 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-27 22:59:14 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-27 22:59:14 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-27 22:59:14 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-27 22:59:14 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-27 22:59:14 [INFO]: ✅ MongoDB connected
+2025-04-27 22:59:14 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-27 22:59:14 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-27 22:59:18 [INFO]: Shutting down server...
+2025-04-28 01:05:25 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 01:05:25 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 01:05:25 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 01:05:25 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 01:05:25 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 01:05:25 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 01:05:25 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 01:05:25 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 01:05:25 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 01:05:25 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 01:05:25 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 01:05:25 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 01:05:25 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 01:05:25 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 01:05:25 [INFO]: ✅ MongoDB connected
+2025-04-28 01:05:25 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 01:05:25 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:06:29 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:06:29 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:06:29 [INFO]: Found 0 records in AidContract
+2025-04-28 01:06:29 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:06:29 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Found 0 records in AidContract
+2025-04-28 01:06:29 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:29 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:06:29 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:06:29 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:29 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:29 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:29 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:30 [INFO]: Found 0 records in AidContract
+2025-04-28 01:06:30 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:06:30 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Found 0 records in AidContract
+2025-04-28 01:06:30 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:30 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:30 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:06:31 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:06:31 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:06:31 [INFO]: Found 0 records in AidContract
+2025-04-28 01:06:31 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /donors/view-donations to /api/donors/view-donations
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/events/recent to /api/blockchain/events/recent
+2025-04-28 01:06:32 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:06:32 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/events/recent to /api/blockchain/events/recent
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /donors/view-donations to /api/donors/view-donations
+2025-04-28 01:06:32 [INFO]: Found 0 records in AidContract
+2025-04-28 01:06:32 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:06:32 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:06:32 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Found 0 records in AidContract
+2025-04-28 01:06:32 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:06:32 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:32 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:06:32 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:06:35 [INFO]: Redirecting legacy path /donors/make-donation to /api/donors/make-donation
+2025-04-28 01:06:35 [INFO]: Processing blockchain donation for user 6800240da8c9d991f58c9591, amount: 0.01 ETH
+2025-04-28 01:06:35 [INFO]: Executing donation transaction: amount=10000000000000000 wei, name=
+2025-04-28 01:06:35 [INFO]: Executing AidDistribution.donate with args:
+2025-04-28 01:06:35 [INFO]: ✅ Transaction submitted: Contract=AidDistribution, Method=donate, Hash=0x0e6d667729e00dfca7a480f096db4ec39ad3fbd222254edfc15692f6265d669c
+2025-04-28 01:06:35 [INFO]: Transaction submitted: 0x0e6d667729e00dfca7a480f096db4ec39ad3fbd222254edfc15692f6265d669c
+2025-04-28 01:06:35 [INFO]: Redirecting legacy path /donors/view-donations to /api/donors/view-donations
+2025-04-28 01:06:35 [INFO]: Redirecting legacy path /blockchain/events/recent to /api/blockchain/events/recent
+2025-04-28 01:06:36 [INFO]: Blockchain event stored: AidDonated, Hash: 0x0e6d667729e00dfca7a480f096db4ec39ad3fbd222254edfc15692f6265d669c
+2025-04-28 01:45:38 [INFO]: Shutting down server...
+2025-04-28 01:46:28 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 01:46:29 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 01:46:29 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 01:46:29 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 01:46:29 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 01:46:29 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 01:46:29 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 01:46:29 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 01:46:29 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 01:46:29 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 01:46:29 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 01:46:29 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 01:46:29 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 01:46:29 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 01:46:29 [INFO]: ✅ MongoDB connected
+2025-04-28 01:46:29 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 01:46:29 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-28 01:46:42 [ERROR]: Not Found: /
+2025-04-28 01:46:42 [ERROR]: Not Found: /favicon.ico
+2025-04-28 01:48:41 [ERROR]: Not Found: /
+2025-04-28 01:48:44 [ERROR]: Not Found: /apple-touch-icon-precomposed.png
+2025-04-28 01:48:44 [ERROR]: Not Found: /favicon.ico
+2025-04-28 01:48:44 [ERROR]: Not Found: /apple-touch-icon.png
+2025-04-28 01:49:57 [INFO]: Redirecting legacy path /auth/logout to /api/auth/logout
+2025-04-28 01:50:10 [INFO]: Redirecting legacy path /donors/make-donation to /api/donors/make-donation
+2025-04-28 01:50:10 [INFO]: Processing blockchain donation for user 6800240da8c9d991f58c9591, amount: 0.01 ETH
+2025-04-28 01:50:10 [INFO]: Executing donation transaction: amount=10000000000000000 wei, name=
+2025-04-28 01:50:10 [INFO]: Executing AidDistribution.donate with args:
+2025-04-28 01:50:10 [INFO]: ✅ Transaction submitted: Contract=AidDistribution, Method=donate, Hash=0x1131828db958c7a453e63af2d15bca6cd0c454c67165a9efec8f20969eeb3747
+2025-04-28 01:50:10 [INFO]: Transaction submitted: 0x1131828db958c7a453e63af2d15bca6cd0c454c67165a9efec8f20969eeb3747
+2025-04-28 01:50:10 [INFO]: Blockchain event stored: AidDonated, Hash: 0x1131828db958c7a453e63af2d15bca6cd0c454c67165a9efec8f20969eeb3747
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:52:34 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:52:34 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:52:34 [INFO]: Found 0 records in AidContract
+2025-04-28 01:52:34 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:52:34 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Found 0 records in AidContract
+2025-04-28 01:52:34 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:52:34 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:52:34 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0x0000000000000000000000000000000000000000 to /api/blockchain/resolve/address/0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Found 0 records in AidContract
+2025-04-28 01:52:34 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:34 [INFO]: No user found for wallet address: 0x0000000000000000000000000000000000000000
+2025-04-28 01:52:34 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:52:34 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Fetching all aid records from contracts
+2025-04-28 01:52:35 [INFO]: Found 3 records in AidDistribution
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:35 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:35 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Found 0 records in AidContract
+2025-04-28 01:52:35 [INFO]: Successfully fetched 3 total records
+2025-04-28 01:52:35 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:35 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:35 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:35 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:35 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:52:35 [INFO]: Redirecting legacy path /blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to /api/blockchain/resolve/address/0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Looking up user for wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b
+2025-04-28 01:52:35 [INFO]: Successfully resolved wallet address: 0xfea3bFA5886bB0E3458a2EF779Bc0C4DE899f16b to user: Refugee11
+2025-04-28 01:53:09 [INFO]: Redirecting legacy path /donors/view-donations to /api/donors/view-donations
+2025-04-28 01:53:09 [INFO]: Redirecting legacy path /donors/view-donations to /api/donors/view-donations
+2025-04-28 01:54:07 [INFO]: Redirecting legacy path /auth/logout to /api/auth/logout
+2025-04-28 01:54:31 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:56:01 [INFO]: Shutting down server...
+2025-04-28 01:56:03 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 01:56:03 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 01:56:03 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 01:56:03 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 01:56:03 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 01:56:03 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 01:56:03 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 01:56:03 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 01:56:03 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 01:56:03 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 01:56:03 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 01:56:03 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 01:56:03 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 01:56:03 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 01:56:04 [INFO]: ✅ MongoDB connected
+2025-04-28 01:56:04 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 01:56:04 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-28 01:56:45 [INFO]: Redirecting legacy path /auth/logout to /api/auth/logout
+2025-04-28 01:57:23 [INFO]: Shutting down server...
+2025-04-28 01:57:37 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 01:57:38 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 01:57:38 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 01:57:38 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 01:57:38 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 01:57:38 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 01:57:38 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 01:57:38 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 01:57:38 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 01:57:38 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 01:57:38 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 01:57:38 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 01:57:38 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 01:57:38 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 01:57:38 [INFO]: ✅ MongoDB connected
+2025-04-28 01:57:38 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 01:57:38 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-28 01:57:41 [INFO]: Redirecting legacy path /auth/logout to /api/auth/logout
+2025-04-28 01:58:02 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 01:58:03 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 01:58:03 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 01:58:03 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 01:58:03 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 01:58:03 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 01:58:03 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 01:58:03 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 01:58:03 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 01:58:03 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 01:58:03 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 01:58:03 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 01:58:03 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 01:58:03 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 01:58:03 [INFO]: ✅ MongoDB connected
+2025-04-28 01:58:03 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 01:58:03 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-28 01:58:23 [INFO]: Redirecting legacy path /auth/logout to /api/auth/logout
+2025-04-28 01:58:48 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 01:58:48 [ERROR]: Not Found: /favicon.ico
+2025-04-28 01:59:28 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 02:00:00 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 02:02:29 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 02:03:06 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 02:03:06 [INFO]: Fetching all aid records from contracts
+2025-04-28 02:03:06 [INFO]: Found 3 records in AidDistribution
+2025-04-28 02:03:06 [INFO]: Found 0 records in AidContract
+2025-04-28 02:03:06 [INFO]: Successfully fetched 3 total records
+2025-04-28 02:07:34 [INFO]: Redirecting legacy path /blockchain/enhanced-aid-records to /api/blockchain/enhanced-aid-records
+2025-04-28 02:11:09 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 02:11:09 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 02:11:09 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 02:11:09 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 02:11:09 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 02:11:09 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 02:11:09 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 02:11:09 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 02:11:09 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 02:11:09 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 02:11:09 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 02:11:09 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 02:11:09 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 02:11:09 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 02:11:10 [INFO]: ✅ MongoDB connected
+2025-04-28 02:11:10 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 02:11:10 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-28 02:11:10 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 02:11:10 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 02:11:10 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 02:11:10 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 02:11:10 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 02:11:10 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 02:11:10 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 02:11:10 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 02:11:10 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 02:11:10 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 02:11:10 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 02:11:10 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 02:11:10 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 02:11:10 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 02:11:11 [INFO]: ✅ MongoDB connected
+2025-04-28 02:11:11 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 02:11:11 [INFO]: ✅ Blockchain event listeners initialized
+2025-04-28 02:11:11 [INFO]: ✅ Monitoring metrics initialized
+2025-04-28 02:11:11 [INFO]: ✅ Loaded ABI for AidDistribution
+2025-04-28 02:11:11 [INFO]: ✅ Loaded ABI for DonorTracking
+2025-04-28 02:11:11 [INFO]: ✅ Loaded ABI for RefugeeAccess
+2025-04-28 02:11:11 [INFO]: ✅ Loaded ABI for FieldWorker
+2025-04-28 02:11:11 [INFO]: ✅ Loaded ABI for AidContract
+2025-04-28 02:11:11 [INFO]: ✅ Loaded ABI for AlternativePayments
+2025-04-28 02:11:11 [INFO]: ✅ Connected to AidDistribution contract at 0x740A78eBD1312D5fE14Ce9D37B8A6A79F429039B
+2025-04-28 02:11:11 [INFO]: ✅ Connected to DonorTracking contract at 0x3A51b1C0e5fB7B0933EE618AB2f5F3Ba152D24d4
+2025-04-28 02:11:11 [INFO]: ✅ Connected to RefugeeAccess contract at 0x31CA81c34a6f736c040eB02b81F1cc9E483Fb71b
+2025-04-28 02:11:11 [INFO]: ✅ Connected to FieldWorker contract at 0x191c0bffda56497495367D545C4F46b77BB6aec7
+2025-04-28 02:11:11 [INFO]: ✅ Connected to AidContract contract at 0x0d0b948ed5c35EbEA27CD0cc06c57eb3FaeEF3E1
+2025-04-28 02:11:11 [INFO]: ✅ Connected to AlternativePayments contract at 0xFb8B77e7c35769A5AFa18538D2B3354849c661c5
+2025-04-28 02:11:11 [INFO]: ✅ Connected to Ethereum Blockchain
+2025-04-28 02:11:12 [INFO]: ✅ MongoDB connected
+2025-04-28 02:11:12 [INFO]: ✅ Blockchain event listeners set up for database storage
+2025-04-28 02:11:12 [INFO]: ✅ Blockchain event listeners initialized

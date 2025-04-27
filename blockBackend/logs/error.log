@@ -1682,3 +1682,10 @@
 2025-04-27 19:18:34 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
 2025-04-27 19:18:49 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
 2025-04-27 19:36:39 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
+2025-04-28 01:46:42 [ERROR]: Not Found: /
+2025-04-28 01:46:42 [ERROR]: Not Found: /favicon.ico
+2025-04-28 01:48:41 [ERROR]: Not Found: /
+2025-04-28 01:48:44 [ERROR]: Not Found: /apple-touch-icon-precomposed.png
+2025-04-28 01:48:44 [ERROR]: Not Found: /favicon.ico
+2025-04-28 01:48:44 [ERROR]: Not Found: /apple-touch-icon.png
+2025-04-28 01:58:48 [ERROR]: Not Found: /favicon.ico
