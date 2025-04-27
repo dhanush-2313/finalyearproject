@@ -1689,3 +1689,10 @@
 2025-04-28 01:48:44 [ERROR]: Not Found: /favicon.ico
 2025-04-28 01:48:44 [ERROR]: Not Found: /apple-touch-icon.png
 2025-04-28 01:58:48 [ERROR]: Not Found: /favicon.ico
+2025-04-28 03:23:14 [ERROR]: Error confirming transaction: Cannot read properties of undefined (reading 'waitForTransaction')
+2025-04-28 03:43:42 [ERROR]: Error fetching aid statistics: invalid BigNumberish string: Cannot convert 0.01 to a BigInt (argument="value", value="0.01", code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-28 03:43:42 [ERROR]: Error fetching aid statistics: invalid BigNumberish string: Cannot convert 0.01 to a BigInt (argument="value", value="0.01", code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-28 03:44:40 [ERROR]: Error fetching aid statistics: invalid BigNumberish string: Cannot convert 0.01 to a BigInt (argument="value", value="0.01", code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-28 03:44:40 [ERROR]: Error fetching aid statistics: invalid BigNumberish string: Cannot convert 0.01 to a BigInt (argument="value", value="0.01", code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-28 03:46:07 [ERROR]: Error fetching aid statistics: invalid BigNumberish string: Cannot convert 0.01 to a BigInt (argument="value", value="0.01", code=INVALID_ARGUMENT, version=6.13.5)
+2025-04-28 03:46:07 [ERROR]: Error fetching aid statistics: invalid BigNumberish string: Cannot convert 0.01 to a BigInt (argument="value", value="0.01", code=INVALID_ARGUMENT, version=6.13.5)

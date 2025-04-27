@@ -25,7 +25,7 @@ exports.makeDonation = async (req, res) => {
     // Create donation record first
     const newDonation = await Donation.create({ 
       donorId: req.user.id, 
-      amount: amount,
+      amount: ethers.parseEther(amount.toString()).toString(),
       cause,
       message: message || '',
       paymentMethod: paymentMethod || 'crypto',

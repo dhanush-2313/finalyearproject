@@ -51,7 +51,9 @@ contract AidContract {
         uint256 _amount,
         string memory _paymentMethod,
         string memory _paymentDetails
-    ) public onlyAdmin {
+    ) public payable {
+        require(msg.value == _amount, "ETH amount must match the specified amount");
+        
         recordCount++;
         aidRecords[recordCount] = AidRecord(
             recordCount,

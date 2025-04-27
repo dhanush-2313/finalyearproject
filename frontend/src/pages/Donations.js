@@ -91,26 +91,10 @@ const Donations = () => {
       if (response?.data) {
         console.log("Donation data received:", response.data);
         
-        // Ensure each donation has a valid date field
-        const processedDonations = response.data.map(donation => {
-          const processedDonation = { ...donation };
-          
-          // Try to find a valid date field (could be date, createdAt, timestamp, etc.)
-          if (!processedDonation.date) {
-            // Check for alternative date fields
-            if (processedDonation.createdAt) {
-              processedDonation.date = processedDonation.createdAt;
-            } else if (processedDonation.timestamp) {
-              processedDonation.date = processedDonation.timestamp;
-            } else {
-              // If no date field exists, use current date as fallback
-              processedDonation.date = new Date().toISOString();
-              console.log(`Adding current date to donation ID: ${processedDonation.id || 'unknown'}`);
-            }
-          }
-          
-          return processedDonation;
-        });
+        const processedDonations = response.data.map(donation => ({
+          ...donation,
+          date: donation.createdAt // Always use the real creation date from the backend
+        }));
         
         setDonations(processedDonations);
         console.log("Processed donations with dates:", processedDonations);
@@ -471,7 +455,7 @@ const Donations = () => {
                       <Tr key={index}>
                         <Td>{weiToEth(donation.amount)}</Td>
                         <Td>{donation.cause}</Td>
-                        <Td>{formatIndianTimestamp(donation.date)}</Td>
+                        <Td>{formatIndianTimestamp(donation.createdAt)}</Td>
                         <Td>
                           <Badge colorScheme={donation.status === "Completed" ? "green" : "yellow"}>
                             {donation.status || "Processing"}

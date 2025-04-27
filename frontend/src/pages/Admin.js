@@ -1063,7 +1063,7 @@ const Admin = () => {
                             <Td>{safeRender(donation.donorName || donation.donorId)}</Td>
                             <Td>{safeRender(weiToEth(donation.amount))} ETH</Td>
                             <Td>{safeRender(donation.cause)}</Td>
-                            <Td>{formatIndianTimestamp(donation.timestamp || donation.date)}</Td>
+                            <Td>{formatIndianTimestamp(donation.createdAt)}</Td>
                             <Td>
                               <Badge colorScheme={
                                 donation.status === "Completed" ? "green" :

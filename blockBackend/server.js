@@ -23,7 +23,7 @@ const mfaRoutes = require('./routes/mfaRoutes');
 const app = express();
 
 const corsOptions = {
-  origin: ['http://localhost:3000', 'https://19e3-…-ngrok-free.app'],
+  origin: ['http://localhost:3000', 'https://19e3-2405-201-d002-70f8-c186-c871-9a95-995c.ngrok-free.app','https://finalyearproject-mocha.vercel.app'],
   methods: ['GET','POST','PUT','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type','Authorization','ngrok-skip-browser-warning']
   // ← no credentials:true
