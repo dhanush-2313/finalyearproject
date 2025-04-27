@@ -9,32 +9,27 @@ require('dotenv').config();
 // Load environment variables
 const { ADMIN_PRIVATE_KEY } = process.env;
 
-if (!ADMIN_PRIVATE_KEY) {
-    throw new Error('ADMIN_PRIVATE_KEY environment variable is required');
-}
-
 // Contracts configuration
 const CONTRACTS = {
     AidDistribution: {
         address: "0xE94a8c2f516DFCf1AC911fF950f6FBd1FE4f63d2",
-        path: "../../blockchain/artifacts/contracts/AidDistribution.sol/AidDistribution.json"
+        abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/AidDistribution.sol/AidDistribution.json')
     },
     DonorTracking: {
         address: "0xf6F39f608B06a16468e997D939846b3DeeB24d1b",
-        path: "../../blockchain/artifacts/contracts/DonorTracking.sol/DonorTracking.json"
+        abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/DonorTracking.sol/DonorTracking.json')
     },
     RefugeeAccess: {
         address: "0xb7496E0aC913a246A5a2d272B4CC493d1b962971",
-        path: "../../blockchain/artifacts/contracts/RefugeeAccess.sol/RefugeeAccess.json"
+        abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/RefugeeAccess.sol/RefugeeAccess.json')
     },
     FieldWorker: {
         address: "0x5c3F66d2d21993fdA4673757D94AfB82982D07E7",
-        path: "../../blockchain/artifacts/contracts/FieldWorker.sol/FieldWorker.json"
+        abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/FieldWorker.sol/FieldWorker.json')
     },
     AidContract: {
-        // Use the same address as AidDistribution since it's the main contract
-        address: "0xE94a8c2f516DFCf1AC911fF950f6FBd1FE4f63d2",
-        path: "../../blockchain/artifacts/contracts/AidContract.sol/AidContract.json"
+        address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+        abiPath: path.join(__dirname, '../../blockchain/artifacts/contracts/AidContract.sol/AidContract.json')
     }
 };
 
@@ -44,83 +39,78 @@ let wallet;
 let contracts = {};
 
 // Load contract ABIs
-const loadContractABIs = async () => {
-    try {
-        console.log('Starting to load contract ABIs...');
-        for (const [name, config] of Object.entries(CONTRACTS)) {
-            try {
-                console.log(`Loading ABI for ${name} contract...`);
-                console.log('ABI path:', config.path);
-                
-                const abiPath = path.join(__dirname, config.path);
-                console.log('Full ABI path:', abiPath);
-                
-                const artifactContent = fs.readFileSync(abiPath, 'utf8');
-                const artifact = JSON.parse(artifactContent);
-                config.abi = artifact.abi;
-                console.log(`ABI content loaded for ${name}`);
-            } catch (error) {
-                console.error(`Error loading ABI for ${name}:`, error);
-                throw error;
+const loadContractABIs = () => {
+    let loadedContracts = {};
+    
+    Object.keys(CONTRACTS).forEach(contractName => {
+        try {
+            const contractPath = path.resolve(__dirname, CONTRACTS[contractName].abiPath);
+            if (fs.existsSync(contractPath)) {
+                const contractJson = JSON.parse(fs.readFileSync(contractPath, 'utf8'));
+                loadedContracts[contractName] = {
+                    address: CONTRACTS[contractName].address,
+                    abi: contractJson.abi
+                };
+                logger.info(`✅ Loaded ABI for ${contractName}`);
+            } else {
+                logger.warn(`⚠️ Contract artifact not found for ${contractName}: ${contractPath}`);
             }
+        } catch (error) {
+            logger.error(`❌ Failed to load ABI for ${contractName}: ${error.message}`);
         }
-        console.log('All contract ABIs loaded successfully');
-    } catch (error) {
-        console.error('Error in loadContractABIs:', error);
-        throw error;
-    }
+    });
+    
+    return loadedContracts;
 };
 
 // Initialize connection with retry mechanism
-const initializeConnection = async () => {
+const initializeConnection = async (retries = 5) => {
     try {
-        console.log('Starting blockchain connection initialization...');
-        console.log('RPC URL:', rpcUrl);
+        // Configure provider with proper transaction handling
+        provider = new ethers.JsonRpcProvider(rpcUrl, undefined, {
+            polling: true,
+            pollingInterval: 1000, // Poll every second
+            timeout: 60000, // 60 second timeout
+        });
         
-        // Initialize provider
-        provider = new ethers.JsonRpcProvider(rpcUrl);
-        console.log('Provider initialized');
+        await provider.getNetwork(); // Test the connection
         
-        // Initialize wallet with admin private key
+        // Configure the wallet with the configured provider
         wallet = new ethers.Wallet(ADMIN_PRIVATE_KEY, provider);
-        console.log('Wallet initialized with address:', wallet.address);
         
         // Load contract ABIs
-        console.log('Loading contract ABIs...');
-        await loadContractABIs();
-        console.log('Contract ABIs loaded');
+        const contractConfigs = loadContractABIs();
         
-        // Initialize contract instances
-        console.log('Initializing contract instances...');
-        for (const [name, config] of Object.entries(CONTRACTS)) {
-            try {
-                console.log(`Initializing ${name} contract...`);
-                console.log('Contract address:', config.address);
-                console.log('Contract ABI:', config.abi);
-                
-                contracts[name] = new ethers.Contract(
-                    config.address,
-                    config.abi,
+        // Initialize contract instances with configured provider/wallet
+        Object.keys(contractConfigs).forEach(contractName => {
+            const config = contractConfigs[contractName];
+            if (config.address && config.abi) {
+                contracts[contractName] = new ethers.Contract(
+                    config.address, 
+                    config.abi, 
                     wallet
                 );
-                console.log(`${name} contract initialized successfully`);
-            } catch (error) {
-                console.error(`Error initializing ${name} contract:`, error);
-                throw error;
+                logger.info(`✅ Connected to ${contractName} contract at ${config.address}`);
             }
-        }
+        });
         
-        console.log('All contracts initialized successfully');
+        logger.info('✅ Connected to Ethereum Blockchain');
         return true;
     } catch (error) {
-        console.error('Error in initializeConnection:', error);
-        throw error;
+        if (retries > 0) {
+            logger.error(`❌ Failed to connect to Ethereum network, retrying... (${retries} attempts left)`);
+            await new Promise(resolve => setTimeout(resolve, 2000)); // Wait 2 seconds before retry
+            return initializeConnection(retries - 1);
+        } else {
+            logger.error(`❌ Failed to connect to Ethereum network after multiple attempts: ${error.message}`);
+            throw error;
+        }
     }
 };
 
 // Initialize connection when module is loaded
 initializeConnection().catch(err => {
-    logger.logError(`Initial blockchain connection failed: ${err.message}`);
+    logger.error(`Initial blockchain connection failed: ${err.message}`);
 });
 
 // Execute transaction with confirmation
@@ -139,11 +129,11 @@ const executeTransaction = async (contractName, methodName, ...args) => {
         // Separate options from regular arguments if present
         const options = hasOptions ? args.pop() : {};
         
-        logger.logInfo(`Executing ${contractName}.${methodName} with args:`, args, 'options:', options);
+        logger.info(`Executing ${contractName}.${methodName} with args:`, args, 'options:', options);
 
         // Execute the transaction with proper options
         const tx = await contracts[contractName][methodName](...args, options);
-        logger.logInfo(`✅ Transaction submitted: Contract=${contractName}, Method=${methodName}, Hash=${tx.hash}`);
+        logger.info(`✅ Transaction submitted: Contract=${contractName}, Method=${methodName}, Hash=${tx.hash}`);
         
         // Return transaction info immediately
         return {
@@ -155,7 +145,7 @@ const executeTransaction = async (contractName, methodName, ...args) => {
             }
         };
     } catch (error) {
-        logger.logError(`❌ Transaction failed: Contract=${contractName}, Method=${methodName}, Error=${error.message}`);
+        logger.error(`❌ Transaction failed: Contract=${contractName}, Method=${methodName}, Error=${error.message}`);
         throw error;
     }
 };
@@ -170,7 +160,7 @@ const callViewFunction = async (contractName, methodName, ...args) => {
         monitoring.metrics.contractCallsTotal.inc({ method: methodName, contract: contractName });
         return await contracts[contractName][methodName](...args);
     } catch (error) {
-        logger.logError(`❌ Error calling ${contractName}.${methodName}: ${error.message}`);
+        logger.error(`❌ Error calling ${contractName}.${methodName}: ${error.message}`);
         
         // If it's a connection issue, try to reconnect
         if (error.code === 'NETWORK_ERROR' || error.message.includes('network')) {
@@ -186,7 +176,7 @@ const callViewFunction = async (contractName, methodName, ...args) => {
 // Function to add an aid record
 const addAidRecord = async (recipient, aidType, amount, paymentMethod = "ETH", paymentDetails = "", options = {}) => {
     try {
-        logger.logInfo(`Creating aid record with AidDistribution: description=${aidType}, amount=${amount}, recipient=${recipient}`);
+        logger.info(`Creating aid record with AidDistribution: description=${aidType}, amount=${amount}, recipient=${recipient}`);
         return executeTransaction(
             'AidDistribution', 
             'createAidRecord',
@@ -195,12 +185,12 @@ const addAidRecord = async (recipient, aidType, amount, paymentMethod = "ETH", p
             recipient, // recipient address
             { 
                 ...options, 
-                gasLimit: options.gasLimit || 1000000,  // Increased gas limit
+                gasLimit: options.gasLimit || 500000,
                 gasPrice: options.gasPrice || undefined
             }
         );
     } catch (error) {
-        logger.logError(`Error in addAidRecord: ${error.message}`);
+        logger.error(`Error in addAidRecord: ${error.message}`);
         throw error;
     }
 };
@@ -208,15 +198,15 @@ const addAidRecord = async (recipient, aidType, amount, paymentMethod = "ETH", p
 // Function to update aid status
 const updateAidStatus = async (id, status) => {
     try {
-        logger.logInfo(`Updating aid status: ID=${id}, New Status=${status}`);
+        logger.info(`Updating aid status: ID=${id}, New Status=${status}`);
         
         // For AidDistribution, only support marking as distributed
         if (status.toLowerCase() === 'distributed' || status.toLowerCase() === 'delivered' || status.toLowerCase() === 'verified') {
-            logger.logInfo('Marking aid as distributed in AidDistribution contract');
+            logger.info('Marking aid as distributed in AidDistribution contract');
             return executeTransaction('AidDistribution', 'distributeAid', id);
         } else {
             // Track intermediate states off-chain
-            logger.logInfo(`Tracking status "${status}" off-chain`);
+            logger.info(`Tracking status "${status}" off-chain`);
             await storeBlockchainEvent({
                 txHash: null,
                 type: 'AidStatusUpdated',
@@ -226,7 +216,7 @@ const updateAidStatus = async (id, status) => {
             return { hash: null, status: 'pending' };
         }
     } catch (error) {
-        logger.logError(`Error updating aid status: ${error.message}`);
+        logger.error(`Error updating aid status: ${error.message}`);
         throw error;
     }
 };
@@ -246,7 +236,7 @@ const queryAidRecord = async (id) => {
             timestamp: Date.now() // Not available in AidDistribution
         };
     } catch (error) {
-        logger.logError(`❌ Error fetching aid record [ID: ${id}]: ${error.message}`);
+        logger.error(`❌ Error fetching aid record [ID: ${id}]: ${error.message}`);
         
         // Check if it's a valid error about non-existent record
         if (error.message.includes('Record not found') || error.message.includes('invalid aid ID')) {
@@ -260,45 +250,72 @@ const queryAidRecord = async (id) => {
 // Function to get all aid records
 const getAllAidRecords = async () => {
     try {
-        console.log('Starting getAllAidRecords...');
-        const contract = contracts.AidDistribution;
-        if (!contract) {
-            console.error('AidDistribution contract not found in contracts object');
-            throw new Error('Contract AidDistribution not found or not initialized.');
-        }
-        console.log('Contract found, getting nextId...');
-        
-        const nextId = await contract.nextId();
-        console.log('Next ID:', nextId.toString());
-        
+        logger.info(`Fetching all aid records from contracts`);
         const records = [];
-        for (let i = 0; i < nextId; i++) {
-            try {
-                console.log(`Fetching record ${i}...`);
-                const record = await contract.aidRecords(i);
-                console.log('Raw record:', record);
-                
-                records.push({
-                    id: i,
-                    recipient: record.recipient,
-                    aidType: record.description,
-                    amount: record.amount.toString(),
-                    addedBy: "0x0", // Not available in AidDistribution
-                    timestamp: record.timestamp ? record.timestamp.toString() : Math.floor(Date.now() / 1000).toString(),
-                    status: record.distributed ? "Distributed" : "Pending"
-                });
-                console.log('Processed record:', records[records.length - 1]);
-            } catch (error) {
-                console.error(`Error fetching record ${i}:`, error);
-                continue;
+        
+        // First check AidDistribution contract
+        try {
+            const nextIdValue = await contracts.AidDistribution.nextId();
+            logger.info(`Found ${nextIdValue} records in AidDistribution`);
+            
+            for (let i = 0; i < Number(nextIdValue); i++) {
+                try {
+                    const record = await callViewFunction('AidDistribution', 'getAidRecord', i);
+                    if (record) {
+                        records.push({
+                            id: i,
+                            recipient: record.recipient || "",
+                            aidType: "Aid Distribution",
+                            amount: Number(record.amount || 0),
+                            status: record.distributed ? "Distributed" : "Pending",
+                            addedBy: "0x0000000000000000000000000000000000000000",
+                            timestamp: Date.now()
+                        });
+                    }
+                } catch (recordError) {
+                    logger.warn(`Skipping invalid record at index ${i}: ${recordError.message}`);
+                    continue;
+                }
             }
+        } catch (error) {
+            logger.warn(`Error fetching records from AidDistribution: ${error.message}`);
         }
         
-        console.log('Total records found:', records.length);
+        // Then check AidContract
+        try {
+            const recordCount = await contracts.AidContract.recordCount();
+            logger.info(`Found ${recordCount} records in AidContract`);
+            
+            for (let i = 1; i <= Number(recordCount); i++) {
+                try {
+                    const record = await callViewFunction('AidContract', 'getAidRecord', i);
+                    if (record) {
+                        records.push({
+                            id: i,
+                            recipient: record.recipient || "",
+                            aidType: record.aidType || "Aid",
+                            amount: Number(record.amount || 0),
+                            status: record.status || "Pending",
+                            addedBy: record.addedBy || "0x0000000000000000000000000000000000000000",
+                            timestamp: Number(record.timestamp || Date.now()),
+                            paymentMethod: record.paymentMethod || "ETH",
+                            paymentDetails: record.paymentDetails || ""
+                        });
+                    }
+                } catch (recordError) {
+                    logger.warn(`Skipping invalid record at index ${i}: ${recordError.message}`);
+                    continue;
+                }
+            }
+        } catch (error) {
+            logger.warn(`Error fetching records from AidContract: ${error.message}`);
+        }
+        
+        logger.info(`Total records found: ${records.length}`);
         return records;
     } catch (error) {
-        console.error('Error in getAllAidRecords:', error);
-        throw error;
+        logger.error(`❌ Error fetching all aid records: ${error.message}`);
+        return []; // Return empty array on error instead of throwing
     }
 };
 
@@ -318,7 +335,7 @@ const getBlockchainEvents = async () => {
                     eventType: "AidDistributed"
                 };
                 
-                logger.logInfo(`📢 AidDistributed Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 AidDistributed Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
             
@@ -329,7 +346,7 @@ const getBlockchainEvents = async () => {
                     eventType: "AidDonated"
                 };
                 
-                logger.logInfo(`📢 AidDonated Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 AidDonated Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
         }
@@ -343,7 +360,7 @@ const getBlockchainEvents = async () => {
                     eventType: "DonorUpdated"
                 };
                 
-                logger.logInfo(`📢 DonorUpdated Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 DonorUpdated Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
         }
@@ -357,7 +374,7 @@ const getBlockchainEvents = async () => {
                     eventType: "RefugeeStatusUpdated"
                 };
                 
-                logger.logInfo(`📢 RefugeeStatusUpdated Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 RefugeeStatusUpdated Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
         }
@@ -372,7 +389,7 @@ const getBlockchainEvents = async () => {
                     eventType: "TaskAssigned"
                 };
                 
-                logger.logInfo(`📢 TaskAssigned Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 TaskAssigned Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
             
@@ -382,7 +399,7 @@ const getBlockchainEvents = async () => {
                     eventType: "TaskCompleted"
                 };
                 
-                logger.logInfo(`📢 TaskCompleted Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 TaskCompleted Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
         }
@@ -400,7 +417,7 @@ const getBlockchainEvents = async () => {
                     eventType: "AidAdded"
                 };
                 
-                logger.logInfo(`📢 Aid Added Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 Aid Added Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
             
@@ -411,7 +428,7 @@ const getBlockchainEvents = async () => {
                     eventType: "AidUpdated"
                 };
                 
-                logger.logInfo(`📢 Aid Updated Event: ID=${id}, New Status=${status}`);
+                logger.info(`📢 Aid Updated Event: ID=${id}, New Status=${status}`);
                 // Here you could add code to store the event in your database
             });
             
@@ -424,7 +441,7 @@ const getBlockchainEvents = async () => {
                     eventType: "AidDistributed"
                 };
                 
-                logger.logInfo(`📢 Aid Distributed Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 Aid Distributed Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
             
@@ -436,14 +453,14 @@ const getBlockchainEvents = async () => {
                     eventType: "DonationReceived"
                 };
                 
-                logger.logInfo(`📢 Donation Received Event: ${JSON.stringify(event)}`);
+                logger.info(`📢 Donation Received Event: ${JSON.stringify(event)}`);
                 // Here you could add code to store the event in your database
             });
         }
         
-        logger.logInfo("✅ Listening for blockchain events...");
+        logger.info("✅ Listening for blockchain events...");
     } catch (error) {
-        logger.logError(`❌ Error setting up event listeners: ${error.message}`);
+        logger.error(`❌ Error setting up event listeners: ${error.message}`);
         
         // If it's a connection issue, try to reconnect
         if (error.code === 'NETWORK_ERROR' || error.message.includes('network')) {
@@ -461,7 +478,7 @@ const removeBlockchainEventListeners = () => {
             contracts[contractName].removeAllListeners();
         }
     });
-    logger.logInfo("✅ Stopped listening for blockchain events");
+    logger.info("✅ Stopped listening for blockchain events");
 };
 
 // Function to verify transaction confirmation
@@ -499,7 +516,7 @@ const verifyTransaction = async (txHash) => {
             receipt
         };
     } catch (error) {
-        logger.logError(`Error verifying transaction ${txHash}: ${error.message}`);
+        logger.error(`Error verifying transaction ${txHash}: ${error.message}`);
         throw error;
     }
 };
@@ -538,7 +555,7 @@ const checkBlockchainHealth = async () => {
             providerUrl: rpcUrl
         };
     } catch (error) {
-        logger.logError(`❌ Blockchain health check failed: ${error.message}`);
+        logger.error(`❌ Blockchain health check failed: ${error.message}`);
         return {
             connected: false,
             error: error.message
@@ -565,7 +582,7 @@ const processDonation = async (amount, donorName = "") => {
         }
 
         // Execute donation transaction
-        logger.logInfo(`Executing donation transaction: amount=${amountInWei.toString()} wei, name=${donorName}`);
+        logger.info(`Executing donation transaction: amount=${amountInWei.toString()} wei, name=${donorName}`);
 
         // Use AidDistribution contract instead
         return executeTransaction(
@@ -577,7 +594,7 @@ const processDonation = async (amount, donorName = "") => {
             }
         );
     } catch (error) {
-        logger.logError(`Error processing donation: ${error.message}`);
+        logger.error(`Error processing donation: ${error.message}`);
         throw error;
     }
 };

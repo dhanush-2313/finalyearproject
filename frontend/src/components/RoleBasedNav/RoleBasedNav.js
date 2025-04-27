@@ -94,11 +94,7 @@ const RoleBasedNav = () => {
               onClick={() => navigate('/admin')} 
               colorScheme="purple"
             />
-            <NavButton 
-              label="Manage Field Workers" 
-              icon={FaUsers} 
-              onClick={() => navigate('/field-workers')} 
-            />
+           
           </>
         )}
         
@@ -109,11 +105,6 @@ const RoleBasedNav = () => {
               icon={FaClipboardList} 
               onClick={() => navigate('/field-worker')} 
               colorScheme="orange"
-            />
-            <NavButton 
-              label="Aid Distribution" 
-              icon={FaHandHoldingHeart} 
-              onClick={() => navigate('/aid-distribution')} 
             />
           </>
         )}
